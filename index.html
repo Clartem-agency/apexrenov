@@ -1,0 +1,1763 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ApexRenov - Couverture & Performance Énergétique | Expert RGE</title>
+    <meta name="description"
+        content="ApexRenov, votre expert certifié RGE en couverture, isolation thermique et panneaux solaires. Devis gratuit et aides financières.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100..900&family=Mulish:wght@200..900&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Personnalisé -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Script JS Personnalisé (Contient la config Tailwind et la logique) -->
+    <script src="script.js"></script>
+</head>
+
+<body class="bg-background text-foreground antialiased font-sans">
+
+    <div class="min-h-screen flex flex-col">
+
+
+
+        <!-- ======================================================= -->
+        <!--                          HEADER                         -->
+        <!-- ======================================================= -->
+
+        <header id="main-header" class="fixed top-0 left-0 right-0 z-50 bg-transparent transition-all duration-300">
+            <div class="container mx-auto px-4">
+                <div class="flex items-center justify-between h-20">
+                    <a href="#accueil" class="flex items-center gap-3 group">
+
+                        <!-- Nouveau code avec l'image -->
+                        <img src="images/logo-apexrenov.png" alt="Logo ApexRenov"
+                            class="w-10 h-10 rounded-lg object-contain">
+
+                        <div class="flex flex-col">
+
+                            <!-- Ajout de la classe 'header-title' pour le ciblage JS -->
+                            <span
+                                class="header-title font-serif font-semibold text-lg text-[#148822] leading-tight transition-colors duration-300">ApexRenov</span>
+
+                            <!-- Ajout de la classe 'header-subtitle' -->
+                            <span
+                                class="header-subtitle text-xs text-white/80 transition-colors duration-300">Couverture
+                                & Performance Énergétique
+                            </span>
+                        </div>
+                    </a>
+
+                    <!-- Desktop Nav -->
+                    <nav class="hidden md:flex items-center gap-8">
+                        <!-- Ajout de la classe 'nav-link' sur tous les liens -->
+                        <a href="#accueil"
+                            class="nav-link text-sm font-medium text-white/90 hover:text-primary transition-colors duration-300">Accueil</a>
+                        <a href="#services"
+                            class="nav-link text-sm font-medium text-white/90 hover:text-primary transition-colors duration-300">Services</a>
+                        <a href="#avantages"
+                            class="nav-link text-sm font-medium text-white/90 hover:text-primary transition-colors duration-300">Pourquoi
+                            Nous</a>
+                        <a href="blog.html" class="nav-link text-sm font-medium text-white/90 hover:text-primary transition-colors duration-300">Blog</a>
+                        <a href="#contact"
+                            class="nav-link text-sm font-medium text-white/90 hover:text-primary transition-colors duration-300">Contact</a>
+                    </nav>
+
+                    <!-- Desktop Actions -->
+                    <div class="hidden md:flex items-center gap-4">
+                        <!-- Ajout de la classe 'header-phone' -->
+                        <a href="tel:+33754826639"
+                            class="header-phone flex items-center gap-2 text-sm text-white/90 hover:text-primary transition-colors duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-phone w-4 h-4">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg>
+                            07 54 82 66 39
+                        </a>
+                        <button onclick="document.getElementById('contact').scrollIntoView()"
+                            class="btn-premium inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm font-semibold h-10 px-6">
+                            Devis Gratuit
+                        </button>
+                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <!-- Ajout de la classe 'mobile-menu-btn-icon' -->
+                    <button id="mobile-menu-btn"
+                        class="mobile-menu-btn-icon md:hidden p-2 text-white hover:text-primary transition-colors"
+                        aria-label="Toggle menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-menu w-6 h-6">
+                            <line x1="4" x2="20" y1="12" y2="12"></line>
+                            <line x1="4" x2="20" y1="6" y2="6"></line>
+                            <line x1="4" x2="20" y1="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+
+
+                <!-- Mobile Menu Content -->
+                <!-- Modification : Remplacement de bg-card par un style glassmorphism manuel via Tailwind -->
+                <div id="mobile-menu"
+                    class="hidden md:hidden pb-6 border-t border-white/20 mt-2 bg-white/90 backdrop-blur-xl rounded-2xl px-6 shadow-2xl mx-2">
+                    <nav class="flex flex-col gap-4 mt-4">
+                        <a href="#accueil"
+                            class="text-base font-medium text-[#153e2e] hover:text-primary py-2 border-b border-gray-100">Accueil</a>
+                        <a href="#services"
+                            class="text-base font-medium text-[#153e2e] hover:text-primary py-2 border-b border-gray-100">Services</a>
+                        <a href="#avantages"
+                            class="text-base font-medium text-[#153e2e] hover:text-primary py-2 border-b border-gray-100">Pourquoi
+                            Nous</a>
+                            <a href="blog.html"
+                            class="text-base font-medium text-[#153e2e] hover:text-primary py-2 border-b border-gray-100">Blog
+                            </a>
+                        <a href="#contact"
+                            class="text-base font-medium text-[#153e2e] hover:text-primary py-2 border-b border-gray-100">Contact</a>
+                        <a href="tel:+33754826639"
+                            class="text-base font-bold text-primary mt-2 flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg>
+                            07 54 82 66 39
+                        </a>
+                    </nav>
+                </div>
+
+            </div>
+        </header>
+
+
+        <main class="flex-grow">
+
+
+
+
+
+            <!-- ======================================================= -->
+            <!--                          SECTION HERO                   -->
+            <!-- ======================================================= -->
+
+            <section id="accueil" class="relative min-h-screen flex items-center pt-20">
+                <div class="absolute inset-0 z-0">
+                    <!-- Image de remplacement Unsplash -->
+                    <img src="images/hero-background.webp" alt="Maison moderne avec panneaux solaires"
+                        class="w-full h-full object-cover">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-foreground/90 via-foreground/70 to-foreground/40">
+                    </div>
+                </div>
+                <div class="container mx-auto px-4 relative z-10">
+                    <div class="max-w-2xl">
+                        <div
+                            class="inline-flex items-center gap-2 bg-accent/20 backdrop-blur-sm border border-accent/30 rounded-full px-4 py-2 mb-6 animate-fade-up">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-leaf w-4 h-4 text-accent">
+                                <path
+                                    d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z">
+                                </path>
+                                <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+                            </svg>
+                            <span class="text-sm font-medium text-white/90">Certifié RGE • Éco-responsable</span>
+                        </div>
+                        <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6 animate-fade-up"
+                            style="animation-delay: 0.1s;">
+                            Experts en Couverture & <span class="text-accent">Rénovation Énergétique</span>
+                        </h1>
+                        <p class="text-lg md:text-xl text-white/80 mb-8 leading-relaxed animate-fade-up"
+                            style="animation-delay: 0.2s;">
+                            Protégez votre maison et réduisez vos factures d'énergie avec nos solutions de toiture,
+                            isolation et panneaux solaires. Qualité garantie depuis plus de 20 ans.
+                        </p>
+
+                        <div class="flex flex-col sm:flex-row gap-4 mb-12 animate-fade-up"
+                            style="animation-delay: 0.3s;">
+
+                            <!-- Bouton Principal -->
+                            <button onclick="document.getElementById('contact').scrollIntoView()"
+                                class="btn-premium inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg font-semibold h-14 px-10 text-base">
+                                Demander un Devis Gratuit
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-arrow-right w-5 h-5">
+                                    <path d="M5 12h14"></path>
+                                    <path d="m12 5 7 7-7 7"></path>
+                                </svg>
+                            </button>
+
+                            <!-- Bouton Secondaire -->
+                            <button onclick="document.getElementById('services').scrollIntoView()"
+                                class="btn-glass inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg font-semibold h-14 px-10 text-base">
+                                Découvrir Nos Services
+                            </button>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-6 animate-fade-up" style="animation-delay: 0.4s;">
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-shield w-6 h-6 text-accent">
+                                        <path
+                                            d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-white font-semibold">Garantie</p>
+                                    <p class="text-white/70 text-sm">10 ans</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-award w-6 h-6 text-accent">
+                                        <path
+                                            d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526">
+                                        </path>
+                                        <circle cx="12" cy="8" r="6"></circle>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-white font-semibold">+2500</p>
+                                    <p class="text-white/70 text-sm">Chantiers</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-leaf w-6 h-6 text-accent">
+                                        <path
+                                            d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z">
+                                        </path>
+                                        <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-white font-semibold">-40%</p>
+                                    <p class="text-white/70 text-sm">Énergie</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+
+
+
+
+
+
+            <!-- ======================================================= -->
+            <!--                      SECTION SERVICES                   -->
+            <!-- ======================================================= -->
+
+            <section id="services" class="py-24 relative overflow-hidden bg-[#F0F2F1]">
+
+                <!-- 1. TEXTURE FIABLE (Motif Architectural Pointillé) -->
+                <!-- Crée une trame de fond propre et technique, style "papier d'architecte" -->
+                <!-- Opacité réglée à 0.05 pour que ce soit subtil mais bien visible -->
+                <div class="absolute inset-0 opacity-[0.05]"
+                    style="background-image: radial-gradient(#153e2e 1.5px, transparent 1.5px); background-size: 32px 32px;">
+                </div>
+
+                <!-- 2. VIGNETTAGE (Ombre légère sur les bords pour la profondeur) -->
+                <div
+                    class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_20%,rgba(0,0,0,0.03)_100%)] pointer-events-none">
+                </div>
+
+                <!-- 3. ACCENTS DE LUMIÈRE (Halo Vert) -->
+                <div
+                    class="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] pointer-events-none">
+                </div>
+                <div
+                    class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] pointer-events-none">
+                </div>
+
+                <div class="container mx-auto px-4 relative z-10">
+
+                    <!-- Header de section -->
+                    <div class="text-center max-w-2xl mx-auto mb-16 reveal-up">
+                        <span
+                            class="text-primary font-bold text-sm uppercase tracking-widest border-b-2 border-primary/20 pb-1">
+                            Nos Expertises
+                        </span>
+                        <h2 class="font-serif text-3xl md:text-4xl text-[#153e2e] mt-4 mb-4">
+                            L'Art de la Rénovation Durable
+                        </h2>
+                        <p class="text-gray-600 text-lg">
+                            Une approche technique et esthétique pour valoriser votre patrimoine tout en réduisant votre
+                            empreinte énergétique.
+                        </p>
+                    </div>
+
+                    <!-- Grille Services -->
+                    <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
+
+                        <!-- Service 1 : Couverture (CODE ORIGINAL RESTAURÉ) -->
+                        <div
+                            class="group relative bg-foreground rounded-2xl p-8 lg:p-10 overflow-hidden shadow-xl reveal-up">
+                            <!-- Image de fond avec effet Zoom -->
+                            <div class="absolute inset-0 z-0">
+                                <img src="images/service-couverture.webp" alt="Toiture"
+                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-50 group-hover:opacity-60">
+                                <!-- Dégradé sombre pour lisibilité texte -->
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-foreground via-foreground/90 to-foreground/60">
+                                </div>
+                            </div>
+
+                            <!-- Contenu -->
+                            <div class="relative z-10 h-full flex flex-col">
+                                <div class="flex items-start justify-between mb-6">
+                                    <div
+                                        class="w-14 h-14 rounded-xl bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/10">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" class="text-primary">
+                                            <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path>
+                                            <path
+                                                d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <div class="text-white/20 group-hover:text-primary transition-colors duration-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-arrow-up-right">
+                                            <path d="M7 7h10v10" />
+                                            <path d="M7 17 17 7" />
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <h3 class="font-serif text-2xl text-white mb-3">Couverture & Toiture</h3>
+                                <p
+                                    class="text-white/70 mb-8 leading-relaxed text-sm lg:text-base border-l-2 border-primary/50 pl-4">
+                                    Rénovation complète et entretien. Nous travaillons l'ardoise, la tuile et le zinc
+                                    avec un savoir-faire artisanal garanti 10 ans.
+                                </p>
+
+                                <ul class="grid sm:grid-cols-2 gap-y-3 gap-x-4 mt-auto">
+                                    <li class="flex items-center gap-3 text-sm text-white/90">
+                                        <div
+                                            class="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_8px_rgba(20,136,34,0.8)]">
+                                        </div> Tuiles et ardoises
+                                    </li>
+                                    <li class="flex items-center gap-3 text-sm text-white/90">
+                                        <div
+                                            class="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_8px_rgba(20,136,34,0.8)]">
+                                        </div> Toiture zinc
+                                    </li>
+                                    <li class="flex items-center gap-3 text-sm text-white/90">
+                                        <div
+                                            class="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_8px_rgba(20,136,34,0.8)]">
+                                        </div> Réparation fuites
+                                    </li>
+                                    <li class="flex items-center gap-3 text-sm text-white/90">
+                                        <div
+                                            class="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_8px_rgba(20,136,34,0.8)]">
+                                        </div> Charpente
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Service 2 : Isolation (CODE ORIGINAL RESTAURÉ) -->
+                        <div
+                            class="group relative bg-foreground rounded-2xl p-8 lg:p-10 overflow-hidden shadow-xl reveal-up delay-100">
+                            <div class="absolute inset-0 z-0">
+                                <img src="images/service-isolation.webp" alt="Isolation"
+                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-50 group-hover:opacity-60">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-foreground via-foreground/90 to-foreground/60">
+                                </div>
+                            </div>
+
+                            <div class="relative z-10 h-full flex flex-col">
+                                <div class="flex items-start justify-between mb-6">
+                                    <div
+                                        class="w-14 h-14 rounded-xl bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/10">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" class="text-primary">
+                                            <path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="text-white/20 group-hover:text-primary transition-colors duration-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-arrow-up-right">
+                                            <path d="M7 7h10v10" />
+                                            <path d="M7 17 17 7" />
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <h3 class="font-serif text-2xl text-white mb-3">Isolation Thermique</h3>
+                                <p
+                                    class="text-white/70 mb-8 leading-relaxed text-sm lg:text-base border-l-2 border-primary/50 pl-4">
+                                    Optimisez votre confort thermique été comme hiver. Des solutions d'isolation haute
+                                    performance pour réduire vos factures.
+                                </p>
+
+                                <ul class="grid sm:grid-cols-2 gap-y-3 gap-x-4 mt-auto">
+                                    <li class="flex items-center gap-3 text-sm text-white/90">
+                                        <div
+                                            class="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_8px_rgba(20,136,34,0.8)]">
+                                        </div> Combles perdus
+                                    </li>
+                                    <li class="flex items-center gap-3 text-sm text-white/90">
+                                        <div
+                                            class="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_8px_rgba(20,136,34,0.8)]">
+                                        </div> Isolation murs
+                                    </li>
+                                    <li class="flex items-center gap-3 text-sm text-white/90">
+                                        <div
+                                            class="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_8px_rgba(20,136,34,0.8)]">
+                                        </div> Planchers bas
+                                    </li>
+                                    <li class="flex items-center gap-3 text-sm text-white/90">
+                                        <div
+                                            class="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_8px_rgba(20,136,34,0.8)]">
+                                        </div> ITE (Façade)
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Service 3 : Solaire (CODE ORIGINAL RESTAURÉ) -->
+                        <div
+                            class="group relative bg-foreground rounded-2xl p-8 lg:p-10 overflow-hidden shadow-xl reveal-up delay-200">
+                            <div class="absolute inset-0 z-0">
+                                <img src="images/service-solaire.webp" alt="Panneaux solaires"
+                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-50 group-hover:opacity-60">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-foreground via-foreground/90 to-foreground/60">
+                                </div>
+                            </div>
+
+                            <div class="relative z-10 h-full flex flex-col">
+                                <div class="flex items-start justify-between mb-6">
+                                    <div
+                                        class="w-14 h-14 rounded-xl bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/10">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" class="text-primary">
+                                            <circle cx="12" cy="12" r="4"></circle>
+                                            <path d="M12 2v2"></path>
+                                            <path d="M12 20v2"></path>
+                                            <path d="m4.93 4.93 1.41 1.41"></path>
+                                            <path d="m17.66 17.66 1.41 1.41"></path>
+                                            <path d="M2 12h2"></path>
+                                            <path d="M20 12h2"></path>
+                                            <path d="m6.34 17.66-1.41 1.41"></path>
+                                            <path d="m19.07 4.93-1.41 1.41"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="text-white/20 group-hover:text-primary transition-colors duration-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-arrow-up-right">
+                                            <path d="M7 7h10v10" />
+                                            <path d="M7 17 17 7" />
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <h3 class="font-serif text-2xl text-white mb-3">Panneaux Solaires</h3>
+                                <p
+                                    class="text-white/70 mb-8 leading-relaxed text-sm lg:text-base border-l-2 border-primary/50 pl-4">
+                                    Produisez votre électricité verte. Une installation clé en main pour
+                                    l'autoconsommation ou la revente, avec suivi de production.
+                                </p>
+
+                                <ul class="grid sm:grid-cols-2 gap-y-3 gap-x-4 mt-auto">
+                                    <li class="flex items-center gap-3 text-sm text-white/90">
+                                        <div
+                                            class="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_8px_rgba(20,136,34,0.8)]">
+                                        </div> Photovoltaïque
+                                    </li>
+                                    <li class="flex items-center gap-3 text-sm text-white/90">
+                                        <div
+                                            class="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_8px_rgba(20,136,34,0.8)]">
+                                        </div> Autoconsommation
+                                    </li>
+                                    <li class="flex items-center gap-3 text-sm text-white/90">
+                                        <div
+                                            class="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_8px_rgba(20,136,34,0.8)]">
+                                        </div> Revente surplus
+                                    </li>
+                                    <li class="flex items-center gap-3 text-sm text-white/90">
+                                        <div
+                                            class="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_8px_rgba(20,136,34,0.8)]">
+                                        </div> Maintenance
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Service 4 : Étanchéité (CODE ORIGINAL RESTAURÉ) -->
+                        <div
+                            class="group relative bg-foreground rounded-2xl p-8 lg:p-10 overflow-hidden shadow-xl reveal-up delay-300">
+                            <div class="absolute inset-0 z-0">
+                                <img src="images/service-etancheite.webp" alt="Étanchéité"
+                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-50 group-hover:opacity-60">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-foreground via-foreground/90 to-foreground/60">
+                                </div>
+                            </div>
+
+                            <div class="relative z-10 h-full flex flex-col">
+                                <div class="flex items-start justify-between mb-6">
+                                    <div
+                                        class="w-14 h-14 rounded-xl bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/10">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" class="text-primary">
+                                            <path
+                                                d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z">
+                                            </path>
+                                            <path
+                                                d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <div class="text-white/20 group-hover:text-primary transition-colors duration-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-arrow-up-right">
+                                            <path d="M7 7h10v10" />
+                                            <path d="M7 17 17 7" />
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <h3 class="font-serif text-2xl text-white mb-3">Étanchéité</h3>
+                                <p
+                                    class="text-white/70 mb-8 leading-relaxed text-sm lg:text-base border-l-2 border-primary/50 pl-4">
+                                    Protection absolue contre les infiltrations. Traitement des toitures terrasses,
+                                    balcons et points singuliers.
+                                </p>
+
+                                <ul class="grid sm:grid-cols-2 gap-y-3 gap-x-4 mt-auto">
+                                    <li class="flex items-center gap-3 text-sm text-white/90">
+                                        <div
+                                            class="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_8px_rgba(20,136,34,0.8)]">
+                                        </div> Toiture terrasse
+                                    </li>
+                                    <li class="flex items-center gap-3 text-sm text-white/90">
+                                        <div
+                                            class="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_8px_rgba(20,136,34,0.8)]">
+                                        </div> Balcons
+                                    </li>
+                                    <li class="flex items-center gap-3 text-sm text-white/90">
+                                        <div
+                                            class="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_8px_rgba(20,136,34,0.8)]">
+                                        </div> Façades
+                                    </li>
+                                    <li class="flex items-center gap-3 text-sm text-white/90">
+                                        <div
+                                            class="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_8px_rgba(20,136,34,0.8)]">
+                                        </div> Diagnostic
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="text-center mt-16 reveal-up delay-200">
+                        <button onclick="document.getElementById('contact').scrollIntoView()"
+                            class="btn-premium inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg font-semibold h-14 px-10 text-base">
+                            Obtenir mon estimation gratuite
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-arrow-right w-5 h-5">
+                                <path d="M5 12h14"></path>
+                                <path d="m12 5 7 7-7 7"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+
+
+
+
+            <!-- ======================================================= -->
+            <!--                      SECTION BREAK                      -->
+            <!-- ======================================================= -->
+
+            <section class="relative py-32 flex items-center justify-center overflow-hidden">
+
+                <!-- 1. IMAGE DE FOND -->
+                <div class="absolute inset-0 z-0">
+                    <div class="w-full h-full bg-fixed bg-cover bg-center"
+                        style="background-image: url('images/break-bg.webp');">
+                    </div>
+                </div>
+
+                <!-- 2. FILTRES D'AMBIANCE -->
+                <div class="absolute inset-0 z-0 bg-black/60"></div>
+                <div class="absolute inset-0 z-0 bg-gradient-to-t from-[#153e2e]/40 to-transparent mix-blend-overlay">
+                </div>
+
+                <!-- 3. CONTENU -->
+                <div class="container mx-auto px-4 relative z-10 text-center">
+
+                    <div class="relative max-w-4xl mx-auto reveal-up">
+
+                        <!-- GUILLEMET SVG (Remplacement du texte bizarre) -->
+                        <!-- Positionné pour être discret, derrière le titre -->
+                        <div class="flex justify-center mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24"
+                                fill="currentColor" class="text-white opacity-20">
+                                <path
+                                    d="M14.017 21L14.017 18C14.017 16.8954 13.1216 16 12.017 16H11.983C10.8784 16 9.983 16.8954 9.983 18L9.983 21H2V11H6.414L11.707 5.707C11.8945 5.51957 12.1488 5.41421 12.414 5.41421C12.6792 5.41421 12.9335 5.51957 13.121 5.707L18.414 11H22.828L22.828 21H14.017ZM12.414 8L16.414 12H19.983V19H15.983V17C15.983 14.7909 14.1921 13 11.983 13H12.017C9.80787 13 8.017 14.7909 8.017 17V19H4.017V12H7.586L11.586 8H12.414Z">
+                                </path>
+                            </svg>
+                        </div>
+
+                        <!-- CONTENU TEXTUEL -->
+                        <div class="relative z-10">
+                            <!-- Ligne verte plus fine et plus proche -->
+                            <div
+                                class="w-16 h-1 bg-primary mx-auto mb-8 rounded-full shadow-[0_0_15px_rgba(20,136,34,0.6)]">
+                            </div>
+
+                            <h2
+                                class="font-serif text-3xl md:text-4xl lg:text-5xl text-white font-medium mb-8 leading-snug drop-shadow-lg">
+                                Votre maison mérite ce qu'il y a de mieux.<br>
+                                <span class="text-white/90">Nous ne construisons pas seulement des toits,</span><br>
+                                <span class="text-white font-bold">nous protégeons votre avenir.</span>
+                            </h2>
+
+                            <!-- Signature minimaliste -->
+                            <div class="flex flex-col items-center gap-3 mt-10">
+                                <p class="text-primary font-bold tracking-[0.2em] uppercase text-xs text-shadow-sm">
+                                    L'engagement ApexRenov
+                                </p>
+
+                                <img src="images/logo-apexrenov.png" alt="Logo ApexRenov"
+                                    class="w-6 h-6 object-contain brightness-0 invert opacity-60">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+
+
+
+
+
+            <!-- ======================================================= -->
+            <!--   SECTION AVANTAGES (ICÔNES VERTES)                     -->
+            <!-- ======================================================= -->
+
+            <section id="avantages" class="py-24 relative overflow-hidden bg-[#F0F2F1]">
+
+                <!-- 1. TEXTURE -->
+                <div class="absolute inset-0 opacity-[0.05]"
+                    style="background-image: radial-gradient(#153e2e 1.5px, transparent 1.5px); background-size: 32px 32px;">
+                </div>
+
+                <!-- 2. VIGNETTAGE -->
+                <div
+                    class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_20%,rgba(0,0,0,0.03)_100%)] pointer-events-none">
+                </div>
+
+                <!-- 3. ACCENTS DE LUMIÈRE -->
+                <div
+                    class="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] pointer-events-none">
+                </div>
+                <div
+                    class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] pointer-events-none">
+                </div>
+
+                <div class="container mx-auto px-4 relative z-10">
+
+                    <!-- En-tête -->
+                    <div class="text-center max-w-2xl mx-auto mb-16 reveal-up">
+                        <span
+                            class="text-primary font-bold text-sm uppercase tracking-widest border-b-2 border-primary/20 pb-1">
+                            L'Excellence ApexRenov
+                        </span>
+                        <h2 class="font-serif text-3xl md:text-4xl text-[#153e2e] mt-4 mb-4">
+                            L'Exigence à chaque étape
+                        </h2>
+                        <p class="text-gray-600 text-lg leading-relaxed">
+                            Plus qu'un chantier, un projet de vie. Nous sécurisons votre investissement par notre
+                            rigueur technique et administrative.
+                        </p>
+                    </div>
+
+                    <!-- Grille -->
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                        <!-- CARTE 1 -->
+                        <div
+                            class="group relative bg-white h-full rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden reveal-up">
+
+                            <!-- FOND DARK HOVER -->
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-[#153e2e] to-[#0a1f16] opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out z-0">
+                            </div>
+
+                            <!-- TEXTURE ARCHITECTE HOVER -->
+                            <div class="absolute inset-0 opacity-0 group-hover:opacity-[0.04] transition-opacity duration-700 z-0 scale-125 blur-[0.5px]"
+                                style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+                                        -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 80%);
+                                        mask-image: linear-gradient(to bottom, black 0%, transparent 80%);">
+                            </div>
+
+                            <!-- SPOT LUMINEUX -->
+                            <div
+                                class="absolute -top-20 -right-20 w-40 h-40 bg-primary rounded-full blur-[80px] opacity-0 group-hover:opacity-40 transition-opacity duration-500 z-0">
+                            </div>
+
+                            <!-- CONTENU -->
+                            <div class="relative z-10 flex flex-col h-full">
+                                <div class="flex justify-between items-start mb-6">
+                                    <!-- MODIFICATION ICI : bg-primary/10 et text-primary -->
+                                    <div
+                                        class="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center transition-all duration-500 group-hover:bg-white/10 group-hover:border-white/20 group-hover:scale-110">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="text-primary transition-colors duration-500 group-hover:text-white">
+                                            <circle cx="12" cy="8" r="7"></circle>
+                                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                                        </svg>
+                                    </div>
+                                    <span
+                                        class="text-4xl font-serif font-bold text-gray-100 group-hover:text-white/5 transition-colors duration-500">01</span>
+                                </div>
+
+                                <h3
+                                    class="font-serif text-xl font-bold text-[#153e2e] mb-3 group-hover:text-white transition-colors duration-300 transform group-hover:translate-x-1">
+                                    Certification RGE
+                                </h3>
+                                <p
+                                    class="text-gray-500 text-sm leading-relaxed group-hover:text-white/80 transition-colors duration-300">
+                                    Notre label est la clé obligatoire pour débloquer <strong>MaPrimeRénov'</strong> et
+                                    l'Éco-PTZ. Une garantie de compétence reconnue par l'État.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- CARTE 2 -->
+                        <div
+                            class="group relative bg-white h-full rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden reveal-up delay-100">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-[#153e2e] to-[#0a1f16] opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out z-0">
+                            </div>
+
+                            <div class="absolute inset-0 opacity-0 group-hover:opacity-[0.04] transition-opacity duration-700 z-0 scale-125 blur-[0.5px]"
+                                style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+                                        -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 80%);
+                                        mask-image: linear-gradient(to bottom, black 0%, transparent 80%);">
+                            </div>
+
+                            <div
+                                class="absolute -top-20 -right-20 w-40 h-40 bg-primary rounded-full blur-[80px] opacity-0 group-hover:opacity-40 transition-opacity duration-500 z-0">
+                            </div>
+
+                            <div class="relative z-10 flex flex-col h-full">
+                                <div class="flex justify-between items-start mb-6">
+                                    <!-- MODIFICATION ICI : bg-primary/10 et text-primary -->
+                                    <div
+                                        class="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center transition-all duration-500 group-hover:bg-white/10 group-hover:border-white/20 group-hover:scale-110">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="text-primary transition-colors duration-500 group-hover:text-white">
+                                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                                        </svg>
+                                    </div>
+                                    <span
+                                        class="text-4xl font-serif font-bold text-gray-100 group-hover:text-white/5 transition-colors duration-500">02</span>
+                                </div>
+                                <h3
+                                    class="font-serif text-xl font-bold text-[#153e2e] mb-3 group-hover:text-white transition-colors duration-300 transform group-hover:translate-x-1">
+                                    Expertise Technique
+                                </h3>
+                                <p
+                                    class="text-gray-500 text-sm leading-relaxed group-hover:text-white/80 transition-colors duration-300">
+                                    Nos équipes sont formées en continu aux nouvelles normes thermiques. Pas de
+                                    sous-traitance : nous maîtrisons votre chantier de A à Z.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- CARTE 3 -->
+                        <div
+                            class="group relative bg-white h-full rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden reveal-up delay-200">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-[#153e2e] to-[#0a1f16] opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out z-0">
+                            </div>
+
+                            <div class="absolute inset-0 opacity-0 group-hover:opacity-[0.04] transition-opacity duration-700 z-0 scale-125 blur-[0.5px]"
+                                style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+                                        -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 80%);
+                                        mask-image: linear-gradient(to bottom, black 0%, transparent 80%);">
+                            </div>
+
+                            <div
+                                class="absolute -top-20 -right-20 w-40 h-40 bg-primary rounded-full blur-[80px] opacity-0 group-hover:opacity-40 transition-opacity duration-500 z-0">
+                            </div>
+
+                            <div class="relative z-10 flex flex-col h-full">
+                                <div class="flex justify-between items-start mb-6">
+                                    <!-- MODIFICATION ICI : bg-primary/10 et text-primary -->
+                                    <div
+                                        class="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center transition-all duration-500 group-hover:bg-white/10 group-hover:border-white/20 group-hover:scale-110">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="text-primary transition-colors duration-500 group-hover:text-white">
+                                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                            <polyline points="14 2 14 8 20 8"></polyline>
+                                            <line x1="16" x2="8" y1="13" y2="13"></line>
+                                            <line x1="16" x2="8" y1="17" y2="17"></line>
+                                        </svg>
+                                    </div>
+                                    <span
+                                        class="text-4xl font-serif font-bold text-gray-100 group-hover:text-white/5 transition-colors duration-500">03</span>
+                                </div>
+                                <h3
+                                    class="font-serif text-xl font-bold text-[#153e2e] mb-3 group-hover:text-white transition-colors duration-300 transform group-hover:translate-x-1">
+                                    Gestion Administrative
+                                </h3>
+                                <p
+                                    class="text-gray-500 text-sm leading-relaxed group-hover:text-white/80 transition-colors duration-300">
+                                    Nous nous occupons de tout. De la demande préalable de travaux au montage de vos
+                                    dossiers de subventions.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- CARTE 4 -->
+                        <div
+                            class="group relative bg-white h-full rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden reveal-up">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-[#153e2e] to-[#0a1f16] opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out z-0">
+                            </div>
+
+                            <div class="absolute inset-0 opacity-0 group-hover:opacity-[0.04] transition-opacity duration-700 z-0 scale-125 blur-[0.5px]"
+                                style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+                                        -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 80%);
+                                        mask-image: linear-gradient(to bottom, black 0%, transparent 80%);">
+                            </div>
+
+                            <div
+                                class="absolute -top-20 -right-20 w-40 h-40 bg-primary rounded-full blur-[80px] opacity-0 group-hover:opacity-40 transition-opacity duration-500 z-0">
+                            </div>
+
+                            <div class="relative z-10 flex flex-col h-full">
+                                <div class="flex justify-between items-start mb-6">
+                                    <!-- MODIFICATION ICI : bg-primary/10 et text-primary -->
+                                    <div
+                                        class="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center transition-all duration-500 group-hover:bg-white/10 group-hover:border-white/20 group-hover:scale-110">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="text-primary transition-colors duration-500 group-hover:text-white">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <polyline points="12 6 12 12 16 14"></polyline>
+                                        </svg>
+                                    </div>
+                                    <span
+                                        class="text-4xl font-serif font-bold text-gray-100 group-hover:text-white/5 transition-colors duration-500">04</span>
+                                </div>
+                                <h3
+                                    class="font-serif text-xl font-bold text-[#153e2e] mb-3 group-hover:text-white transition-colors duration-300 transform group-hover:translate-x-1">
+                                    Engagement Délais
+                                </h3>
+                                <p
+                                    class="text-gray-500 text-sm leading-relaxed group-hover:text-white/80 transition-colors duration-300">
+                                    Un planning précis et respecté. Nous nous engageons contractuellement sur les dates
+                                    d'intervention pour votre sérénité.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- CARTE 5 -->
+                        <div
+                            class="group relative bg-white h-full rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden reveal-up delay-100">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-[#153e2e] to-[#0a1f16] opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out z-0">
+                            </div>
+
+                            <div class="absolute inset-0 opacity-0 group-hover:opacity-[0.04] transition-opacity duration-700 z-0 scale-125 blur-[0.5px]"
+                                style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+                                        -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 80%);
+                                        mask-image: linear-gradient(to bottom, black 0%, transparent 80%);">
+                            </div>
+
+                            <div
+                                class="absolute -top-20 -right-20 w-40 h-40 bg-primary rounded-full blur-[80px] opacity-0 group-hover:opacity-40 transition-opacity duration-500 z-0">
+                            </div>
+
+                            <div class="relative z-10 flex flex-col h-full">
+                                <div class="flex justify-between items-start mb-6">
+                                    <!-- MODIFICATION ICI : bg-primary/10 et text-primary -->
+                                    <div
+                                        class="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center transition-all duration-500 group-hover:bg-white/10 group-hover:border-white/20 group-hover:scale-110">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="text-primary transition-colors duration-500 group-hover:text-white">
+                                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                        </svg>
+                                    </div>
+                                    <span
+                                        class="text-4xl font-serif font-bold text-gray-100 group-hover:text-white/5 transition-colors duration-500">05</span>
+                                </div>
+                                <h3
+                                    class="font-serif text-xl font-bold text-[#153e2e] mb-3 group-hover:text-white transition-colors duration-300 transform group-hover:translate-x-1">
+                                    Garantie Décennale
+                                </h3>
+                                <p
+                                    class="text-gray-500 text-sm leading-relaxed group-hover:text-white/80 transition-colors duration-300">
+                                    Nous sommes assurés chez les leaders du marché. Votre toit et votre isolation sont
+                                    couverts pendant 10 ans, quoi qu'il arrive.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- CARTE 6 -->
+                        <div
+                            class="group relative bg-white h-full rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden reveal-up delay-200">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-[#153e2e] to-[#0a1f16] opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out z-0">
+                            </div>
+
+                            <div class="absolute inset-0 opacity-0 group-hover:opacity-[0.04] transition-opacity duration-700 z-0 scale-125 blur-[0.5px]"
+                                style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+                                        -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 80%);
+                                        mask-image: linear-gradient(to bottom, black 0%, transparent 80%);">
+                            </div>
+
+                            <div
+                                class="absolute -top-20 -right-20 w-40 h-40 bg-primary rounded-full blur-[80px] opacity-0 group-hover:opacity-40 transition-opacity duration-500 z-0">
+                            </div>
+
+                            <div class="relative z-10 flex flex-col h-full">
+                                <div class="flex justify-between items-start mb-6">
+                                    <!-- MODIFICATION ICI : bg-primary/10 et text-primary -->
+                                    <div
+                                        class="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center transition-all duration-500 group-hover:bg-white/10 group-hover:border-white/20 group-hover:scale-110">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="text-primary transition-colors duration-500 group-hover:text-white">
+                                            <path
+                                                d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <span
+                                        class="text-4xl font-serif font-bold text-gray-100 group-hover:text-white/5 transition-colors duration-500">06</span>
+                                </div>
+                                <h3
+                                    class="font-serif text-xl font-bold text-[#153e2e] mb-3 group-hover:text-white transition-colors duration-300 transform group-hover:translate-x-1">
+                                    Matériaux Premium
+                                </h3>
+                                <p
+                                    class="text-gray-500 text-sm leading-relaxed group-hover:text-white/80 transition-colors duration-300">
+                                    Partenaires officiels VELUX, ISOVER et ZINC ASTURIENNE. Nous n'installons que ce qui
+                                    se fait de mieux pour une durabilité maximale.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+
+
+
+
+            <!-- ======================================================= -->
+            <!--                     SECTION STATS                       -->
+            <!-- ======================================================= -->
+
+            <section id="stats-section" class="py-24 relative overflow-hidden">
+
+                <!-- 1. IMAGE DE FOND (Représentant le métier) -->
+                <!-- Conseil : Utilisez une photo de texture (Ardoises noires, Tuiles modernes ou Panneaux solaires en gros plan) -->
+                <div class="absolute inset-0 z-0">
+                    <img src="images/stats-bg.webp" alt="Texture toiture et solaire"
+                        class="w-full h-full object-cover opacity-40">
+                </div>
+
+                <!-- 2. FILTRE PREMIUM (Dégradé sombre pour la lisibilité) -->
+                <!-- Ce dégradé fusionne l'image avec votre couleur verte sombre (foreground) -->
+                <div
+                    class="absolute inset-0 z-0 bg-gradient-to-r from-foreground/95 via-foreground/90 to-foreground/85">
+                </div>
+
+                <div class="container mx-auto px-4 relative z-10">
+                    <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 text-center divide-x divide-white/10">
+
+                        <div class="reveal-up">
+                            <p class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2">
+                                +<span class="counter" data-target="20">0</span>
+                            </p>
+                            <p class="text-primary font-medium tracking-wide uppercase text-sm">Années d'Expérience</p>
+                        </div>
+
+                        <div class="reveal-up delay-100">
+                            <p class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2">
+                                <span class="counter" data-target="2500">0</span>
+                            </p>
+                            <p class="text-primary font-medium tracking-wide uppercase text-sm">Chantiers Réalisés</p>
+                        </div>
+
+                        <div class="reveal-up delay-200">
+                            <p class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2">
+                                <span class="counter" data-target="98">0</span>%
+                            </p>
+                            <p class="text-primary font-medium tracking-wide uppercase text-sm">Clients Satisfaits</p>
+                        </div>
+
+                        <div class="reveal-up delay-300">
+                            <p class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2">
+                                -<span class="counter" data-target="40">0</span>%
+                            </p>
+                            <p class="text-primary font-medium tracking-wide uppercase text-sm">Économies d'Énergie</p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+
+
+
+            <!-- ======================================================= -->
+            <!--                  SECTION BLOG PREVIEW                   -->
+            <!-- ======================================================= -->
+
+            <section id="blog-preview" class="py-24 bg-white relative overflow-hidden">
+
+                <!-- Décoration de fond (Points subtils) -->
+                <div class="absolute inset-0 opacity-[0.03]"
+                    style="background-image: radial-gradient(#153e2e 1.5px, transparent 1.5px); background-size: 32px 32px;">
+                </div>
+
+                <div class="container mx-auto px-4 relative z-10">
+
+                    <!-- En-tête de section -->
+                    <div class="text-center max-w-2xl mx-auto mb-16 reveal-up">
+                        <span class="text-primary font-bold text-sm uppercase tracking-widest border-b-2 border-primary/20 pb-1">
+                            Le Mag de l'Habitat
+                        </span>
+                        <h2 class="font-serif text-3xl md:text-4xl text-[#153e2e] mt-4 mb-4">
+                            Conseils d'Experts & Actualités
+                        </h2>
+                        <p class="text-gray-600 text-lg">
+                            Retrouvez nos derniers guides pour comprendre la rénovation énergétique et faire les bons choix pour votre maison.
+                        </p>
+                    </div>
+
+                    <!-- Grille des articles (3 derniers articles) -->
+                    <div class="grid md:grid-cols-3 gap-8">
+
+                        <!-- Article 1 -->
+                        <article class="group bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 reveal-up">
+                            <a href="articles/article-isolation-priorite.html" class="block h-56 overflow-hidden relative">
+                                <img src="images/service-isolation.webp" alt="Isolation combles" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
+                                <div class="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">Isolation</div>
+                            </a>
+                            <div class="p-6">
+                                <div class="text-gray-400 text-xs mb-3 flex items-center gap-2">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
+                                    15 Janvier 2025
+                                </div>
+                                <h3 class="font-serif text-xl font-bold text-[#153e2e] mb-3 group-hover:text-primary transition-colors line-clamp-2">
+                                    <a href="articles/article-isolation-priorite.html">Pourquoi l'isolation des combles doit être votre priorité n°1 ?</a>
+                                </h3>
+                                <p class="text-gray-600 text-sm line-clamp-3 mb-6 leading-relaxed">
+                                    Avant de changer votre chauffage, pensez à l'isolation. C'est 30% de pertes de chaleur en moins et un confort immédiat.
+                                </p>
+                                <a href="articles/article-isolation-priorite.html" class="inline-flex items-center text-primary font-bold text-sm hover:text-accent transition-colors group/link">
+                                    Lire l'article 
+                                    <svg class="w-4 h-4 ml-1 transform transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- Article 2 -->
+                        <article class="group bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 reveal-up delay-100">
+                            <a href="articles/article-panneaux-solaires.html" class="block h-56 overflow-hidden relative">
+                                <img src="images/service-solaire.webp" alt="Rentabilité Panneaux Solaires" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
+                                <div class="absolute top-4 left-4 bg-[#Eab308] text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">Solaire</div>
+                            </a>
+                            <div class="p-6">
+                                <div class="text-gray-400 text-xs mb-3 flex items-center gap-2">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
+                                    20 Janvier 2025
+                                </div>
+                                <h3 class="font-serif text-xl font-bold text-[#153e2e] mb-3 group-hover:text-primary transition-colors line-clamp-2">
+                                    <a href="articles/article-panneaux-solaires.html">Panneaux solaires en 2026 : Est-ce (toujours) rentable ?</a>
+                                </h3>
+                                <p class="text-gray-600 text-sm line-clamp-3 mb-6 leading-relaxed">
+                                    Avec la hausse des prix de l'électricité, l'autoconsommation devient incontournable. Analyse du retour sur investissement.
+                                </p>
+                                <a href="articles/article-panneaux-solaires.html" class="inline-flex items-center text-primary font-bold text-sm hover:text-accent transition-colors group/link">
+                                    Lire l'article 
+                                    <svg class="w-4 h-4 ml-1 transform transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- Article 3 -->
+                        <article class="group bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 reveal-up delay-200">
+                            <a href="articles/article-entretien-toiture.html" class="block h-56 overflow-hidden relative">
+                                <img src="images/service-couverture.webp" alt="Entretien Toiture" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
+                                <div class="absolute top-4 left-4 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">Entretien</div>
+                            </a>
+                            <div class="p-6">
+                                <div class="text-gray-400 text-xs mb-3 flex items-center gap-2">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
+                                    02 Février 2025
+                                </div>
+                                <h3 class="font-serif text-xl font-bold text-[#153e2e] mb-3 group-hover:text-primary transition-colors line-clamp-2">
+                                    <a href="articles/article-entretien-toiture.html">Démoussage de toiture : Pourquoi attendre la fuite est une erreur ?</a>
+                                </h3>
+                                <p class="text-gray-600 text-sm line-clamp-3 mb-6 leading-relaxed">
+                                    Découvrez les dangers de la mousse, les risques du Kärcher et les avantages du traitement hydrofuge professionnel.
+                                </p>
+                                <a href="articles/article-entretien-toiture.html" class="inline-flex items-center text-primary font-bold text-sm hover:text-accent transition-colors group/link">
+                                    Lire l'article 
+                                    <svg class="w-4 h-4 ml-1 transform transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                                </a>
+                            </div>
+                        </article>
+
+                    </div>
+
+                    <!-- Bouton Voir Tout -->
+                    <div class="text-center mt-12 reveal-up delay-300">
+                        <a href="blog.html" class="btn-glass !text-[#153e2e] !border-[#153e2e]/20 hover:!bg-[#153e2e]/5 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg font-semibold h-12 px-8 text-base transition-all">
+                            Voir tous nos articles
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                        </a>
+                    </div>
+
+                </div>
+            </section>
+
+
+
+            
+
+
+
+            <!-- ======================================================= -->
+            <!--             SECTION FAQ (Cartes Dark / Fond Light)      -->
+            <!-- ======================================================= -->
+
+            <section id="faq" class="py-24 bg-secondary relative overflow-hidden">
+
+                <!-- Élément décoratif de fond (Motif points subtil) -->
+                <div class="absolute inset-0 opacity-[0.03]"
+                    style="background-image: radial-gradient(#148822 1px, transparent 1px); background-size: 32px 32px;">
+                </div>
+
+                <div class="container mx-auto px-4 relative z-10">
+                    <!-- En-tête de section -->
+                    <div class="text-center max-w-3xl mx-auto mb-16 reveal-up">
+                        <span class="text-accent font-semibold text-sm uppercase tracking-wider">Questions
+                            Fréquentes</span>
+                        <h2 class="font-serif text-3xl md:text-4xl text-foreground mt-3 mb-4">Vos Interrogations</h2>
+                        <p class="text-muted-foreground text-lg">
+                            Les réponses aux questions essentielles. Pour plus de détails, consultez notre FAQ complète.
+                        </p>
+                    </div>
+
+
+
+                    <!-- GRILLE 2 COLONNES (HTML Mis à jour) -->
+                    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-6 reveal-up delay-100">
+
+                        <!-- Question 1 -->
+                        <details
+                            class="group bg-[#153e2e] border border-foreground/5 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 open:ring-2 open:ring-primary/50 h-fit">
+                            <summary
+                                class="flex items-center justify-between p-6 cursor-pointer select-none text-white outline-none">
+                                <span class="font-serif text-lg font-medium pr-4">Vos devis sont-ils gratuits et sans
+                                    engagement ?</span>
+                                <div
+                                    class="relative w-8 h-8 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 transition-colors duration-300 group-hover:bg-primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="text-white">
+                                        <path d="M5 12h14" />
+                                        <path d="M12 5v14" />
+                                    </svg>
+                                </div>
+                            </summary>
+                            <!-- Wrapper animation -->
+                            <div class="faq-content h-0">
+                                <!-- Wrapper padding & slide -->
+                                <div
+                                    class="faq-inner text-white/70 text-base leading-relaxed border-t border-white/10 pt-4">
+                                    <p>Absolument. Tous nos devis sont 100% gratuits et sans engagement. Nous nous
+                                        déplaçons chez vous pour évaluer les travaux et vous recevez une proposition
+                                        détaillée sous 48h.</p>
+                                </div>
+                            </div>
+                        </details>
+
+                        <!-- Question 2 -->
+                        <details
+                            class="group bg-[#153e2e] border border-foreground/5 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 open:ring-2 open:ring-primary/50 h-fit">
+                            <summary
+                                class="flex items-center justify-between p-6 cursor-pointer select-none text-white outline-none">
+                                <span class="font-serif text-lg font-medium pr-4">À quelles aides financières ai-je
+                                    droit ?</span>
+                                <div
+                                    class="relative w-8 h-8 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 transition-colors duration-300 group-hover:bg-primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="text-white">
+                                        <path d="M5 12h14" />
+                                        <path d="M12 5v14" />
+                                    </svg>
+                                </div>
+                            </summary>
+                            <div class="faq-content h-0">
+                                <div
+                                    class="faq-inner text-white/70 text-base leading-relaxed border-t border-white/10 pt-4">
+                                    <p>Selon vos revenus et la nature des travaux, vous pouvez prétendre à
+                                        MaPrimeRénov', aux primes CEE, à l'Éco-PTZ ou à la TVA réduite à 5,5%. Notre
+                                        équipe administrative gère le montage de vos dossiers d'aides.</p>
+                                </div>
+                            </div>
+                        </details>
+
+                        <!-- Question 3 -->
+                        <details
+                            class="group bg-[#153e2e] border border-foreground/5 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 open:ring-2 open:ring-primary/50 h-fit">
+                            <summary
+                                class="flex items-center justify-between p-6 cursor-pointer select-none text-white outline-none">
+                                <span class="font-serif text-lg font-medium pr-4">Que signifie la certification RGE
+                                    ?</span>
+                                <div
+                                    class="relative w-8 h-8 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 transition-colors duration-300 group-hover:bg-primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="text-white">
+                                        <path d="M5 12h14" />
+                                        <path d="M12 5v14" />
+                                    </svg>
+                                </div>
+                            </summary>
+                            <div class="faq-content h-0">
+                                <div
+                                    class="faq-inner text-white/70 text-base leading-relaxed border-t border-white/10 pt-4">
+                                    <p>Le label RGE (Reconnu Garant de l'Environnement) est un gage de qualité délivré
+                                        aux professionnels du bâtiment. Il est <strong>obligatoire</strong> de faire
+                                        appel à un artisan RGE comme ApexRenov pour bénéficier des aides de l'État.</p>
+                                </div>
+                            </div>
+                        </details>
+
+                        <!-- Question 4 -->
+                        <details
+                            class="group bg-[#153e2e] border border-foreground/5 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 open:ring-2 open:ring-primary/50 h-fit">
+                            <summary
+                                class="flex items-center justify-between p-6 cursor-pointer select-none text-white outline-none">
+                                <span class="font-serif text-lg font-medium pr-4">Quelle est la durée des travaux
+                                    ?</span>
+                                <div
+                                    class="relative w-8 h-8 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 transition-colors duration-300 group-hover:bg-primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="text-white">
+                                        <path d="M5 12h14" />
+                                        <path d="M12 5v14" />
+                                    </svg>
+                                </div>
+                            </summary>
+                            <div class="faq-content h-0">
+                                <div
+                                    class="faq-inner text-white/70 text-base leading-relaxed border-t border-white/10 pt-4">
+                                    <p>La durée dépend du projet. Une isolation de combles peut prendre 1 journée,
+                                        tandis qu'une rénovation complète de toiture peut durer 1 à 2 semaines. Nous
+                                        vous communiquons un planning précis avant le début du chantier.</p>
+                                </div>
+                            </div>
+                        </details>
+
+                    </div>
+
+
+
+                    <div class="text-center mt-12 reveal-up delay-200">
+                        <a href="faq.html"
+                            class="inline-flex items-center justify-center gap-2 text-primary font-semibold hover:text-accent transition-colors group">
+                            Voir toutes les questions
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-arrow-right w-4 h-4 transition-transform group-hover:translate-x-1">
+                                <path d="M5 12h14" />
+                                <path d="m12 5 7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+
+
+
+
+            <!-- ======================================================= -->
+            <!--                      SECTION CONTACT                    -->
+            <!-- ======================================================= -->
+
+            <section id="contact" class="relative py-24 bg-foreground overflow-hidden">
+
+                <!-- IMAGE DE FOND & TEXTURE -->
+                <div class="absolute inset-0 z-0">
+                    <!-- 1. L'image : On passe l'opacité à 60% (au lieu de 20%) -->
+                    <img src="images/contact-texture.webp" alt="Texture de fond"
+                        class="w-full h-full object-cover opacity-60">
+
+                    <!-- 2. Le filtre : On réduit l'intensité.
+             - Gauche (sous le texte) : 90% d'opacité (pour lire le blanc)
+             - Milieu : 75%
+             - Droite (sous le formulaire) : 60% (on voit mieux l'image ici) -->
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-foreground/90 via-foreground/75 to-foreground/60">
+                    </div>
+                </div>
+
+                <!-- Élément décoratif (Cercle lumineux subtil) -->
+                <div
+                    class="absolute top-0 left-0 -ml-20 -mt-20 w-96 h-96 bg-primary/20 rounded-full blur-3xl z-0 pointer-events-none">
+                </div>
+
+                <div class="container mx-auto px-4 relative z-10">
+                    <div class="grid lg:grid-cols-2 gap-16 items-start">
+
+                        <!-- Colonne Info Contact (Texte passé en blanc) -->
+                        <div class="reveal-up">
+                            <span
+                                class="text-primary font-bold text-sm uppercase tracking-widest border-b-2 border-primary/20 pb-1">Contactez-nous</span>
+                            <h2 class="font-serif text-3xl md:text-4xl text-white mt-4 mb-6">Parlons de Votre Projet
+                            </h2>
+                            <p class="text-white/70 text-lg mb-10 leading-relaxed">
+                                Vous avez un projet de rénovation ? Profitez de notre expertise RGE.
+                                Devis gratuit, réponse sous 48h et accompagnement pour vos aides financières.
+                            </p>
+
+                            <!-- Liste coordonnées -->
+                            <div class="space-y-8 mb-10">
+
+                                <!-- Téléphone -->
+                                <a href="tel:+33123456789" class="flex items-center gap-5 group">
+                                    <div
+                                        class="w-14 h-14 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm flex items-center justify-center group-hover:bg-primary group-hover:border-primary transition-all duration-300 shadow-lg">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-phone w-6 h-6 text-white group-hover:scale-110 transition-transform">
+                                            <path
+                                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs font-semibold text-primary uppercase tracking-wider mb-1">
+                                            Appelez-nous</p>
+                                        <p
+                                            class="text-xl font-serif text-white group-hover:text-primary transition-colors">
+                                            07 54 82 66 39</p>
+                                    </div>
+                                </a>
+
+                                <!-- Email -->
+                                <a href="mailto:ldelavictoire@gmail.com" class="flex items-center gap-5 group">
+                                    <div
+                                        class="w-14 h-14 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm flex items-center justify-center group-hover:bg-primary group-hover:border-primary transition-all duration-300 shadow-lg">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-mail w-6 h-6 text-white group-hover:scale-110 transition-transform">
+                                            <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs font-semibold text-primary uppercase tracking-wider mb-1">
+                                            Envoyez un email</p>
+                                        <p
+                                            class="text-lg font-serif text-white group-hover:text-primary transition-colors">
+                                            ldelavictoire@gmail.com</p>
+                                    </div>
+                                </a>
+
+                                <!-- Adresse -->
+                                <div class="flex items-center gap-5">
+                                    <div
+                                        class="w-14 h-14 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm flex items-center justify-center shadow-lg">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-map-pin w-6 h-6 text-white">
+                                            <path
+                                                d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
+                                            </path>
+                                            <circle cx="12" cy="10" r="3"></circle>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs font-semibold text-primary uppercase tracking-wider mb-1">
+                                            Notre Agence</p>
+                                        <p class="text-lg font-serif text-white">27 rue Armand Carrel, 75019 Paris</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Map Design -->
+                            <div
+                                class="rounded-2xl overflow-hidden h-64 lg:h-[320px] w-full bg-white/5 border border-white/10 relative shadow-2xl">
+
+                                <!-- MODIFICATION : Suppression des classes grayscale, opacity et hover pour avoir la couleur tout le temps -->
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d674929.8152548773!2d1.8683103445305193!3d48.65349479133804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2zw45sZS1kZS1GcmFuY2U!5e0!3m2!1sfr!2sfr!4v1709214781452!5m2!1sfr!2sfr"
+                                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade" class="w-full h-full">
+                                </iframe>
+                            </div>
+
+                        </div>
+
+                        <!-- Colonne Formulaire (Carte blanche flottante) -->
+                        <!-- L'ajout de shadow-2xl et border-white/10 renforce l'effet de relief -->
+                        <div
+                            class="bg-white rounded-3xl p-8 md:p-10 shadow-2xl reveal-up delay-200 border border-white/10 relative">
+
+                            <!-- Petit triangle décoratif en haut à droite de la carte -->
+                            <div class="absolute top-0 right-0 w-20 h-20 bg-primary/10 rounded-bl-full -mr-0 -mt-0">
+                            </div>
+
+                            <h3 class="font-serif text-2xl text-gray-900 mb-6 relative z-10">Demande de Devis Gratuit
+                            </h3>
+
+                            <form class="space-y-5 relative z-10"
+                                onsubmit="event.preventDefault(); alert('Merci ! Votre demande a été reçue.');">
+                                <div class="grid sm:grid-cols-2 gap-5">
+                                    <div>
+                                        <label for="firstName"
+                                            class="block text-sm font-bold text-gray-700 mb-2">Prénom</label>
+                                        <input
+                                            class="flex h-12 w-full rounded-lg border border-gray-200 bg-gray-50 px-4 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus:bg-white transition-colors"
+                                            id="firstName" placeholder="Jean" required="">
+                                    </div>
+                                    <div>
+                                        <label for="lastName"
+                                            class="block text-sm font-bold text-gray-700 mb-2">Nom</label>
+                                        <input
+                                            class="flex h-12 w-full rounded-lg border border-gray-200 bg-gray-50 px-4 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus:bg-white transition-colors"
+                                            id="lastName" placeholder="Dupont" required="">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-sm font-bold text-gray-700 mb-2">Email</label>
+                                    <input type="email"
+                                        class="flex h-12 w-full rounded-lg border border-gray-200 bg-gray-50 px-4 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus:bg-white transition-colors"
+                                        id="email" placeholder="jean.dupont@email.com" required="">
+                                </div>
+                                <div>
+                                    <label for="phone"
+                                        class="block text-sm font-bold text-gray-700 mb-2">Téléphone</label>
+                                    <input type="tel"
+                                        class="flex h-12 w-full rounded-lg border border-gray-200 bg-gray-50 px-4 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus:bg-white transition-colors"
+                                        id="phone" placeholder="06 12 34 56 78" required="">
+                                </div>
+                                <div>
+                                    <label for="service" class="block text-sm font-bold text-gray-700 mb-2">Type de
+                                        Projet</label>
+                                    <select id="service"
+                                        class="flex h-12 w-full rounded-lg border border-gray-200 bg-gray-50 px-4 py-2 text-base ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus:bg-white transition-colors"
+                                        required="">
+                                        <option value="">Sélectionnez un service</option>
+                                        <option value="couverture">Couverture & Toiture</option>
+                                        <option value="isolation">Isolation Thermique</option>
+                                        <option value="solaire">Panneaux Solaires</option>
+                                        <option value="etancheite">Étanchéité</option>
+                                        <option value="autre">Autre</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="message" class="block text-sm font-bold text-gray-700 mb-2">Décrivez
+                                        votre projet</label>
+                                    <textarea
+                                        class="flex min-h-[100px] w-full rounded-lg border border-gray-200 bg-gray-50 px-4 py-3 text-base ring-offset-background placeholder:text-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus:bg-white transition-colors"
+                                        id="message" placeholder="Détails, surface approximative, contraintes..."
+                                        rows="4" required=""></textarea>
+                                </div>
+
+                                <div class="flex items-start gap-3 mt-4 mb-4">
+                                    <input type="checkbox" id="consent" required
+                                        class="mt-1 h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary">
+                                    <label for="consent" class="text-xs text-gray-500 leading-tight">
+                                        J'accepte que les informations saisies soient exploitées pour ma demande de
+                                        devis. <a href="privacy.html" class="text-primary hover:underline">Politique de
+                                            confidentialité</a>.
+                                    </label>
+                                </div>
+
+                                <button
+                                    class="btn-submit inline-flex items-center justify-center gap-2 whitespace-nowrap text-white font-bold h-14 rounded-xl px-10 text-base w-full"
+                                    type="submit">
+                                    Envoyer ma Demande
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-send w-5 h-5">
+                                        <path
+                                            d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z">
+                                        </path>
+                                        <path d="m21.854 2.147-10.94 10.939"></path>
+                                    </svg>
+                                </button>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+        </main>
+
+
+
+
+
+
+        <!-- ======================================================= -->
+        <!--                      FOOTER                            -->
+        <!-- ======================================================= -->
+
+        <footer class="bg-foreground text-white/90">
+            <div class="container mx-auto px-4 py-16">
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+                    <div>
+                        <div class="flex items-center gap-3 mb-6">
+
+
+                            <!-- Nouveau code avec l'image -->
+                            <img src="images/logo-apexrenov.png" alt="Logo ApexRenov"
+                                class="w-10 h-10 rounded-lg object-contain">
+
+
+                            <div class="flex flex-col">
+                                <span
+                                    class="font-serif font-semibold text-lg leading-tight text-[#148822]">ApexRenov</span>
+                                <span class="text-xs text-white/60">Couverture & Performance Énergétique</span>
+                            </div>
+                        </div>
+                        <p class="text-white/70 text-sm leading-relaxed mb-6">Spécialistes de la couverture et de la
+                            rénovation énergétique depuis plus de 20 ans. Qualité, expertise et engagement écologique.
+                        </p>
+                        <div class="flex gap-4">
+                            <a href="#"
+                                class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-accent transition-colors"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-facebook w-5 h-5">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                                </svg></a>
+                            <a href="#"
+                                class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-accent transition-colors"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-instagram w-5 h-5">
+                                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                                </svg></a>
+                            <a href="#"
+                                class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-accent transition-colors"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-linkedin w-5 h-5">
+                                    <path
+                                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                    </path>
+                                    <rect width="4" height="12" x="2" y="9"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg></a>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-serif text-lg mb-6">Nos Services</h4>
+                        <ul class="space-y-3">
+                            <li><a href="#services"
+                                    class="text-white/70 hover:text-accent transition-colors text-sm">Couverture &
+                                    Toiture</a></li>
+                            <li><a href="#services"
+                                    class="text-white/70 hover:text-accent transition-colors text-sm">Isolation
+                                    Thermique</a></li>
+                            <li><a href="#services"
+                                    class="text-white/70 hover:text-accent transition-colors text-sm">Panneaux
+                                    Solaires</a></li>
+                            <li><a href="#services"
+                                    class="text-white/70 hover:text-accent transition-colors text-sm">Étanchéité</a>
+                            </li>
+                            <li><a href="#services"
+                                    class="text-white/70 hover:text-accent transition-colors text-sm">Charpente</a></li>
+                            <li><a href="#services"
+                                    class="text-white/70 hover:text-accent transition-colors text-sm">Zinguerie</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-serif text-lg mb-6">Liens Utiles</h4>
+                        <ul class="space-y-3">
+                            <li><a href="#" class="text-white/70 hover:text-accent transition-colors text-sm">Nos
+                                    Réalisations</a></li>
+                            <li><a href="#" class="text-white/70 hover:text-accent transition-colors text-sm">Aides &
+                                    Financements</a></li>
+                            <li><a href="faq.html"
+                                    class="text-white/70 hover:text-accent transition-colors text-sm">FAQ</a>
+                            </li>
+                            <li><a href="legal.html"
+                                    class="text-white/70 hover:text-accent transition-colors text-sm">Mentions
+                                    Légales</a></li>
+                            <li><a href="privacy.html"
+                                    class="text-white/70 hover:text-accent transition-colors text-sm">Politique
+                                    de Confidentialité</a></li>
+                            <li><button
+                                    onclick="localStorage.removeItem('ecoToit_cookie_consent'); window.location.reload();"
+                                    class="text-white/70 hover:text-accent transition-colors text-sm text-left">Gestion
+                                    des cookies</button></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-serif text-lg mb-6">Contact</h4>
+                        <ul class="space-y-4">
+                            <li>
+                                <a href="tel:+33754826639"
+                                    class="flex items-center gap-3 text-white/70 hover:text-accent transition-colors text-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-phone w-4 h-4">
+                                        <path
+                                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                        </path>
+                                    </svg>
+                                    07 54 82 66 39
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:ldelavictoire@gmail.com"
+                                    class="flex items-center gap-3 text-white/70 hover:text-accent transition-colors text-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-mail w-4 h-4">
+                                        <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                                    </svg>
+                                    ldelavictoire@gmail.com
+                                </a>
+                            </li>
+                            <li>
+                                <div class="flex items-start gap-3 text-white/70 text-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="lucide lucide-map-pin w-4 h-4 mt-0.5 flex-shrink-0">
+                                        <path
+                                            d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
+                                        </path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                    27 rue Armand Carrel<br>75019 Paris
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div
+                    class="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-white/60 text-sm">© 2026 ApexRenov. Tous droits réservés.</p>
+                    <div class="flex items-center gap-6">
+                        <span class="text-white/60 text-sm">Certifié RGE</span>
+                        <span class="text-white/60 text-sm">Garantie Décennale</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+
+    </div>
+</body>
+
+</html>

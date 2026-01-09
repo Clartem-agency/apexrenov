@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentions Légales | ApexRenov - Couverture & Performance Énergétique</title>
+    <meta name="description"
+        content="Mentions légales, politique de confidentialité et conditions d'utilisation du site ApexRenov.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100..900&family=Mulish:wght@200..900&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Personnalisé -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Script JS Personnalisé -->
+    <script src="script.js"></script>
+</head>
+
+<body class="bg-background text-foreground antialiased font-sans">
+
+    <div class="min-h-screen flex flex-col">
+
+        <!-- ======================================================= -->
+        <!--        HEADER (IDENTIQUE ACCUEIL + LIENS ABSOLUS)       -->
+        <!-- ======================================================= -->
+
+        <header id="main-header" class="fixed top-0 left-0 right-0 z-50 bg-transparent transition-all duration-300">
+            <div class="container mx-auto px-4">
+                <div class="flex items-center justify-between h-20">
+                    <a href="index.html" class="flex items-center gap-3 group">
+                        <img src="images/logo-apexrenov.png" alt="Logo ApexRenov"
+                            class="w-10 h-10 rounded-lg object-contain">
+                        <div class="flex flex-col">
+                            <span
+                                class="header-title font-serif font-semibold text-lg text-[#148822] leading-tight transition-colors duration-300">ApexRenov</span>
+                            <span
+                                class="header-subtitle text-xs text-white/80 transition-colors duration-300">Couverture
+                                & Performance Énergétique
+                            </span>
+                        </div>
+                    </a>
+
+                    <!-- Desktop Nav (Liens vers index.html) -->
+                    <nav class="hidden md:flex items-center gap-8">
+                        <a href="index.html"
+                            class="nav-link text-sm font-medium text-white/90 hover:text-primary transition-colors duration-300">Accueil</a>
+                        <a href="index.html#services"
+                            class="nav-link text-sm font-medium text-white/90 hover:text-primary transition-colors duration-300">Services</a>
+                        <a href="index.html#avantages"
+                            class="nav-link text-sm font-medium text-white/90 hover:text-primary transition-colors duration-300">Pourquoi
+                            Nous</a>
+                             <a href="blog.html" class="nav-link text-sm font-medium text-white/90 hover:text-primary transition-colors duration-300">Blog</a>
+                        <a href="index.html#contact"
+                            class="nav-link text-sm font-medium text-white/90 hover:text-primary transition-colors duration-300">Contact</a>
+                    </nav>
+
+                    <!-- Desktop Actions -->
+                    <div class="hidden md:flex items-center gap-4">
+                        <a href="tel:+33754826639"
+                            class="header-phone flex items-center gap-2 text-sm text-white/90 hover:text-primary transition-colors duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-phone w-4 h-4">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg>
+                            07 54 82 66 39
+                        </a>
+                        <button onclick="window.location.href='index.html#contact'"
+                            class="btn-premium inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm font-semibold h-10 px-6">
+                            Devis Gratuit
+                        </button>
+                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn"
+                        class="mobile-menu-btn-icon md:hidden p-2 text-white hover:text-primary transition-colors"
+                        aria-label="Toggle menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-menu w-6 h-6">
+                            <line x1="4" x2="20" y1="12" y2="12"></line>
+                            <line x1="4" x2="20" y1="6" y2="6"></line>
+                            <line x1="4" x2="20" y1="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Content -->
+                <div id="mobile-menu"
+                    class="hidden md:hidden pb-6 border-t border-white/20 mt-2 bg-white/90 backdrop-blur-xl rounded-2xl px-6 shadow-2xl mx-2">
+                    <nav class="flex flex-col gap-4 mt-4">
+                        <a href="index.html"
+                            class="text-base font-medium text-[#153e2e] hover:text-primary py-2 border-b border-gray-100">Accueil</a>
+                        <a href="index.html#services"
+                            class="text-base font-medium text-[#153e2e] hover:text-primary py-2 border-b border-gray-100">Services</a>
+                        <a href="index.html#avantages"
+                            class="text-base font-medium text-[#153e2e] hover:text-primary py-2 border-b border-gray-100">Pourquoi
+                            Nous</a>
+                            <a href="blog.html"
+                            class="text-base font-medium text-[#153e2e] hover:text-primary py-2 border-b border-gray-100">Blog
+                            </a>
+                        <a href="index.html#contact"
+                            class="text-base font-medium text-[#153e2e] hover:text-primary py-2 border-b border-gray-100">Contact</a>
+                        <a href="tel:+33754826639"
+                            class="text-base font-bold text-primary mt-2 flex items-center gap-2">
+                            07 54 82 66 39
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+
+        <main class="flex-grow">
+
+            <!-- ======================================================= -->
+            <!--             HEADER PAGE LEGAL (Style Dark)              -->
+            <!-- ======================================================= -->
+            <section class="relative pt-32 pb-16 bg-foreground overflow-hidden">
+                <!-- Texture de fond identique au style du site -->
+                <div class="absolute inset-0 z-0">
+                    <img src="images/contact-texture.webp" alt="Texture de fond"
+                        class="w-full h-full object-cover opacity-60">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-foreground/95 via-foreground/80 to-foreground/60">
+                    </div>
+                </div>
+
+                <div class="container mx-auto px-4 relative z-10 text-center">
+                    <span
+                        class="text-primary font-bold text-sm uppercase tracking-widest border-b-2 border-primary/20 pb-1">
+                        Informations Juridiques
+                    </span>
+                    <h1 class="font-serif text-4xl md:text-5xl text-white mt-4 mb-4">Mentions Légales</h1>
+                    <p class="text-white/70 text-lg max-w-2xl mx-auto">
+                        Transparence et conditions d'utilisation du site ApexRenov.
+                    </p>
+                </div>
+            </section>
+
+            <!-- ======================================================= -->
+            <!--                      CONTENU LEGAL                      -->
+            <!-- ======================================================= -->
+            <section class="py-16 bg-background relative">
+                <!-- Motif de fond subtil -->
+                <div class="absolute inset-0 opacity-[0.03] pointer-events-none"
+                    style="background-image: radial-gradient(#148822 1px, transparent 1px); background-size: 32px 32px;">
+                </div>
+
+                <div class="container mx-auto px-4 relative z-10">
+                    <div class="max-w-4xl mx-auto space-y-12">
+
+                        <!-- Article 1 -->
+                        <div class="space-y-4">
+                            <h2 class="font-serif text-2xl text-foreground pb-2 border-b border-border">1. Édition du
+                                site</h2>
+                            <p class="text-muted-foreground leading-relaxed">
+                                En vertu de l'article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans
+                                l'économie numérique, il est précisé aux utilisateurs du site internet
+                                <strong>ApexRenov</strong> l'identité des différents intervenants dans le cadre de sa
+                                réalisation et de son suivi :
+                            </p>
+                            <ul class="list-disc pl-5 space-y-2 text-muted-foreground">
+                                <li><strong>Propriétaire du site :</strong> SAS ApexRenov - Contact :
+                                    ldelavictoire@gmail.com - Adresse : 27 rue Armand Carrel, 75019 Paris.</li>
+                                <li><strong>Identification de l'entreprise :</strong> SAS ApexRenov au capital social de
+                                    [MONTANT]€ - SIREN : [NUMERO SIREN] - RCS : [VILLE] - Adresse postale : 27 rue
+                                    Armand Carrel, 75019 Paris.</li>
+                                <li><strong>Directeur de la publication :</strong> [NOM PRENOM DU DIRECTEUR] - Contact :
+                                    ldelavictoire@gmail.com.</li>
+                                <li><strong>Hébergeur :</strong> [NOM DE L'HÉBERGEUR EX: OVH SAS] - [ADRESSE HÉBERGEUR]
+                                    - Téléphone : [TEL HÉBERGEUR].</li>
+                                <li><strong>Délégué à la protection des données :</strong> [NOM DU DPO] -
+                                    ldelavictoire@gmail.com.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Article 2 -->
+                        <div class="space-y-4">
+                            <h2 class="font-serif text-2xl text-foreground pb-2 border-b border-border">2. Propriété
+                                intellectuelle et contrefaçons</h2>
+                            <p class="text-muted-foreground leading-relaxed">
+                                <strong>ApexRenov</strong> est propriétaire des droits de propriété intellectuelle et
+                                détient les droits d’usage sur tous les éléments accessibles sur le site internet,
+                                notamment les textes, images, graphismes, logos, vidéos, architecture, icônes et sons.
+                            </p>
+                            <p class="text-muted-foreground leading-relaxed">
+                                Toute reproduction, représentation, modification, publication, adaptation de tout ou
+                                partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est
+                                interdite, sauf autorisation écrite préalable de <strong>ApexRenov</strong>.
+                            </p>
+                            <p class="text-muted-foreground leading-relaxed">
+                                Toute exploitation non autorisée du site ou de l’un quelconque des éléments qu’il
+                                contient sera considérée comme constitutive d’une contrefaçon et poursuivie conformément
+                                aux dispositions des articles L.335-2 et suivants du Code de Propriété Intellectuelle.
+                            </p>
+                        </div>
+
+                        <!-- Article 3 -->
+                        <div class="space-y-4">
+                            <h2 class="font-serif text-2xl text-foreground pb-2 border-b border-border">3. Limitations
+                                de responsabilité</h2>
+                            <p class="text-muted-foreground leading-relaxed">
+                                <strong>ApexRenov</strong> ne pourra être tenu pour responsable des dommages directs et
+                                indirects causés au matériel de l’utilisateur, lors de l’accès au site.
+                            </p>
+                            <p class="text-muted-foreground leading-relaxed">
+                                <strong>ApexRenov</strong> décline toute responsabilité quant à l’utilisation qui
+                                pourrait être faite des informations et contenus présents sur le site.
+                            </p>
+                            <p class="text-muted-foreground leading-relaxed">
+                                <strong>ApexRenov</strong> s’engage à sécuriser au mieux le site, cependant sa
+                                responsabilité ne pourra être mise en cause si des données indésirables sont importées
+                                et installées sur son site à son insu.
+                            </p>
+                        </div>
+
+                        <!-- Article 4 -->
+                        <div class="space-y-4">
+                            <h2 class="font-serif text-2xl text-foreground pb-2 border-b border-border">4. CNIL et
+                                gestion des données personnelles</h2>
+                            <p class="text-muted-foreground leading-relaxed">
+                                Conformément aux dispositions de la loi 78-17 du 6 janvier 1978 modifiée, l’utilisateur
+                                du site dispose d’un droit d’accès, de modification et de suppression des informations
+                                collectées. Pour exercer ce droit, envoyez un message à notre Délégué à la Protection
+                                des Données : <strong>ldelavictoire@gmail.com</strong>.
+                            </p>
+                            <p class="text-muted-foreground leading-relaxed">
+                                Les données collectées via le formulaire de contact sont utilisées uniquement pour
+                                répondre à vos demandes de devis et de renseignements. Aucune information personnelle de
+                                l'utilisateur du site n'est publiée à l'insu de l'utilisateur, échangée, transférée,
+                                cédée ou vendue sur un support quelconque à des tiers.
+                            </p>
+                        </div>
+
+                        <!-- Article 5 -->
+                        <div class="space-y-4">
+                            <h2 class="font-serif text-2xl text-foreground pb-2 border-b border-border">5. Liens
+                                hypertextes et cookies</h2>
+                            <p class="text-muted-foreground leading-relaxed">
+                                Le site contient des liens hypertextes vers d’autres sites et dégage toute
+                                responsabilité à propos de ces liens externes ou des liens créés par d’autres sites vers
+                                celui-ci.
+                            </p>
+                            <p class="text-muted-foreground leading-relaxed">
+                                La navigation sur le site est susceptible de provoquer l’installation de cookie(s) sur
+                                l’ordinateur de l’utilisateur. Un "cookie" est un fichier de petite taille qui
+                                enregistre des informations relatives à la navigation d’un utilisateur sur un site. Les
+                                données ainsi obtenues permettent d'obtenir des mesures de fréquentation, par exemple.
+                            </p>
+                            <p class="text-muted-foreground leading-relaxed">
+                                Vous avez la possibilité <strong>d’accepter ou de refuser les cookies</strong> en
+                                modifiant les paramètres de votre navigateur ou en cliquant sur le bouton "Gestion des
+                                cookies" en bas de page.
+                            </p>
+                        </div>
+
+                        <!-- Article 6 -->
+                        <div class="space-y-4">
+                            <h2 class="font-serif text-2xl text-foreground pb-2 border-b border-border">6. Droit
+                                applicable et attribution de juridiction</h2>
+                            <p class="text-muted-foreground leading-relaxed">
+                                Tout litige en relation avec l’utilisation du site est soumis au droit français. En
+                                dehors des cas où la loi ne le permet pas, il est fait attribution exclusive de
+                                juridiction aux tribunaux compétents de <strong>Paris</strong>.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- ======================================================= -->
+        <!--           FOOTER (IDENTIQUE ACCUEIL + LIENS ABSOLUS)    -->
+        <!-- ======================================================= -->
+
+        <footer class="bg-foreground text-white/90">
+            <div class="container mx-auto px-4 py-16">
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+                    <div>
+                        <div class="flex items-center gap-3 mb-6">
+                            <img src="images/logo-apexrenov.png" alt="Logo ApexRenov"
+                                class="w-10 h-10 rounded-lg object-contain">
+                            <div class="flex flex-col">
+                                <span
+                                    class="font-serif font-semibold text-lg leading-tight text-[#148822]">ApexRenov</span>
+                                <span class="text-xs text-white/60">Couverture & Performance Énergétique</span>
+                            </div>
+                        </div>
+                        <p class="text-white/70 text-sm leading-relaxed mb-6">Spécialistes de la couverture et de la
+                            rénovation énergétique depuis plus de 20 ans. Qualité, expertise et engagement écologique.
+                        </p>
+                        <div class="flex gap-4">
+                            <a href="#"
+                                class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-accent transition-colors"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-facebook w-5 h-5">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                                </svg></a>
+                            <a href="#"
+                                class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-accent transition-colors"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-instagram w-5 h-5">
+                                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                                </svg></a>
+                            <a href="#"
+                                class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-accent transition-colors"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-linkedin w-5 h-5">
+                                    <path
+                                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                    </path>
+                                    <rect width="4" height="12" x="2" y="9"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg></a>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-serif text-lg mb-6">Nos Services</h4>
+                        <ul class="space-y-3">
+                            <li><a href="index.html#services"
+                                    class="text-white/70 hover:text-accent transition-colors text-sm">Couverture &
+                                    Toiture</a></li>
+                            <li><a href="index.html#services"
+                                    class="text-white/70 hover:text-accent transition-colors text-sm">Isolation
+                                    Thermique</a></li>
+                            <li><a href="index.html#services"
+                                    class="text-white/70 hover:text-accent transition-colors text-sm">Panneaux
+                                    Solaires</a></li>
+                            <li><a href="index.html#services"
+                                    class="text-white/70 hover:text-accent transition-colors text-sm">Étanchéité</a>
+                            </li>
+                            <li><a href="index.html#services"
+                                    class="text-white/70 hover:text-accent transition-colors text-sm">Charpente</a></li>
+                            <li><a href="index.html#services"
+                                    class="text-white/70 hover:text-accent transition-colors text-sm">Zinguerie</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-serif text-lg mb-6">Liens Utiles</h4>
+                        <ul class="space-y-3">
+                            <li><a href="#" class="text-white/70 hover:text-accent transition-colors text-sm">Nos
+                                    Réalisations</a></li>
+                            <li><a href="#" class="text-white/70 hover:text-accent transition-colors text-sm">Aides &
+                                    Financements</a></li>
+                            <li><a href="faq.html"
+                                    class="text-white/70 hover:text-accent transition-colors text-sm">FAQ</a>
+                            </li>
+                            <li><a href="legal.html"
+                                    class="text-white/70 hover:text-accent transition-colors text-sm font-semibold text-accent">Mentions
+                                    Légales</a></li>
+                            <li><a href="privacy.html"
+                                    class="text-white/70 hover:text-accent transition-colors text-sm">Politique
+                                    de Confidentialité</a></li>
+                            <li><button
+                                    onclick="localStorage.removeItem('ecoToit_cookie_consent'); window.location.reload();"
+                                    class="text-white/70 hover:text-accent transition-colors text-sm text-left">Gestion
+                                    des cookies</button></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-serif text-lg mb-6">Contact</h4>
+                        <ul class="space-y-4">
+                            <li>
+                                <a href="tel:+33754826639"
+                                    class="flex items-center gap-3 text-white/70 hover:text-accent transition-colors text-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-phone w-4 h-4">
+                                        <path
+                                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                        </path>
+                                    </svg>
+                                    07 54 82 66 39
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:ldelavictoire@gmail.com"
+                                    class="flex items-center gap-3 text-white/70 hover:text-accent transition-colors text-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-mail w-4 h-4">
+                                        <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                                    </svg>
+                                    ldelavictoire@gmail.com
+                                </a>
+                            </li>
+                            <li>
+                                <div class="flex items-start gap-3 text-white/70 text-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="lucide lucide-map-pin w-4 h-4 mt-0.5 flex-shrink-0">
+                                        <path
+                                            d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
+                                        </path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                    27 rue Armand Carrel<br>75019 Paris
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div
+                    class="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-white/60 text-sm">© 2026 ApexRenov. Tous droits réservés.</p>
+                    <div class="flex items-center gap-6">
+                        <span class="text-white/60 text-sm">Certifié RGE</span>
+                        <span class="text-white/60 text-sm">Garantie Décennale</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,252 @@
+/* --- Variables de Thème (Couleurs HSL) --- */
+:root {
+    --background: 0 0% 100%;
+    --foreground: 155 35% 12%; /* Dark Green/Black */
+    
+    --card: 0 0% 100%;
+    --card-foreground: 155 35% 12%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 155 35% 12%;
+    
+    --primary: 142 76% 36%; /* Vibrant Green */
+    --primary-foreground: 355.7 100% 97.3%;
+    
+    --secondary: 140 30% 96%; /* Very Light Green */
+    --secondary-foreground: 155 35% 12%;
+    
+    --muted: 155 10% 55%;
+    --muted-foreground: 155 10% 40%;
+    
+    --accent: 142 70% 45%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 155 20% 90%;
+    --input: 155 20% 90%;
+    --ring: 142 76% 36%;
+    
+    --radius: 0.75rem;
+}
+
+/* --- Utilitaires Personnalisés --- */
+.shadow-soft {
+    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+}
+
+.shadow-elevated {
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Animations --- */
+@keyframes fade-up {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up {
+    opacity: 0; /* État initial invisible */
+    animation: fade-up 0.5s ease-out forwards;
+}
+
+
+
+
+
+/* --- Scroll Reveal Animations (Effet Premium) --- */
+
+/* État initial : invisible et légèrement décalé vers le bas */
+.reveal-up {
+    opacity: 0;
+    transform: translateY(40px);
+    /* Transition fluide avec une courbe de bézier "premium" (démarrage rapide, fin douce) */
+    transition: opacity 1s cubic-bezier(0.22, 1, 0.36, 1), transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+}
+
+/* État visible : opacité 1 et position d'origine */
+.reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Gestion des délais pour les éléments en grille (effet cascade) */
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+.delay-400 { transition-delay: 0.4s; }
+
+
+
+
+/* --- Glassmorphism Utilities --- */
+.glass-header-scroll {
+    background-color: rgba(255, 255, 255, 0.75); /* Blanc à 75% d'opacité */
+    backdrop-filter: blur(12px); /* Le flou d'arrière-plan */
+    -webkit-backdrop-filter: blur(12px); /* Pour Safari */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5); /* Bordure semi-transparente */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05); /* Ombre très douce */
+}
+
+/* Optionnel : Si vous préférez un verre sombre (Dark Glass) */
+.glass-header-scroll-dark {
+    background-color: rgba(21, 62, 46, 0.85); /* Votre Vert sombre à 85% */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+
+
+
+/* --- START OF FILE style.css (Ajout à la fin) --- */
+
+/* --- BOUTONS PREMIUM --- */
+
+/* 1. Bouton Principal (L'Action Verte) */
+.btn-premium {
+    position: relative;
+    overflow: hidden;
+    /* Dégradé vertical subtil pour effet bombé */
+    background: linear-gradient(180deg, hsl(var(--primary)/0.9) 0%, hsl(var(--primary)) 100%);
+    color: hsl(var(--primary-foreground));
+    border: 1px solid hsl(var(--primary));
+    /* Ombre portée colorée (Glow) + Ombre interne (Reflet haut) */
+    box-shadow: 
+        0 4px 15px -3px rgba(20, 136, 34, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2); 
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    z-index: 1;
+}
+
+.btn-premium:hover {
+    transform: translateY(-2px);
+    /* Le glow s'intensifie */
+    box-shadow: 
+        0 8px 25px -5px rgba(20, 136, 34, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.btn-premium:active {
+    transform: translateY(0);
+}
+
+/* Effet de reflet qui passe ("Shine") */
+.btn-premium::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transform: skewX(-20deg);
+    transition: none;
+    z-index: -1;
+}
+
+.btn-premium:hover::after {
+    left: 150%;
+    transition: left 0.7s ease-in-out;
+}
+
+/* 2. Bouton Secondaire (Glassmorphism / Ghost) */
+.btn-glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    box-shadow: 0 4px 15px -3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.btn-glass:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.2);
+}
+
+/* 3. Bouton Formulaire (Large et Solide) */
+.btn-submit {
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--foreground)) 100%);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.btn-submit::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, hsl(var(--foreground)) 0%, hsl(var(--primary)) 100%);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.btn-submit:hover::before {
+    opacity: 1;
+}
+.btn-submit:hover {
+    box-shadow: 0 10px 30px -5px rgba(21, 62, 46, 0.4);
+    transform: translateY(-2px);
+}
+
+
+
+/* --- START OF FILE style.css (Ajout à la fin) --- */
+
+/* --- FAQ PREMIUM ANIMATIONS --- */
+
+/* Le conteneur qui va s'ouvrir/fermer */
+.faq-content {
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    transition: height 0.4s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.3s ease-in-out;
+    will-change: height, opacity;
+}
+
+/* Le contenu texte à l'intérieur (pour le padding et l'effet slide) */
+.faq-inner {
+    padding: 0 1.5rem 1.5rem 1.5rem; /* px-6 pb-6 */
+    transform: translateY(10px);
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* État ouvert : on rend visible */
+details.is-expanded .faq-content {
+    opacity: 1;
+    /* La height est gérée par JS, mais l'opacité ici assure le fade-in */
+}
+
+details.is-expanded .faq-inner {
+    transform: translateY(0);
+}
+
+/* Rotation de l'icône plus fluide */
+details summary svg {
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+details[open] summary svg {
+    transform: rotate(45deg);
+}
+
+/* Suppression du marqueur par défaut (triangle noir moche) */
+details > summary {
+    list-style: none;
+}
+details > summary::-webkit-details-marker {
+    display: none;
+}
