@@ -324,14 +324,16 @@
                     <!-- Grille Services -->
                     <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
 
-                        <!-- Service 1 : Couverture (Transformé en Lien) -->
+
+
+                        <!-- Service 1 : Couverture -->
                         <a href="services/hub-toiture.html"
-                            class="group relative bg-foreground rounded-2xl p-8 lg:p-10 overflow-hidden shadow-xl reveal-up block transition-transform hover:-translate-y-2">
-                            <!-- Image de fond avec effet Zoom -->
+                            style="-webkit-mask-image: -webkit-radial-gradient(white, black);"
+                            class="group relative bg-foreground rounded-2xl p-8 lg:p-10 overflow-hidden shadow-xl reveal-up block hover:-translate-y-2">
+                            <!-- Image de fond -->
                             <div class="absolute inset-0 z-0">
                                 <img src="images/service-couverture.webp" alt="Toiture"
                                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-50 group-hover:opacity-60">
-                                <!-- Dégradé sombre pour lisibilité texte -->
                                 <div
                                     class="absolute inset-0 bg-gradient-to-t from-foreground via-foreground/90 to-foreground/60">
                                 </div>
@@ -351,7 +353,6 @@
                                             </path>
                                         </svg>
                                     </div>
-                                    <!-- L'icône flèche indique clairement que c'est cliquable -->
                                     <div
                                         class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white/50 group-hover:text-primary group-hover:bg-white/20 transition-all duration-300">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
@@ -369,7 +370,7 @@
                                 <p
                                     class="text-white/70 mb-8 leading-relaxed text-sm lg:text-base border-l-2 border-primary/50 pl-4">
                                     Rénovation complète et entretien. Nous travaillons l'ardoise, la tuile et le zinc
-                                    avec un savoir-faire artisanal garanti 10 ans. Cliquez pour voir le détail.
+                                    avec un savoir-faire artisanal garanti 10 ans.
                                 </p>
 
                                 <ul class="grid sm:grid-cols-2 gap-y-3 gap-x-4 mt-auto">
@@ -397,9 +398,14 @@
                             </div>
                         </a>
 
-                        <!-- Service 2 : Isolation (CODE ORIGINAL RESTAURÉ) -->
-                        <div
-                            class="group relative bg-foreground rounded-2xl p-8 lg:p-10 overflow-hidden shadow-xl reveal-up delay-100">
+
+
+
+
+                        <!-- Service 2 : Isolation -->
+                        <a href="services/hub-isolation.html"
+                            style="-webkit-mask-image: -webkit-radial-gradient(white, black);"
+                            class="group relative bg-foreground rounded-2xl p-8 lg:p-10 overflow-hidden shadow-xl reveal-up delay-100 block hover:-translate-y-2">
                             <div class="absolute inset-0 z-0">
                                 <img src="images/service-isolation.webp" alt="Isolation"
                                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-50 group-hover:opacity-60">
@@ -418,18 +424,20 @@
                                             <path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"></path>
                                         </svg>
                                     </div>
-                                    <div class="text-white/20 group-hover:text-primary transition-colors duration-300">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
-                                            stroke-linecap="round" stroke-linejoin="round"
-                                            class="lucide lucide-arrow-up-right">
+                                    <div
+                                        class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white/50 group-hover:text-primary group-hover:bg-white/20 transition-all duration-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
                                             <path d="M7 7h10v10" />
                                             <path d="M7 17 17 7" />
                                         </svg>
                                     </div>
                                 </div>
 
-                                <h3 class="font-serif text-2xl text-white mb-3">Isolation Thermique</h3>
+                                <h3
+                                    class="font-serif text-2xl text-white mb-3 group-hover:text-primary transition-colors">
+                                    Isolation Thermique</h3>
                                 <p
                                     class="text-white/70 mb-8 leading-relaxed text-sm lg:text-base border-l-2 border-primary/50 pl-4">
                                     Optimisez votre confort thermique été comme hiver. Des solutions d'isolation haute
@@ -459,11 +467,14 @@
                                     </li>
                                 </ul>
                             </div>
-                        </div>
+                        </a>
 
-                        <!-- Service 3 : Solaire (CODE ORIGINAL RESTAURÉ) -->
-                        <div
-                            class="group relative bg-foreground rounded-2xl p-8 lg:p-10 overflow-hidden shadow-xl reveal-up delay-200">
+
+
+
+                        <!-- Service 3 : Solaire -->
+                        <a href="#" style="-webkit-mask-image: -webkit-radial-gradient(white, black);"
+                            class="group relative bg-foreground rounded-2xl p-8 lg:p-10 overflow-hidden shadow-xl reveal-up delay-200 block hover:-translate-y-2">
                             <div class="absolute inset-0 z-0">
                                 <img src="images/service-solaire.webp" alt="Panneaux solaires"
                                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-50 group-hover:opacity-60">
@@ -490,18 +501,20 @@
                                             <path d="m19.07 4.93-1.41 1.41"></path>
                                         </svg>
                                     </div>
-                                    <div class="text-white/20 group-hover:text-primary transition-colors duration-300">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
-                                            stroke-linecap="round" stroke-linejoin="round"
-                                            class="lucide lucide-arrow-up-right">
+                                    <div
+                                        class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white/50 group-hover:text-primary group-hover:bg-white/20 transition-all duration-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
                                             <path d="M7 7h10v10" />
                                             <path d="M7 17 17 7" />
                                         </svg>
                                     </div>
                                 </div>
 
-                                <h3 class="font-serif text-2xl text-white mb-3">Panneaux Solaires</h3>
+                                <h3
+                                    class="font-serif text-2xl text-white mb-3 group-hover:text-primary transition-colors">
+                                    Panneaux Solaires</h3>
                                 <p
                                     class="text-white/70 mb-8 leading-relaxed text-sm lg:text-base border-l-2 border-primary/50 pl-4">
                                     Produisez votre électricité verte. Une installation clé en main pour
@@ -531,11 +544,13 @@
                                     </li>
                                 </ul>
                             </div>
-                        </div>
+                        </a>
 
-                        <!-- Service 4 : Étanchéité (CODE ORIGINAL RESTAURÉ) -->
-                        <div
-                            class="group relative bg-foreground rounded-2xl p-8 lg:p-10 overflow-hidden shadow-xl reveal-up delay-300">
+
+
+                        <!-- Service 4 : Étanchéité -->
+                        <a href="#" style="-webkit-mask-image: -webkit-radial-gradient(white, black);"
+                            class="group relative bg-foreground rounded-2xl p-8 lg:p-10 overflow-hidden shadow-xl reveal-up delay-300 block hover:-translate-y-2">
                             <div class="absolute inset-0 z-0">
                                 <img src="images/service-etancheite.webp" alt="Étanchéité"
                                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-50 group-hover:opacity-60">
@@ -559,18 +574,20 @@
                                             </path>
                                         </svg>
                                     </div>
-                                    <div class="text-white/20 group-hover:text-primary transition-colors duration-300">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
-                                            stroke-linecap="round" stroke-linejoin="round"
-                                            class="lucide lucide-arrow-up-right">
+                                    <div
+                                        class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white/50 group-hover:text-primary group-hover:bg-white/20 transition-all duration-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
                                             <path d="M7 7h10v10" />
                                             <path d="M7 17 17 7" />
                                         </svg>
                                     </div>
                                 </div>
 
-                                <h3 class="font-serif text-2xl text-white mb-3">Étanchéité</h3>
+                                <h3
+                                    class="font-serif text-2xl text-white mb-3 group-hover:text-primary transition-colors">
+                                    Étanchéité</h3>
                                 <p
                                     class="text-white/70 mb-8 leading-relaxed text-sm lg:text-base border-l-2 border-primary/50 pl-4">
                                     Protection absolue contre les infiltrations. Traitement des toitures terrasses,
@@ -600,7 +617,9 @@
                                     </li>
                                 </ul>
                             </div>
-                        </div>
+                        </a>
+
+
 
                     </div>
 
