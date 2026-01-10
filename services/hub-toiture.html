@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travaux de Toiture & Charpente | ApexRenov</title>
+    
+    <!-- FAVICON : On remonte d'un dossier avec ../ -->
+    <link rel="icon" type="image/png" href="../images/favicon-apexrenov.png">
+    
+    <!-- POLICES (Liens externes, pas de changement) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100..900&family=Mulish:wght@200..900&display=swap" rel="stylesheet">
+    
+    <!-- CSS : On remonte d'un dossier -->
+    <link rel="stylesheet" href="../style.css">
+    
+    <!-- TAILWIND & JS : On remonte d'un dossier -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../script.js"></script>
+</head>
+
+<body class="bg-background text-foreground antialiased font-sans">
+
+    <!-- HEADER -->
+    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border shadow-sm">
+        <div class="container mx-auto px-4 h-20 flex items-center justify-between">
+            
+            <!-- LOGO : Lien vers l'accueil (../index.html) et image (../images/...) -->
+            <a href="../index.html" class="flex items-center gap-3">
+                <img src="../images/logo-apexrenov.png" alt="Logo ApexRenov" class="w-10 h-10 rounded-lg object-contain">
+                <div class="flex flex-col">
+                    <span class="font-serif font-semibold text-lg text-[#148822] leading-tight">ApexRenov</span>
+                    <span class="text-xs text-muted-foreground">Pôle Toiture</span>
+                </div>
+            </a>
+            
+            <!-- NAVIGATION DESKTOP -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="../index.html" class="text-sm font-medium text-[#153e2e] hover:text-primary transition-colors">Accueil</a>
+                <!-- Lien vers la section services de l'accueil -->
+                <a href="../index.html#services" class="text-sm font-bold text-primary transition-colors">Tous les Services</a>
+                <!-- Bouton Devis -->
+                <a href="../index.html#contact" class="btn-premium inline-flex items-center justify-center gap-2 rounded-lg text-sm font-semibold h-10 px-6 text-white">Devis Gratuit</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        
+        <!-- FIL D'ARIANE (Navigation) -->
+        <div class="bg-gray-50 border-b border-gray-100 py-3">
+            <div class="container mx-auto px-4">
+                <nav class="text-xs text-gray-500 flex gap-2">
+                    <a href="../index.html" class="hover:text-primary">Accueil</a>
+                    <span>/</span>
+                    <span class="text-gray-900 font-semibold">Hub Toiture</span>
+                </nav>
+            </div>
+        </div>
+
+        <!-- HERO SECTION PARENT -->
+        <section class="relative py-24 bg-[#F0F2F1] overflow-hidden">
+            
+            <!-- Texture de fond (Optionnel, chemin mis à jour) -->
+            <div class="absolute inset-0 opacity-[0.05]" 
+                 style="background-image: radial-gradient(#153e2e 1.5px, transparent 1.5px); background-size: 32px 32px;">
+            </div>
+
+            <div class="container mx-auto px-4 relative z-10 text-center">
+                <span class="text-primary font-bold text-sm uppercase tracking-widest mb-2 block border-b-2 border-primary/20 w-fit mx-auto pb-1">Expertise Couverture</span>
+                <h1 class="font-serif text-4xl md:text-5xl text-[#153e2e] mb-6 mt-4">L'Expertise Complète de votre Toit</h1>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-12">
+                    De la charpente qui soutient votre maison aux tuiles qui la protègent, nous maîtrisons chaque élément de votre couverture. Sélectionnez votre besoin :
+                </p>
+
+                <!-- GRILLE DE NAVIGATION (HUB) -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-6 max-w-5xl mx-auto text-left">
+                    
+                    <!-- CARTE 1 : CHARPENTE (Lien vers page enfant) -->
+                    <!-- Notez : pas de ../ ici car le fichier est dans le même dossier "services" -->
+                    <a href="toiture-charpente.html" class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex items-start gap-5 hover:-translate-y-1">
+                        <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors shrink-0">
+                            <!-- Icone Charpente -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/><path d="M4.14 15.08c2.62-1.57 5.24-1.43 7.86.42 2.74 1.94 5.49 2 8.23.19"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-xl text-[#153e2e] font-bold mb-2 group-hover:text-primary transition-colors">Charpente & Structure</h3>
+                            <p class="text-sm text-gray-600 mb-4 leading-relaxed">Traitement des bois (capricornes), renforcement structurel, et modification de fermettes pour aménagement de combles.</p>
+                            <span class="text-primary text-sm font-bold underline decoration-primary/30 group-hover:decoration-primary transition-all">Voir le détail &rarr;</span>
+                        </div>
+                    </a>
+
+                    <!-- CARTE 2 : MATÉRIAUX (Lien fictif # pour l'instant) -->
+                    <a href="#" class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex items-start gap-5 hover:-translate-y-1">
+                        <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-xl text-[#153e2e] font-bold mb-2 group-hover:text-primary transition-colors">Matériaux de Couverture</h3>
+                            <p class="text-sm text-gray-600 mb-4 leading-relaxed">Rénovation complète en Tuiles mécaniques, Ardoise naturelle, Zinc et Bac acier. Pose neuve et remplacement.</p>
+                            <span class="text-primary text-sm font-bold underline decoration-primary/30 group-hover:decoration-primary transition-all">Voir le détail &rarr;</span>
+                        </div>
+                    </a>
+
+                    <!-- CARTE 3 : ZINGUERIE (Lien fictif #) -->
+                    <a href="#" class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex items-start gap-5 hover:-translate-y-1">
+                        <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 19h8a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2Z"/><path d="M12 19V3"/><path d="M2 15h20"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-xl text-[#153e2e] font-bold mb-2 group-hover:text-primary transition-colors">Zinguerie & Étanchéité</h3>
+                            <p class="text-sm text-gray-600 mb-4 leading-relaxed">Gestion des eaux pluviales : Gouttières (zinc/PVC), chéneaux, abergements de cheminée et solins.</p>
+                            <span class="text-primary text-sm font-bold underline decoration-primary/30 group-hover:decoration-primary transition-all">Voir le détail &rarr;</span>
+                        </div>
+                    </a>
+
+                     <!-- CARTE 4 : ENTRETIEN (Lien fictif #) -->
+                     <a href="#" class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex items-start gap-5 hover:-translate-y-1">
+                        <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-xl text-[#153e2e] font-bold mb-2 group-hover:text-primary transition-colors">Entretien & Démoussage</h3>
+                            <p class="text-sm text-gray-600 mb-4 leading-relaxed">Nettoyage basse pression, traitement hydrofuge coloré ou incolore, et vérification d'étanchéité annuelle.</p>
+                            <span class="text-primary text-sm font-bold underline decoration-primary/30 group-hover:decoration-primary transition-all">Voir le détail &rarr;</span>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION APPEL A L'ACTION (CTA) -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="font-serif text-3xl text-[#153e2e] mb-6">Besoin d'un diagnostic global ?</h2>
+                <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
+                    Nous nous déplaçons gratuitement pour évaluer l'état de l'ensemble de votre toiture (Charpente + Couverture + Zinguerie).
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="../index.html#contact" class="btn-premium inline-flex items-center justify-center px-8 py-3 rounded-lg text-white font-bold">
+                        Demander un RDV Gratuit
+                    </a>
+                    <a href="tel:+33754826639" class="inline-flex items-center justify-center px-8 py-3 rounded-lg border border-gray-200 text-gray-700 font-bold hover:bg-gray-50 transition-colors">
+                        📞 07 54 82 66 39
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER (Simplifié avec liens mis à jour) -->
+    <footer class="bg-foreground text-white/90 py-12 border-t border-white/10 mt-12">
+        <div class="container mx-auto px-4 grid md:grid-cols-3 gap-8 text-sm">
+            <div>
+                <a href="../index.html" class="flex items-center gap-2 mb-4">
+                    <img src="../images/logo-apexrenov.png" alt="Logo" class="w-8 h-8 rounded object-contain bg-white/10">
+                    <span class="font-serif font-bold text-[#148822]">ApexRenov</span>
+                </a>
+                <p class="text-white/60">Expert en rénovation énergétique et couverture en Île-de-France.</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4 text-white">Services</h4>
+                <ul class="space-y-2 text-white/60">
+                    <li><a href="toiture-charpente.html" class="hover:text-primary">Charpente</a></li>
+                    <li><a href="#" class="hover:text-primary">Couverture</a></li>
+                    <li><a href="#" class="hover:text-primary">Isolation</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4 text-white">Contact</h4>
+                <ul class="space-y-2 text-white/60">
+                    <li>27 rue Armand Carrel, 75019 Paris</li>
+                    <li>07 54 82 66 39</li>
+                    <li>ldelavictoire@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="container mx-auto px-4 mt-8 pt-8 border-t border-white/10 text-center text-white/40 text-xs">
+            <p>© 2026 ApexRenov. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
