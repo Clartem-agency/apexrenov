@@ -325,7 +325,7 @@ document.addEventListener('DOMContentLoaded', () => {
  * Logique du bandeau de consentement RGPD
  */
 function initCookieConsent() {
-    const consentKey = 'ecoToit_cookie_consent';
+    const consentKey = 'apexrenov_cookie_consent';
     // Vérifie si un choix a déjà été fait
     const hasConsented = localStorage.getItem(consentKey);
 
