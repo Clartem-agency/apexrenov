@@ -10,150 +10,208 @@
     <link rel="icon" type="image/png" href="../images/favicon-apexrenov.png">
     
     <!-- POLICES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100..900&family=Mulish:wght@200..900&display=swap" rel="stylesheet">
     
-    <!-- CSS & JS -->
+    <!-- CSS & JS LOCAUX -->
     <link rel="stylesheet" href="../style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="../script.js"></script>
 </head>
 
-<body class="bg-background text-foreground antialiased font-sans">
+<body class="bg-background text-foreground antialiased font-sans flex flex-col min-h-screen">
 
-    <!-- HEADER -->
-    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border shadow-sm">
-        <div class="container mx-auto px-4 h-20 flex items-center justify-between">
-            <a href="../index.html" class="flex items-center gap-3">
-                <img src="../images/logo-apexrenov.png" alt="Logo ApexRenov" class="w-10 h-10 rounded-lg object-contain">
-                <div class="flex flex-col">
-                    <span class="font-serif font-semibold text-lg text-[#148822] leading-tight">ApexRenov</span>
-                    <span class="text-xs text-muted-foreground">Étude Thermique</span>
-                </div>
-            </a>
-            <nav class="hidden md:flex items-center gap-8">
-                <a href="../index.html" class="text-sm font-medium text-[#153e2e] hover:text-primary transition-colors">Accueil</a>
-                <a href="hub-isolation.html" class="text-sm font-medium text-[#153e2e] hover:text-primary transition-colors">Pôle Isolation</a>
-                <!-- Bouton différent ici -->
-                <a href="tel:+33754826639" class="btn-premium inline-flex items-center justify-center gap-2 rounded-lg text-sm font-semibold h-10 px-6 text-white">
-                    07 54 82 66 39
+    <!-- ======================================================= -->
+    <!--                          HEADER                         -->
+    <!-- ======================================================= -->
+    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 bg-transparent transition-all duration-300">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-20">
+                <a href="../index.html" class="flex items-center gap-3 group">
+                    <img src="../images/logo-apexrenov.png" alt="Logo ApexRenov" class="w-10 h-10 rounded-lg object-contain">
+                    <div class="flex flex-col">
+                        <span class="header-title font-serif font-semibold text-lg text-[#148822] leading-tight transition-colors duration-300">ApexRenov</span>
+                        <span class="header-subtitle text-xs text-white/80 transition-colors duration-300">Étude Thermique</span>
+                    </div>
                 </a>
-            </nav>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="../index.html" class="nav-link text-sm font-medium text-white/90 hover:text-primary transition-colors duration-300">Accueil</a>
+                    <a href="../index.html#services" class="nav-link text-sm font-medium text-white/90 hover:text-primary transition-colors duration-300">Services</a>
+                    <a href="../index.html#avantages" class="nav-link text-sm font-medium text-white/90 hover:text-primary transition-colors duration-300">Pourquoi Nous</a>
+                    <a href="../blog.html" class="nav-link text-sm font-medium text-white/90 hover:text-primary transition-colors duration-300">Blog</a>
+                    <a href="../index.html#contact" class="nav-link text-sm font-medium text-white/90 hover:text-primary transition-colors duration-300">Contact</a>
+                </nav>
+
+                <!-- Desktop Actions -->
+                <div class="hidden md:flex items-center gap-4">
+                    <a href="tel:+33754826639" class="header-phone flex items-center gap-2 text-sm text-white/90 hover:text-primary transition-colors duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone w-4 h-4">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        07 54 82 66 39
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="mobile-menu-btn-icon md:hidden p-2 text-white hover:text-primary transition-colors" aria-label="Toggle menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu w-6 h-6">
+                        <line x1="4" x2="20" y1="12" y2="12"></line>
+                        <line x1="4" x2="20" y1="6" y2="6"></line>
+                        <line x1="4" x2="20" y1="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu Content -->
+            <div id="mobile-menu" class="hidden md:hidden pb-6 border-t border-white/20 mt-2 bg-white/90 backdrop-blur-xl rounded-2xl px-6 shadow-2xl mx-2">
+                <nav class="flex flex-col gap-4 mt-4">
+                    <a href="../index.html" class="text-base font-medium text-[#153e2e] hover:text-primary py-2 border-b border-gray-100">Accueil</a>
+                    <a href="../index.html#services" class="text-base font-medium text-[#153e2e] hover:text-primary py-2 border-b border-gray-100">Services</a>
+                    <a href="../index.html#contact" class="text-base font-medium text-[#153e2e] hover:text-primary py-2 border-b border-gray-100">Contact</a>
+                    <a href="tel:+33754826639" class="text-base font-bold text-primary mt-2 flex items-center gap-2">
+                        07 54 82 66 39
+                    </a>
+                </nav>
+            </div>
         </div>
     </header>
 
-    <main class="pt-20">
+    <main class="flex-grow">
 
-        <!-- HERO SECTION (STYLE DARK) -->
-        <section class="relative py-16 lg:py-24 bg-[#153e2e] overflow-hidden">
-            <!-- Texture de fond -->
-            <div class="absolute inset-0 opacity-10 bg-[url('../images/contact-texture.webp')] bg-cover bg-center mix-blend-overlay"></div>
-            
-            <div class="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center relative z-10">
-                
-                <div class="reveal-up text-white">
-                    <span class="inline-block py-1 px-3 rounded-full bg-green-500/20 text-green-300 text-xs font-bold mb-4 border border-green-500/30">
-                        Offre réservée aux propriétaires
-                    </span>
-                    <h1 class="font-serif text-4xl lg:text-5xl leading-tight mb-6">
-                        Où votre maison perd-elle <span class="text-primary">son énergie ?</span>
-                    </h1>
-                    <p class="text-lg text-white/80 mb-8 leading-relaxed">
-                        Ne vous lancez pas dans des travaux au hasard. Notre bilan thermique identifie précisément les points faibles de votre habitation (ponts thermiques, isolation tassée) pour prioriser les travaux les plus rentables.
-                    </p>
+        <!-- ======================================================= -->
+        <!--                  HERO SECTION (BANNIÈRE)                -->
+        <!-- ======================================================= -->
+        <section class="relative min-h-screen lg:min-h-[800px] flex items-center pt-24 pb-16 overflow-hidden">
+            <!-- Background & Overlay (Style Index) -->
+            <div class="absolute inset-0 z-0">
+                <img src="../images/contact-texture.webp" alt="Fond Bilan Thermique" class="w-full h-full object-cover">
+                <!-- Dégradé sombre pour lisibilité -->
+                <div class="absolute inset-0 bg-gradient-to-r from-[#153e2e]/95 via-[#153e2e]/80 to-[#153e2e]/50"></div>
+            </div>
+
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
                     
-                    <ul class="space-y-4">
-                        <li class="flex items-center gap-3 font-medium text-white/90">
-                            <div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-white shrink-0 text-xs">✓</div>
-                            Analyse par caméra thermique (si conditions requises)
-                        </li>
-                        <li class="flex items-center gap-3 font-medium text-white/90">
-                            <div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-white shrink-0 text-xs">✓</div>
-                            Vérification de l'état des isolants existants
-                        </li>
-                        <li class="flex items-center gap-3 font-medium text-white/90">
-                            <div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-white shrink-0 text-xs">✓</div>
-                            Estimation du gain énergétique (DPE projeté)
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Formulaire dédié Bilan (Différent du contact classique) -->
-                <div class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl reveal-up delay-100">
-                    <h3 class="font-serif text-2xl text-[#153e2e] mb-2">Réserver mon bilan offert</h3>
-                    <p class="text-sm text-gray-500 mb-6">Sans engagement. Réponse sous 24h.</p>
-                    
-                    <form onsubmit="event.preventDefault(); alert('Demande de bilan envoyée !');" class="space-y-4">
-                        <div class="grid grid-cols-2 gap-4">
-                            <input type="text" placeholder="Code Postal" class="w-full h-12 px-4 rounded-lg bg-gray-50 border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" required>
-                            <input type="text" placeholder="Ville" class="w-full h-12 px-4 rounded-lg bg-gray-50 border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" required>
-                        </div>
+                    <!-- Colonne Texte -->
+                    <div class="reveal-up text-white">
+                        <span class="inline-block py-1 px-3 rounded-full bg-green-500/20 text-green-300 text-xs font-bold mb-6 border border-green-500/30">
+                            Offre réservée aux propriétaires
+                        </span>
+                        <h1 class="font-serif text-4xl lg:text-6xl leading-tight mb-6">
+                            Où votre maison perd-elle <span class="text-primary">son énergie ?</span>
+                        </h1>
+                        <p class="text-lg text-white/80 mb-8 leading-relaxed">
+                            Ne vous lancez pas dans des travaux au hasard. Notre bilan thermique identifie précisément les points faibles de votre habitation (ponts thermiques, isolation tassée) pour prioriser les travaux les plus rentables.
+                        </p>
                         
-                        <select class="w-full h-12 px-4 rounded-lg bg-gray-50 border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors text-gray-600">
-                            <option value="">Année de construction (approx)</option>
-                            <option value="avant-1975">Avant 1975 (Non isolé)</option>
-                            <option value="1975-2000">Entre 1975 et 2000</option>
-                            <option value="apres-2000">Après 2000</option>
-                        </select>
+                        <ul class="space-y-4">
+                            <li class="flex items-center gap-3 font-medium text-white/90">
+                                <div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-white shrink-0 text-xs">✓</div>
+                                Analyse par caméra thermique (si conditions requises)
+                            </li>
+                            <li class="flex items-center gap-3 font-medium text-white/90">
+                                <div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-white shrink-0 text-xs">✓</div>
+                                Vérification de l'état des isolants existants
+                            </li>
+                            <li class="flex items-center gap-3 font-medium text-white/90">
+                                <div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-white shrink-0 text-xs">✓</div>
+                                Estimation du gain énergétique (DPE projeté)
+                            </li>
+                        </ul>
+                    </div>
 
-                        <select class="w-full h-12 px-4 rounded-lg bg-gray-50 border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors text-gray-600">
-                            <option value="">Chauffage principal actuel</option>
-                            <option value="electricite">Électrique</option>
-                            <option value="gaz">Gaz / Fioul</option>
-                            <option value="bois">Bois / Granulés</option>
-                            <option value="pompe">Pompe à chaleur</option>
-                        </select>
+                    <!-- Colonne Formulaire (Style Index Contact) -->
+                    <div class="bg-white rounded-3xl p-8 md:p-10 shadow-2xl reveal-up delay-100 border border-white/10 relative">
+                        <!-- Petit triangle décoratif -->
+                        <div class="absolute top-0 right-0 w-20 h-20 bg-primary/10 rounded-bl-full -mr-0 -mt-0"></div>
 
-                        <div class="grid grid-cols-2 gap-4">
-                            <input type="text" placeholder="Nom" class="w-full h-12 px-4 rounded-lg bg-gray-50 border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" required>
-                            <input type="tel" placeholder="Téléphone" class="w-full h-12 px-4 rounded-lg bg-gray-50 border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" required>
-                        </div>
-
-                        <button type="submit" class="w-full h-14 bg-[#153e2e] hover:bg-primary text-white font-bold rounded-xl transition-colors shadow-lg mt-2 flex items-center justify-center gap-2">
-                            Valider ma demande
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                        </button>
+                        <h3 class="font-serif text-2xl text-[#153e2e] mb-2 relative z-10">Réserver mon bilan offert</h3>
+                        <p class="text-sm text-gray-500 mb-6 relative z-10">Sans engagement. Réponse sous 24h.</p>
                         
-                        <p class="text-xs text-gray-400 text-center mt-3">Vos données restent confidentielles.</p>
-                    </form>
+                        <form onsubmit="event.preventDefault(); alert('Demande de bilan envoyée !');" class="space-y-4 relative z-10">
+                            <div class="grid grid-cols-2 gap-4">
+                                <input type="text" placeholder="Code Postal" class="w-full h-12 px-4 rounded-lg bg-gray-50 border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" required>
+                                <input type="text" placeholder="Ville" class="w-full h-12 px-4 rounded-lg bg-gray-50 border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" required>
+                            </div>
+                            
+                            <select class="w-full h-12 px-4 rounded-lg bg-gray-50 border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors text-gray-600">
+                                <option value="">Année de construction (approx)</option>
+                                <option value="avant-1975">Avant 1975 (Non isolé)</option>
+                                <option value="1975-2000">Entre 1975 et 2000</option>
+                                <option value="apres-2000">Après 2000</option>
+                            </select>
+
+                            <select class="w-full h-12 px-4 rounded-lg bg-gray-50 border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors text-gray-600">
+                                <option value="">Chauffage principal actuel</option>
+                                <option value="electricite">Électrique</option>
+                                <option value="gaz">Gaz / Fioul</option>
+                                <option value="bois">Bois / Granulés</option>
+                                <option value="pompe">Pompe à chaleur</option>
+                            </select>
+
+                            <div class="grid grid-cols-2 gap-4">
+                                <input type="text" placeholder="Nom" class="w-full h-12 px-4 rounded-lg bg-gray-50 border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" required>
+                                <input type="tel" placeholder="Téléphone" class="w-full h-12 px-4 rounded-lg bg-gray-50 border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" required>
+                            </div>
+
+                            <button type="submit" class="w-full h-14 bg-[#153e2e] hover:bg-primary text-white font-bold rounded-xl transition-colors shadow-lg mt-2 flex items-center justify-center gap-2">
+                                Valider ma demande
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                            </button>
+                            
+                            <div class="flex items-start gap-2 mt-3">
+                                <input type="checkbox" id="consent" required class="mt-1 h-3 w-3 rounded border-gray-300 text-primary focus:ring-primary">
+                                <label for="consent" class="text-xs text-gray-400 leading-tight">J'accepte d'être recontacté pour cette étude gratuite.</label>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION PROCESSUS -->
-        <section class="py-20 bg-white">
-            <div class="container mx-auto px-4">
+        <!-- ======================================================= -->
+        <!--                 SECTION PROCESSUS                       -->
+        <!-- ======================================================= -->
+        <section class="py-24 bg-white relative overflow-hidden">
+             <!-- Texture de fond style architecte -->
+            <div class="absolute inset-0 opacity-[0.05]" style="background-image: radial-gradient(#153e2e 1.5px, transparent 1.5px); background-size: 32px 32px;"></div>
+
+            <div class="container mx-auto px-4 relative z-10">
                 <div class="text-center max-w-3xl mx-auto mb-16 reveal-up">
-                    <span class="text-primary font-bold text-sm uppercase tracking-widest">Déroulement</span>
+                    <span class="text-primary font-bold text-sm uppercase tracking-widest border-b-2 border-primary/20 pb-1">Déroulement</span>
                     <h2 class="font-serif text-3xl md:text-4xl text-[#153e2e] mt-4 mb-4">Comment se passe la visite ?</h2>
-                    <p class="text-gray-600">Notre expert se déplace chez vous (environ 45 min). Ce n'est pas une simple visite commerciale, mais un véritable diagnostic technique.</p>
+                    <p class="text-gray-600 text-lg">Notre expert se déplace chez vous (environ 45 min). Ce n'est pas une simple visite commerciale, mais un véritable diagnostic technique.</p>
                 </div>
 
                 <div class="grid md:grid-cols-3 gap-8">
                     <!-- Etape 1 -->
-                    <div class="group p-8 rounded-2xl border border-gray-100 hover:shadow-xl transition-all reveal-up">
+                    <div class="group p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all reveal-up">
                         <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600 mb-6 group-hover:scale-110 transition-transform">
                             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20"/><path d="M2 12l5 5"/><path d="M2 12l5-5"/></svg>
                         </div>
-                        <h3 class="font-serif text-xl font-bold text-[#153e2e] mb-3">1. Inspection Visuelle & Mesures</h3>
-                        <p class="text-gray-600 text-sm">Mesure des surfaces, vérification des vitrages, de l'état de la toiture et des entrées d'air. Nous cherchons les traces d'humidité.</p>
+                        <h3 class="font-serif text-xl font-bold text-[#153e2e] mb-3">1. Inspection Visuelle</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">Mesure des surfaces, vérification des vitrages, de l'état de la toiture et des entrées d'air. Nous cherchons les traces d'humidité.</p>
                     </div>
 
                     <!-- Etape 2 -->
-                    <div class="group p-8 rounded-2xl border border-gray-100 hover:shadow-xl transition-all reveal-up delay-100">
+                    <div class="group p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all reveal-up delay-100">
                         <div class="w-14 h-14 bg-orange-100 rounded-2xl flex items-center justify-center text-orange-600 mb-6 group-hover:scale-110 transition-transform">
                             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg>
                         </div>
                         <h3 class="font-serif text-xl font-bold text-[#153e2e] mb-3">2. Analyse Thermique</h3>
-                        <p class="text-gray-600 text-sm">Si l'écart de température le permet, nous utilisons une caméra thermique pour visualiser les ponts thermiques (zones rouges) invisibles à l'œil nu.</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">Si l'écart de température le permet, nous utilisons une caméra thermique pour visualiser les ponts thermiques (zones rouges) invisibles à l'œil nu.</p>
                     </div>
 
                     <!-- Etape 3 -->
-                    <div class="group p-8 rounded-2xl border border-gray-100 hover:shadow-xl transition-all reveal-up delay-200">
+                    <div class="group p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all reveal-up delay-200">
                         <div class="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center text-green-600 mb-6 group-hover:scale-110 transition-transform">
                             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
                         </div>
-                        <h3 class="font-serif text-xl font-bold text-[#153e2e] mb-3">3. Rapport & Préconisations</h3>
-                        <p class="text-gray-600 text-sm">Nous vous remettons une synthèse chiffrée : Quels travaux prioriser ? Pour quel gain énergétique ? Avec quelles aides financières ?</p>
+                        <h3 class="font-serif text-xl font-bold text-[#153e2e] mb-3">3. Rapport & Solution</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">Nous vous remettons une synthèse chiffrée : Quels travaux prioriser ? Pour quel gain énergétique ? Avec quelles aides financières ?</p>
                     </div>
                 </div>
             </div>
@@ -161,16 +219,71 @@
 
     </main>
 
-    <!-- FOOTER -->
-    <footer class="bg-foreground text-white/60 py-8 border-t border-white/10 text-center text-sm">
-        <div class="container mx-auto">
-            <p class="mb-2">© 2026 ApexRenov - Expert RGE</p>
-            <div class="flex justify-center gap-4 text-xs">
-                <a href="../legal.html" class="hover:text-white transition-colors">Mentions Légales</a>
-                <a href="../privacy.html" class="hover:text-white transition-colors">Politique de Confidentialité</a>
+    <!-- ======================================================= -->
+    <!--                      FOOTER                            -->
+    <!-- ======================================================= -->
+    <footer class="bg-foreground text-white/90">
+        <div class="container mx-auto px-4 py-16">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <img src="../images/logo-apexrenov.png" alt="Logo ApexRenov" class="w-10 h-10 rounded-lg object-contain">
+                        <div class="flex flex-col">
+                            <span class="font-serif font-semibold text-lg leading-tight text-[#148822]">ApexRenov</span>
+                            <span class="text-xs text-white/60">Couverture & Performance Énergétique</span>
+                        </div>
+                    </div>
+                    <p class="text-white/70 text-sm leading-relaxed mb-6">Spécialistes de la couverture et de la rénovation énergétique depuis plus de 20 ans. Qualité, expertise et engagement écologique.</p>
+                </div>
+                <div>
+                    <h4 class="font-serif text-lg mb-6">Nos Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="../index.html#services" class="text-white/70 hover:text-accent transition-colors text-sm">Couverture & Toiture</a></li>
+                        <li><a href="../index.html#services" class="text-white/70 hover:text-accent transition-colors text-sm">Isolation Thermique</a></li>
+                        <li><a href="../index.html#services" class="text-white/70 hover:text-accent transition-colors text-sm">Panneaux Solaires</a></li>
+                        <li><a href="../index.html#services" class="text-white/70 hover:text-accent transition-colors text-sm">Étanchéité</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-serif text-lg mb-6">Liens Utiles</h4>
+                    <ul class="space-y-3">
+                        <li><a href="../faq.html" class="text-white/70 hover:text-accent transition-colors text-sm">FAQ</a></li>
+                        <li><a href="../legal.html" class="text-white/70 hover:text-accent transition-colors text-sm">Mentions Légales</a></li>
+                        <li><a href="../privacy.html" class="text-white/70 hover:text-accent transition-colors text-sm">Politique de Confidentialité</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-serif text-lg mb-6">Contact</h4>
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="tel:+33754826639" class="flex items-center gap-3 text-white/70 hover:text-accent transition-colors text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                07 54 82 66 39
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:ldelavictoire@gmail.com" class="flex items-center gap-3 text-white/70 hover:text-accent transition-colors text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                                ldelavictoire@gmail.com
+                            </a>
+                        </li>
+                        <li>
+                            <div class="flex items-start gap-3 text-white/70 text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                27 rue Armand Carrel<br>75019 Paris
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </footer>
+            <div class="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-white/60 text-sm">© 2026 ApexRenov. Tous droits réservés.</p>
+                <div class="flex items-center gap-6">
+                    <span class="text-white/60 text-sm">Certifié RGE</span>
+                    <span class="text-white/60 text-sm">Garantie Décennale</span>
+                </div>
+            </div>
+        </footer>
 
 </body>
 </html>
