@@ -6,13 +6,13 @@
     <title>Zinguerie & Étanchéité Toiture | ApexRenov</title>
     <meta name="description" content="Expert zingueur : Pose et réparation de gouttières (zinc/PVC), chéneaux, abergements de cheminée et solins. Étanchéité parfaite garantie 10 ans.">
     
-    <!-- FAVICON -->
+    <!-- FAVICON (Chemin corrigé) -->
     <link rel="icon" type="image/png" href="../images/favicon-apexrenov.png">
     
     <!-- POLICES -->
     <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100..900&family=Mulish:wght@200..900&display=swap" rel="stylesheet">
     
-    <!-- CSS & JS -->
+    <!-- CSS & JS (Chemins corrigés) -->
     <link rel="stylesheet" href="../style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="../script.js"></script>
@@ -20,217 +20,344 @@
 
 <body class="bg-background text-foreground antialiased font-sans">
 
-    <!-- HEADER -->
-    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border shadow-sm">
-        <div class="container mx-auto px-4 h-20 flex items-center justify-between">
-            <a href="../index.html" class="flex items-center gap-3">
-                <img src="../images/logo-apexrenov.png" alt="Logo ApexRenov" class="w-10 h-10 rounded-lg object-contain">
-                <div class="flex flex-col">
-                    <span class="font-serif font-semibold text-lg text-[#148822] leading-tight">ApexRenov</span>
-                    <span class="text-xs text-muted-foreground">Artisan Zingueur</span>
-                </div>
-            </a>
-            <nav class="hidden md:flex items-center gap-8">
-                <a href="../index.html" class="text-sm font-medium text-[#153e2e] hover:text-primary transition-colors">Accueil</a>
-                <a href="hub-toiture.html" class="text-sm font-medium text-[#153e2e] hover:text-primary transition-colors">Pôle Toiture</a>
-                <a href="../index.html#contact" class="btn-premium inline-flex items-center justify-center gap-2 rounded-lg text-sm font-semibold h-10 px-6 text-white">Devis Gratuit</a>
-            </nav>
-        </div>
-    </header>
+    <div class="min-h-screen flex flex-col">
 
-    <main class="pt-20">
+        <!-- ======================================================= -->
+        <!--                          HEADER                         -->
+        <!-- ======================================================= -->
 
-        <!-- FIL D'ARIANE -->
-        <div class="bg-gray-50 border-b border-gray-100 py-3">
+        <header id="main-header" class="fixed top-0 left-0 right-0 z-50 bg-transparent transition-all duration-300">
             <div class="container mx-auto px-4">
-                <nav class="text-xs text-gray-500 flex gap-2 items-center">
-                    <a href="../index.html" class="hover:text-primary transition-colors">Accueil</a>
-                    <span class="text-gray-300">/</span>
-                    <a href="hub-toiture.html" class="hover:text-primary transition-colors">Hub Toiture</a>
-                    <span class="text-gray-300">/</span>
-                    <span class="text-primary font-bold bg-primary/5 px-2 py-0.5 rounded text-[10px] uppercase tracking-wide">Zinguerie</span>
-                </nav>
-            </div>
-        </div>
+                <div class="flex items-center justify-between h-20">
+                    <a href="../index.html" class="flex items-center gap-3 group">
+                        <img src="../images/logo-apexrenov.png" alt="Logo ApexRenov" class="w-10 h-10 rounded-lg object-contain">
+                        <div class="flex flex-col">
+                            <span class="header-title font-serif font-semibold text-lg text-[#148822] leading-tight transition-colors duration-300">ApexRenov</span>
+                            <span class="header-subtitle text-xs text-white/80 transition-colors duration-300">Couverture & Performance Énergétique</span>
+                        </div>
+                    </a>
 
-        <!-- HERO SECTION -->
-        <section class="relative py-16 lg:py-24 bg-white overflow-hidden">
-            <div class="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
-                
-                <div class="reveal-up">
-                    <h1 class="font-serif text-4xl lg:text-5xl text-[#153e2e] leading-tight mb-6">
-                        Zinguerie & Étanchéité :<br>
-                        <span class="text-primary">La finition qui protège votre maison</span>
-                    </h1>
-                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-                        Une toiture performante, c'est avant tout une évacuation des eaux maîtrisée. Nous façonnons le zinc sur-mesure pour protéger vos façades et garantir l'étanchéité des points sensibles.
-                    </p>
-                    
-                    <ul class="space-y-4 mb-10">
-                        <li class="flex items-center gap-3 text-gray-700 font-medium">
-                            <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17 4 12"/></svg>
-                            </div>
-                            Gouttières Zinc, PVC & Alu
-                        </li>
-                        <li class="flex items-center gap-3 text-gray-700 font-medium">
-                            <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17 4 12"/></svg>
-                            </div>
-                            Étanchéité cheminées (Abergements)
-                        </li>
-                        <li class="flex items-center gap-3 text-gray-700 font-medium">
-                            <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17 4 12"/></svg>
-                            </div>
-                            Soudure à l'étain traditionnelle
-                        </li>
-                    </ul>
+                    <!-- Desktop Nav (Liens corrigés vers ../index.html) -->
+                    <nav class="hidden md:flex items-center gap-8">
+                        <a href="../index.html" class="nav-link text-sm font-medium text-white/90 hover:text-primary transition-colors duration-300">Accueil</a>
+                        <a href="../index.html#services" class="nav-link text-sm font-medium text-white/90 hover:text-primary transition-colors duration-300">Services</a>
+                        <a href="../index.html#avantages" class="nav-link text-sm font-medium text-white/90 hover:text-primary transition-colors duration-300">Pourquoi Nous</a>
+                        <a href="../blog.html" class="nav-link text-sm font-medium text-white/90 hover:text-primary transition-colors duration-300">Blog</a>
+                        <a href="../index.html#contact" class="nav-link text-sm font-medium text-white/90 hover:text-primary transition-colors duration-300">Contact</a>
+                    </nav>
 
-                    <div class="flex flex-wrap gap-4">
-                        <a href="../index.html#contact" class="btn-premium inline-flex items-center justify-center px-8 py-3 rounded-lg text-white font-bold transition-transform hover:-translate-y-1">
-                            Devis Zinguerie Gratuit
+                    <!-- Desktop Actions -->
+                    <div class="hidden md:flex items-center gap-4">
+                        <a href="tel:+33754826639" class="header-phone flex items-center gap-2 text-sm text-white/90 hover:text-primary transition-colors duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone w-4 h-4">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            07 54 82 66 39
+                        </a>
+                        <a href="../index.html#contact" class="btn-premium inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm font-semibold h-10 px-6 text-white">
+                            Devis Gratuit
                         </a>
                     </div>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="mobile-menu-btn-icon md:hidden p-2 text-white hover:text-primary transition-colors" aria-label="Toggle menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu w-6 h-6">
+                            <line x1="4" x2="20" y1="12" y2="12"></line>
+                            <line x1="4" x2="20" y1="6" y2="6"></line>
+                            <line x1="4" x2="20" y1="18" y2="18"></line>
+                        </svg>
+                    </button>
                 </div>
 
-                <!-- Image Hero -->
-                <div class="relative h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl reveal-up delay-100 group border border-gray-100">
-                    <img src="../images/zinguerie-hero.webp" alt="Artisan zingueur soudure" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                    <div class="absolute bottom-6 left-6 text-white">
-                        <p class="font-serif text-xl font-bold">Précision & Finition</p>
-                        <p class="text-white/80 text-sm">Le souci du détail</p>
-                    </div>
+                <!-- Mobile Menu Content -->
+                <div id="mobile-menu" class="hidden md:hidden pb-6 border-t border-white/20 mt-2 bg-white/90 backdrop-blur-xl rounded-2xl px-6 shadow-2xl mx-2">
+                    <nav class="flex flex-col gap-4 mt-4">
+                        <a href="../index.html" class="text-base font-medium text-[#153e2e] hover:text-primary py-2 border-b border-gray-100">Accueil</a>
+                        <a href="../index.html#services" class="text-base font-medium text-[#153e2e] hover:text-primary py-2 border-b border-gray-100">Services</a>
+                        <a href="../index.html#avantages" class="text-base font-medium text-[#153e2e] hover:text-primary py-2 border-b border-gray-100">Pourquoi Nous</a>
+                        <a href="../blog.html" class="text-base font-medium text-[#153e2e] hover:text-primary py-2 border-b border-gray-100">Blog</a>
+                        <a href="../index.html#contact" class="text-base font-medium text-[#153e2e] hover:text-primary py-2 border-b border-gray-100">Contact</a>
+                        <a href="tel:+33754826639" class="text-base font-bold text-primary mt-2 flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            07 54 82 66 39
+                        </a>
+                    </nav>
                 </div>
             </div>
-        </section>
+        </header>
 
-        <!-- DÉTAILS DES PRESTATIONS -->
-        <section class="py-20 bg-[#F0F2F1]">
-            <div class="container mx-auto px-4">
-                <div class="text-center max-w-3xl mx-auto mb-16 reveal-up">
-                    <h2 class="font-serif text-3xl md:text-4xl text-[#153e2e] mb-4">Gestion des Eaux Pluviales</h2>
-                    <p class="text-gray-600">Une mauvaise évacuation entraîne des infiltrations en façade et fragilise les fondations. Nous intervenons sur tous les éléments de zinguerie.</p>
+        <main class="flex-grow">
+
+            <!-- ======================================================= -->
+            <!--                 HERO SECTION (Injectée)                 -->
+            <!-- ======================================================= -->
+            <section class="relative min-h-[50vh] lg:min-h-[60vh] flex items-center pt-20 overflow-hidden">
+                <!-- Image de fond (Réutilisation de l'image de zinguerie existante) -->
+                <div class="absolute inset-0 z-0">
+                    <img src="../images/zinguerie-hero.webp" alt="Travaux de zinguerie toiture" class="w-full h-full object-cover">
+                    <!-- Overlay sombre pour rendre le header transparent lisible -->
+                    <div class="absolute inset-0 bg-gradient-to-r from-[#153e2e]/90 via-[#153e2e]/70 to-[#153e2e]/40"></div>
                 </div>
 
-                <div class="grid md:grid-cols-3 gap-8">
-                    
-                    <!-- 1. GOUTTIERES -->
-                    <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-all reveal-up">
-                        <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-blue-700 mb-6">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                        </div>
-                        <h3 class="font-serif text-xl font-bold text-[#153e2e] mb-3">Gouttières & Descentes</h3>
-                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">
-                            Pose et remplacement (Demi-ronde, Havraise, Nantaise).
+                <div class="container mx-auto px-4 relative z-10">
+                    <!-- Fil d'ariane intégré au Hero -->
+                    <nav class="flex gap-2 items-center text-xs text-white/60 mb-6 animate-fade-up">
+                        <a href="../index.html" class="hover:text-primary transition-colors">Accueil</a>
+                        <span>/</span>
+                        <a href="hub-toiture.html" class="hover:text-primary transition-colors">Pôle Toiture</a>
+                        <span>/</span>
+                        <span class="text-primary font-bold bg-white/10 px-2 py-0.5 rounded uppercase tracking-wide">Zinguerie</span>
+                    </nav>
+
+                    <div class="max-w-3xl">
+                        <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6 animate-fade-up" style="animation-delay: 0.1s;">
+                            Zinguerie & Étanchéité
+                        </h1>
+                        <p class="text-lg md:text-xl text-white/90 mb-8 leading-relaxed animate-fade-up" style="animation-delay: 0.2s;">
+                            La finition qui protège votre maison. Nous façonnons le zinc sur-mesure pour garantir une évacuation parfaite des eaux et protéger vos façades.
                         </p>
-                        <ul class="text-sm space-y-2 text-gray-700 border-t border-gray-100 pt-4">
-                            <li><strong>Zinc :</strong> Durée de vie 40 ans+, esthétique traditionnelle.</li>
-                            <li><strong>PVC :</strong> Économique, nombreux coloris.</li>
-                            <li><strong>Alu :</strong> Moderne, sans soudure.</li>
+                        <div class="flex flex-wrap gap-4 animate-fade-up" style="animation-delay: 0.3s;">
+                            <a href="../index.html#contact" class="btn-premium inline-flex items-center justify-center px-8 py-3 rounded-lg text-white font-bold transition-transform hover:-translate-y-1">
+                                Devis Gratuit
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======================================================= -->
+            <!--             CONTENU PRINCIPAL (Réadapté)                -->
+            <!-- ======================================================= -->
+
+            <!-- SECTION INTRO & POINTS CLÉS -->
+            <section class="py-16 bg-white">
+                <div class="container mx-auto px-4">
+                    <div class="max-w-4xl mx-auto">
+                        <p class="text-lg text-gray-600 mb-10 leading-relaxed text-center">
+                            Une toiture performante, c'est avant tout une évacuation des eaux maîtrisée. Une mauvaise évacuation entraîne des infiltrations en façade et fragilise les fondations.
+                        </p>
+                        
+                        <!-- Liste des points forts réorganisée -->
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <div class="flex flex-col items-center text-center p-6 bg-gray-50 rounded-xl border border-gray-100">
+                                <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17 4 12"/></svg>
+                                </div>
+                                <h3 class="font-bold text-[#153e2e] mb-2">Gouttières</h3>
+                                <p class="text-sm text-gray-500">Zinc, PVC & Alu</p>
+                            </div>
+                            <div class="flex flex-col items-center text-center p-6 bg-gray-50 rounded-xl border border-gray-100">
+                                <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17 4 12"/></svg>
+                                </div>
+                                <h3 class="font-bold text-[#153e2e] mb-2">Abergements</h3>
+                                <p class="text-sm text-gray-500">Étanchéité cheminées</p>
+                            </div>
+                            <div class="flex flex-col items-center text-center p-6 bg-gray-50 rounded-xl border border-gray-100">
+                                <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17 4 12"/></svg>
+                                </div>
+                                <h3 class="font-bold text-[#153e2e] mb-2">Soudure</h3>
+                                <p class="text-sm text-gray-500">À l'étain traditionnelle</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DÉTAILS DES PRESTATIONS -->
+            <section class="py-20 bg-[#F0F2F1]">
+                <div class="container mx-auto px-4">
+                    <div class="text-center max-w-3xl mx-auto mb-16 reveal-up">
+                        <span class="text-primary font-bold text-sm uppercase tracking-widest border-b-2 border-primary/20 pb-1">Nos Solutions</span>
+                        <h2 class="font-serif text-3xl md:text-4xl text-[#153e2e] mt-4 mb-4">Gestion des Eaux Pluviales</h2>
+                        <p class="text-gray-600">Nous intervenons sur tous les éléments de zinguerie pour garantir la pérennité de votre bâti.</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-8">
+                        
+                        <!-- 1. GOUTTIERES -->
+                        <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-all reveal-up">
+                            <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-blue-700 mb-6">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                            </div>
+                            <h3 class="font-serif text-xl font-bold text-[#153e2e] mb-3">Gouttières & Descentes</h3>
+                            <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                                Pose et remplacement (Demi-ronde, Havraise, Nantaise).
+                            </p>
+                            <ul class="text-sm space-y-2 text-gray-700 border-t border-gray-100 pt-4">
+                                <li><strong>Zinc :</strong> Durée de vie 40 ans+, esthétique traditionnelle.</li>
+                                <li><strong>PVC :</strong> Économique, nombreux coloris.</li>
+                                <li><strong>Alu :</strong> Moderne, sans soudure.</li>
+                            </ul>
+                        </div>
+
+                        <!-- 2. POINTS SINGULIERS -->
+                        <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-all reveal-up delay-100">
+                            <div class="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center text-orange-700 mb-6">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l8-4 8 4v14"/><path d="M17 21v-8.66a2 2 0 0 0-2-2h-6a2 2 0 0 0-2 2V21"/></svg>
+                            </div>
+                            <h3 class="font-serif text-xl font-bold text-[#153e2e] mb-3">Abergements & Solins</h3>
+                            <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                                C'est souvent ici que les fuites démarrent. Nous assurons l'étanchéité parfaite autour de vos cheminées, fenêtres de toit (Velux) et murs acrotères.
+                            </p>
+                            <div class="inline-block bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">Façonné sur mesure</div>
+                        </div>
+
+                        <!-- 3. CHÉNEAUX -->
+                        <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-all reveal-up delay-200">
+                            <div class="w-14 h-14 bg-gray-100 rounded-xl flex items-center justify-center text-gray-700 mb-6">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 19h8a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2Z"/></svg>
+                            </div>
+                            <h3 class="font-serif text-xl font-bold text-[#153e2e] mb-3">Chéneaux Encaissés</h3>
+                            <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                                Pour les toitures plus complexes ou invisibles. Remplacement des fonds de chéneaux usés par le temps et pose de joints de dilatation.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION SAVOIR-FAIRE (SOUDURE) -->
+            <section class="py-20 bg-white">
+                <div class="container mx-auto px-4 grid lg:grid-cols-2 gap-16 items-center">
+                    
+                    <div class="reveal-up">
+                        <span class="text-primary font-bold text-sm uppercase tracking-widest">Technique Artisanale</span>
+                        <h2 class="font-serif text-3xl md:text-4xl text-[#153e2e] mt-4 mb-6 leading-tight">La maîtrise de la soudure à l'étain</h2>
+                        <p class="text-gray-600 mb-6 leading-relaxed text-lg">
+                            Contrairement à beaucoup de prestataires qui utilisent du silicone (qui vieillit mal), nos zingueurs réalisent des <strong>soudures à l'étain traditionnelles</strong>.
+                        </p>
+                        <p class="text-gray-600 mb-8 leading-relaxed">
+                            Cette technique garantit une jonction moléculaire entre les plaques de zinc, assurant une étanchéité absolue pendant des décennies, même avec les variations de température.
+                        </p>
+                        
+                        <ul class="space-y-4">
+                            <li class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">✓</div>
+                                <span class="text-gray-700 font-medium">Respect des pentes d'écoulement (DTU 40.5)</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">✓</div>
+                                <span class="text-gray-700 font-medium">Gestion de la dilatation du métal</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">✓</div>
+                                <span class="text-gray-700 font-medium">Façonnage sur chantier pour du sur-mesure</span>
+                            </li>
                         </ul>
                     </div>
 
-                    <!-- 2. POINTS SINGULIERS -->
-                    <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-all reveal-up delay-100">
-                        <div class="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center text-orange-700 mb-6">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l8-4 8 4v14"/><path d="M17 21v-8.66a2 2 0 0 0-2-2h-6a2 2 0 0 0-2 2V21"/></svg>
-                        </div>
-                        <h3 class="font-serif text-xl font-bold text-[#153e2e] mb-3">Abergements & Solins</h3>
-                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">
-                            C'est souvent ici que les fuites démarrent. Nous assurons l'étanchéité parfaite autour de vos cheminées, fenêtres de toit (Velux) et murs acrotères.
-                        </p>
-                        <div class="inline-block bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">Façonné sur mesure</div>
-                    </div>
-
-                    <!-- 3. CHÉNEAUX -->
-                    <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-all reveal-up delay-200">
-                        <div class="w-14 h-14 bg-gray-100 rounded-xl flex items-center justify-center text-gray-700 mb-6">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 19h8a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2Z"/></svg>
-                        </div>
-                        <h3 class="font-serif text-xl font-bold text-[#153e2e] mb-3">Chéneaux Encaissés</h3>
-                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">
-                            Pour les toitures plus complexes ou invisibles. Remplacement des fonds de chéneaux usés par le temps et pose de joints de dilatation.
-                        </p>
+                    <!-- Image Technique (Chemin corrigé) -->
+                    <div class="relative h-[450px] rounded-2xl overflow-hidden shadow-2xl border border-gray-100 reveal-up delay-100">
+                        <img src="../images/soudure-zinc.webp" alt="Soudure zinc toiture" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/10 hover:bg-transparent transition-colors duration-500"></div>
                     </div>
 
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- SECTION SAVOIR-FAIRE (SOUDURE) -->
-        <section class="py-20 bg-white">
-            <div class="container mx-auto px-4 grid lg:grid-cols-2 gap-16 items-center">
-                
-                <div class="reveal-up">
-                    <span class="text-primary font-bold text-sm uppercase tracking-widest">Technique Artisanale</span>
-                    <h2 class="font-serif text-3xl md:text-4xl text-[#153e2e] mt-4 mb-6 leading-tight">La maîtrise de la soudure à l'étain</h2>
-                    <p class="text-gray-600 mb-6 leading-relaxed text-lg">
-                        Contrairement à beaucoup de prestataires qui utilisent du silicone (qui vieillit mal), nos zingueurs réalisent des <strong>soudures à l'étain traditionnelles</strong>.
+            <!-- CTA CONTACT -->
+            <section class="py-24 bg-[#153e2e] relative overflow-hidden">
+                 <div class="absolute inset-0 opacity-20 bg-[url('../images/contact-texture.webp')] bg-cover bg-center mix-blend-overlay"></div>
+                 
+                 <div class="container mx-auto px-4 text-center relative z-10">
+                    <h2 class="font-serif text-3xl md:text-4xl text-white mb-6">Une fuite de gouttière ?</h2>
+                    <p class="text-white/70 mb-10 max-w-2xl mx-auto text-lg">
+                        L'eau qui ruisselle sur la façade peut créer de graves dommages (moisissures, fissures). N'attendez pas pour remplacer vos zingueries.
                     </p>
-                    <p class="text-gray-600 mb-8 leading-relaxed">
-                        Cette technique garantit une jonction moléculaire entre les plaques de zinc, assurant une étanchéité absolue pendant des décennies, même avec les variations de température.
-                    </p>
-                    
-                    <ul class="space-y-4">
-                        <li class="flex items-center gap-3">
-                            <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">✓</div>
-                            <span class="text-gray-700 font-medium">Respect des pentes d'écoulement (DTU 40.5)</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">✓</div>
-                            <span class="text-gray-700 font-medium">Gestion de la dilatation du métal</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">✓</div>
-                            <span class="text-gray-700 font-medium">Façonnage sur chantier pour du sur-mesure</span>
-                        </li>
-                    </ul>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <a href="../index.html#contact" class="btn-premium inline-flex items-center justify-center px-8 py-4 rounded-xl text-white font-bold text-lg shadow-2xl">
+                            Demander une intervention
+                        </a>
+                        <a href="tel:+33754826639" class="inline-flex items-center justify-center px-8 py-4 rounded-xl border border-white/20 text-white font-bold hover:bg-white/10 transition-colors backdrop-blur-sm">
+                            📞 07 54 82 66 39
+                        </a>
+                    </div>
                 </div>
+            </section>
 
-                <!-- Image Technique -->
-                <div class="relative h-[450px] rounded-2xl overflow-hidden shadow-2xl border border-gray-100 reveal-up delay-100">
-                    <img src="../images/soudure-zinc.webp" alt="Soudure zinc toiture" class="w-full h-full object-cover">
-                    <!-- Zoom Effect Overlay -->
-                    <div class="absolute inset-0 bg-black/10 hover:bg-transparent transition-colors duration-500"></div>
+        </main>
+
+        <!-- ======================================================= -->
+        <!--                      FOOTER (Global)                    -->
+        <!-- ======================================================= -->
+
+        <footer class="bg-foreground text-white/90">
+            <div class="container mx-auto px-4 py-16">
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+                    <div>
+                        <div class="flex items-center gap-3 mb-6">
+                            <img src="../images/logo-apexrenov.png" alt="Logo ApexRenov" class="w-10 h-10 rounded-lg object-contain">
+                            <div class="flex flex-col">
+                                <span class="font-serif font-semibold text-lg leading-tight text-[#148822]">ApexRenov</span>
+                                <span class="text-xs text-white/60">Couverture & Performance Énergétique</span>
+                            </div>
+                        </div>
+                        <p class="text-white/70 text-sm leading-relaxed mb-6">Spécialistes de la couverture et de la rénovation énergétique depuis plus de 20 ans. Qualité, expertise et engagement écologique.</p>
+                        <div class="flex gap-4">
+                            <a href="#" class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-accent transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook w-5 h-5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                            <a href="#" class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-accent transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram w-5 h-5"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a>
+                            <a href="#" class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-accent transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin w-5 h-5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-serif text-lg mb-6">Nos Services</h4>
+                        <ul class="space-y-3">
+                            <li><a href="../index.html#services" class="text-white/70 hover:text-accent transition-colors text-sm">Couverture & Toiture</a></li>
+                            <li><a href="../index.html#services" class="text-white/70 hover:text-accent transition-colors text-sm">Isolation Thermique</a></li>
+                            <li><a href="../index.html#services" class="text-white/70 hover:text-accent transition-colors text-sm">Panneaux Solaires</a></li>
+                            <li><a href="../index.html#services" class="text-white/70 hover:text-accent transition-colors text-sm">Étanchéité</a></li>
+                            <li><a href="../index.html#services" class="text-white/70 hover:text-accent transition-colors text-sm">Charpente</a></li>
+                            <li><a href="../index.html#services" class="text-white/70 hover:text-accent transition-colors text-sm">Zinguerie</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-serif text-lg mb-6">Liens Utiles</h4>
+                        <ul class="space-y-3">
+                            <li><a href="#" class="text-white/70 hover:text-accent transition-colors text-sm">Nos Réalisations</a></li>
+                            <li><a href="#" class="text-white/70 hover:text-accent transition-colors text-sm">Aides & Financements</a></li>
+                            <li><a href="../faq.html" class="text-white/70 hover:text-accent transition-colors text-sm">FAQ</a></li>
+                            <li><a href="../legal.html" class="text-white/70 hover:text-accent transition-colors text-sm">Mentions Légales</a></li>
+                            <li><a href="../privacy.html" class="text-white/70 hover:text-accent transition-colors text-sm">Politique de Confidentialité</a></li>
+                            <li><button onclick="localStorage.removeItem('ecoToit_cookie_consent'); window.location.reload();" class="text-white/70 hover:text-accent transition-colors text-sm text-left">Gestion des cookies</button></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-serif text-lg mb-6">Contact</h4>
+                        <ul class="space-y-4">
+                            <li>
+                                <a href="tel:+33754826639" class="flex items-center gap-3 text-white/70 hover:text-accent transition-colors text-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone w-4 h-4"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                    07 54 82 66 39
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:ldelavictoire@gmail.com" class="flex items-center gap-3 text-white/70 hover:text-accent transition-colors text-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail w-4 h-4"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                                    ldelavictoire@gmail.com
+                                </a>
+                            </li>
+                            <li>
+                                <div class="flex items-start gap-3 text-white/70 text-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin w-4 h-4 mt-0.5 flex-shrink-0"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                    27 rue Armand Carrel<br>75019 Paris
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-
-            </div>
-        </section>
-
-        <!-- CTA CONTACT -->
-        <section class="py-24 bg-[#153e2e] relative overflow-hidden">
-             <div class="absolute inset-0 opacity-20 bg-[url('../images/contact-texture.webp')] bg-cover bg-center mix-blend-overlay"></div>
-             
-             <div class="container mx-auto px-4 text-center relative z-10">
-                <h2 class="font-serif text-3xl md:text-4xl text-white mb-6">Une fuite de gouttière ?</h2>
-                <p class="text-white/70 mb-10 max-w-2xl mx-auto text-lg">
-                    L'eau qui ruisselle sur la façade peut créer de graves dommages (moisissures, fissures). N'attendez pas pour remplacer vos zingueries.
-                </p>
-                <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="../index.html#contact" class="btn-premium inline-flex items-center justify-center px-8 py-4 rounded-xl text-white font-bold text-lg shadow-2xl">
-                        Demander une intervention
-                    </a>
-                    <a href="tel:+33754826639" class="inline-flex items-center justify-center px-8 py-4 rounded-xl border border-white/20 text-white font-bold hover:bg-white/10 transition-colors backdrop-blur-sm">
-                        📞 07 54 82 66 39
-                    </a>
+                <div class="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-white/60 text-sm">© 2026 ApexRenov. Tous droits réservés.</p>
+                    <div class="flex items-center gap-6">
+                        <span class="text-white/60 text-sm">Certifié RGE</span>
+                        <span class="text-white/60 text-sm">Garantie Décennale</span>
+                    </div>
                 </div>
             </div>
-        </section>
+        </footer>
 
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="bg-foreground text-white/60 py-8 border-t border-white/10 text-center text-sm">
-        <div class="container mx-auto">
-            <p class="mb-2">© 2026 ApexRenov - Expert RGE</p>
-            <div class="flex justify-center gap-4 text-xs">
-                <a href="../legal.html" class="hover:text-white transition-colors">Mentions Légales</a>
-                <a href="../privacy.html" class="hover:text-white transition-colors">Politique de Confidentialité</a>
-            </div>
-        </div>
-    </footer>
-
+    </div>
 </body>
 </html>
