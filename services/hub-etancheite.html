@@ -28,8 +28,6 @@
         <!-- ======================================================= -->
         <!--                          HEADER                         -->
         <!-- ======================================================= -->
-        <!-- Header identique à l'index, adapté pour le sous-dossier -->
-        
         <header id="main-header" class="fixed top-0 left-0 right-0 z-50 bg-transparent transition-all duration-300">
             <div class="container mx-auto px-4">
                 <div class="flex items-center justify-between h-20">
@@ -42,7 +40,7 @@
                         </div>
                     </a>
 
-                    <!-- Desktop Nav (Liens absolus vers index.html) -->
+                    <!-- Desktop Nav -->
                     <nav class="hidden md:flex items-center gap-8">
                         <a href="../index.html#accueil" class="nav-link text-sm font-medium text-white/90 hover:text-primary transition-colors duration-300">Accueil</a>
                         <a href="../index.html#services" class="nav-link text-sm font-medium text-white/90 hover:text-primary transition-colors duration-300">Services</a>
@@ -97,7 +95,7 @@
             <!--                  HERO SECTION UNIVERSELLE               -->
             <!-- ======================================================= -->
             <section class="relative h-[50vh] min-h-[400px] flex items-center justify-center pt-20 overflow-hidden">
-                <!-- Image de fond (Réutilisation d'une image existante ou placeholder) -->
+                <!-- Image de fond -->
                 <div class="absolute inset-0 z-0">
                     <img src="../images/service-etancheite.webp" alt="Travaux d'étanchéité" class="w-full h-full object-cover">
                     <!-- Overlay dégradé sombre pour lisibilité Header -->
@@ -152,7 +150,7 @@
                     <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-6 max-w-5xl mx-auto text-left">
                         
                         <!-- 1. TOITURE TERRASSE (Le gros marché) -->
-                        <div class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex items-start gap-5 hover:-translate-y-1 cursor-pointer">
+                        <a href="etancheite-toiture-terrasse.html" class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex items-start gap-5 hover:-translate-y-1 cursor-pointer">
                             <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors shrink-0">
                                 <!-- Icone Toit Plat -->
                                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M5 20V8h14v12"/><path d="M5 8 12 2l7 6"/></svg>
@@ -163,10 +161,10 @@
                                 <p class="text-sm text-gray-600 mb-4 leading-relaxed">Étanchéité Bitume (Paxalu), EPDM ou Résine. Pour toits accessibles (dalles sur plots) ou non accessibles (gravillons).</p>
                                 <span class="text-primary text-sm font-bold underline decoration-primary/30 group-hover:decoration-primary transition-all">Voir les solutions &rarr;</span>
                             </div>
-                        </div>
+                        </a>
 
                         <!-- 2. BALCONS (Résine) -->
-                        <div class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex items-start gap-5 hover:-translate-y-1 cursor-pointer">
+                        <a href="etancheite-balcons.html" class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex items-start gap-5 hover:-translate-y-1 cursor-pointer">
                             <div class="w-14 h-14 bg-cyan-100 rounded-xl flex items-center justify-center text-cyan-600 group-hover:bg-cyan-600 group-hover:text-white transition-colors shrink-0">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h16"/><path d="M4 14h16"/><path d="M4 10v11"/><path d="M20 10v11"/><path d="M8 14v7"/><path d="M12 14v7"/><path d="M16 14v7"/></svg>
                             </div>
@@ -176,10 +174,10 @@
                                 <p class="text-sm text-gray-600 mb-4 leading-relaxed">Système d'Étanchéité Liquide (SEL). Une résine performante et esthétique, sans joints, idéale pour la rénovation.</p>
                                 <span class="text-primary text-sm font-bold underline decoration-primary/30 group-hover:decoration-primary transition-all">Découvrir la résine &rarr;</span>
                             </div>
-                        </div>
+                        </a>
 
                         <!-- 3. FAÇADES (Hydrofuge) -->
-                        <div class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex items-start gap-5 hover:-translate-y-1 cursor-pointer">
+                        <a href="etancheite-facade.html" class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex items-start gap-5 hover:-translate-y-1 cursor-pointer">
                             <div class="w-14 h-14 bg-gray-100 rounded-xl flex items-center justify-center text-gray-600 group-hover:bg-gray-600 group-hover:text-white transition-colors shrink-0">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l8-4 8 4v14"/><path d="M17 21v-8.66a2 2 0 0 0-2-2h-6a2 2 0 0 0-2 2V21"/></svg>
                             </div>
@@ -189,10 +187,10 @@
                                 <p class="text-sm text-gray-600 mb-4 leading-relaxed">Traitement des fissures et application d'hydrofuge de façade pour stopper les infiltrations latérales.</p>
                                 <span class="text-primary text-sm font-bold underline decoration-primary/30 group-hover:decoration-primary transition-all">En savoir plus &rarr;</span>
                             </div>
-                        </div>
+                        </a>
 
                          <!-- 4. DIAGNOSTIC FUITE (Urgence) -->
-                         <div class="group bg-[#153e2e] p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-[#153e2e] flex items-start gap-5 hover:-translate-y-1 cursor-pointer">
+                         <a href="etancheite-recherche-fuite.html" class="group bg-[#153e2e] p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-[#153e2e] flex items-start gap-5 hover:-translate-y-1 cursor-pointer">
                             <div class="w-14 h-14 bg-red-500/20 rounded-xl flex items-center justify-center text-red-400 shrink-0 border border-red-500/30">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 21l-4.35-4.35"/><circle cx="11" cy="11" r="8"/><path d="m14.31 8-5.74 9.94"/></svg>
                             </div>
@@ -202,7 +200,7 @@
                                 <p class="text-sm text-white/70 mb-4 leading-relaxed">Infiltrations visibles ? Nous localisons l'origine précise (fumigène, colorant) et réparons immédiatement.</p>
                                 <span class="text-white text-sm font-bold underline decoration-white/30 group-hover:decoration-white transition-all">Demander une intervention &rarr;</span>
                             </div>
-                        </div>
+                        </a>
 
                     </div>
                 </div>
