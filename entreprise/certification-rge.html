@@ -6,303 +6,300 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Entreprise Certifiée RGE Qualibat | ApexRenov</title>
     <meta name="description" content="ApexRenov est certifié RGE (Reconnu Garant de l'Environnement). Label indispensable pour obtenir MaPrimeRénov', CEE et Éco-PTZ pour vos travaux.">
-    
-    <!-- FAVICON (Chemin ajusté) -->
+
     <link rel="icon" type="image/png" href="../images/favicon-apexrenov.png">
-    
-    <!-- POLICES -->
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100..900&family=Mulish:wght@200..900&display=swap" rel="stylesheet">
-    
-    <!-- CSS & JS (Chemins ajustés) -->
+
+    <!-- CSS Personnalisé -->
     <link rel="stylesheet" href="../style.css">
+
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Script JS Personnalisé -->
     <script src="../script.js"></script>
 </head>
 
-<body class="bg-background text-foreground antialiased font-sans flex flex-col min-h-screen">
+<body class="bg-background text-foreground antialiased font-sans">
 
-    <!-- ======================================================= -->
-    <!--           HEADER (Identique à Index + Chemins)          -->
-    <!-- ======================================================= -->
+    <div class="min-h-screen flex flex-col">
 
-    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 bg-transparent transition-all duration-300">
-        <div class="container mx-auto px-4">
-            <div class="flex items-center justify-between h-20">
-                <!-- Logo vers l'accueil (Chemin ajusté) -->
-                <a href="../index.html" class="flex items-center gap-3 group">
-                    <img src="../images/logo-apexrenov.png" alt="Logo ApexRenov" class="w-10 h-10 rounded-lg object-contain">
-                    <div class="flex flex-col">
-                        <span class="header-title font-serif font-semibold text-lg text-[#148822] leading-tight transition-colors duration-300">ApexRenov</span>
-                        <span class="header-subtitle text-xs text-white/80 transition-colors duration-300">Certification RGE</span>
+        <!-- ======================================================= -->
+        <!--                          HEADER                         -->
+        <!-- ======================================================= -->
+
+        <header id="main-header" class="fixed top-0 left-0 right-0 z-50 bg-transparent transition-all duration-300">
+            <div class="container mx-auto px-4">
+                <div class="flex items-center justify-between h-20">
+                    <a href="../index.html" class="flex items-center gap-3 group">
+                        <img src="../images/logo-apexrenov.png" alt="Logo ApexRenov" class="w-10 h-10 rounded-lg object-contain">
+                        <div class="flex flex-col">
+                            <span class="header-title font-serif font-semibold text-lg text-[#148822] leading-tight transition-colors duration-300">ApexRenov</span>
+                            <span class="header-subtitle text-xs text-white/80 transition-colors duration-300">Certification RGE</span>
+                        </div>
+                    </a>
+
+                    <!-- Desktop Nav -->
+                    <nav class="hidden md:flex items-center gap-8">
+                        <a href="../index.html" class="nav-link text-sm font-medium text-white/90 hover:text-primary transition-colors duration-300">Accueil</a>
+                        <a href="../index.html#services" class="nav-link text-sm font-medium text-white/90 hover:text-primary transition-colors duration-300">Services</a>
+                        <a href="../index.html#avantages" class="nav-link text-sm font-medium text-white/90 hover:text-primary transition-colors duration-300">Pourquoi Nous</a>
+                        <a href="../blog.html" class="nav-link text-sm font-medium text-white/90 hover:text-primary transition-colors duration-300">Blog</a>
+                        <a href="../index.html#contact" class="nav-link text-sm font-medium text-white/90 hover:text-primary transition-colors duration-300">Contact</a>
+                    </nav>
+
+                    <!-- Desktop Actions -->
+                    <div class="hidden md:flex items-center gap-4">
+                        <a href="tel:+33754826639" class="header-phone flex items-center gap-2 text-sm text-white/90 hover:text-primary transition-colors duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone w-4 h-4">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            07 54 82 66 39
+                        </a>
+                        <button onclick="document.getElementById('contact-cta').scrollIntoView()" class="btn-premium inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm font-semibold h-10 px-6">
+                            Devis Gratuit
+                        </button>
                     </div>
-                </a>
 
-                <!-- Desktop Nav (Liens ajustés avec ../) -->
-                <nav class="hidden md:flex items-center gap-8">
-                    <a href="../index.html" class="nav-link text-sm font-medium text-white/90 hover:text-primary transition-colors duration-300">Accueil</a>
-                    <a href="../index.html#services" class="nav-link text-sm font-medium text-white/90 hover:text-primary transition-colors duration-300">Services</a>
-                    <a href="../index.html#avantages" class="nav-link text-sm font-medium text-white/90 hover:text-primary transition-colors duration-300">Pourquoi Nous</a>
-                    <a href="../blog.html" class="nav-link text-sm font-medium text-white/90 hover:text-primary transition-colors duration-300">Blog</a>
-                    <a href="../index.html#contact" class="nav-link text-sm font-medium text-white/90 hover:text-primary transition-colors duration-300">Contact</a>
-                </nav>
-
-                <!-- Desktop Actions -->
-                <div class="hidden md:flex items-center gap-4">
-                    <a href="tel:+33754826639" class="header-phone flex items-center gap-2 text-sm text-white/90 hover:text-primary transition-colors duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone w-4 h-4">
-                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="mobile-menu-btn-icon md:hidden p-2 text-white hover:text-primary transition-colors" aria-label="Toggle menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu w-6 h-6">
+                            <line x1="4" x2="20" y1="12" y2="12"></line>
+                            <line x1="4" x2="20" y1="6" y2="6"></line>
+                            <line x1="4" x2="20" y1="18" y2="18"></line>
                         </svg>
-                        07 54 82 66 39
-                    </a>
-                    <a href="../index.html#contact" class="btn-premium inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm font-semibold h-10 px-6">
-                        Devis Gratuit
-                    </a>
+                    </button>
                 </div>
 
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="mobile-menu-btn-icon md:hidden p-2 text-white hover:text-primary transition-colors" aria-label="Toggle menu">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu w-6 h-6">
-                        <line x1="4" x2="20" y1="12" y2="12"></line>
-                        <line x1="4" x2="20" y1="6" y2="6"></line>
-                        <line x1="4" x2="20" y1="18" y2="18"></line>
-                    </svg>
-                </button>
+                <!-- Mobile Menu Content -->
+                <div id="mobile-menu" class="hidden md:hidden pb-6 border-t border-white/20 mt-2 bg-white/90 backdrop-blur-xl rounded-2xl px-6 shadow-2xl mx-2">
+                    <nav class="flex flex-col gap-4 mt-4">
+                        <a href="../index.html" class="text-base font-medium text-[#153e2e] hover:text-primary py-2 border-b border-gray-100">Accueil</a>
+                        <a href="../index.html#services" class="text-base font-medium text-[#153e2e] hover:text-primary py-2 border-b border-gray-100">Services</a>
+                        <a href="../index.html#avantages" class="text-base font-medium text-[#153e2e] hover:text-primary py-2 border-b border-gray-100">Pourquoi Nous</a>
+                        <a href="../blog.html" class="text-base font-medium text-[#153e2e] hover:text-primary py-2 border-b border-gray-100">Blog</a>
+                        <a href="../index.html#contact" class="text-base font-medium text-[#153e2e] hover:text-primary py-2 border-b border-gray-100">Contact</a>
+                        <a href="tel:+33754826639" class="text-base font-bold text-primary mt-2 flex items-center gap-2">
+                            07 54 82 66 39
+                        </a>
+                    </nav>
+                </div>
             </div>
+        </header>
 
-            <!-- Mobile Menu Content -->
-            <div id="mobile-menu" class="hidden md:hidden pb-6 border-t border-white/20 mt-2 bg-white/90 backdrop-blur-xl rounded-2xl px-6 shadow-2xl mx-2">
-                <nav class="flex flex-col gap-4 mt-4">
-                    <a href="../index.html" class="text-base font-medium text-[#153e2e] hover:text-primary py-2 border-b border-gray-100">Accueil</a>
-                    <a href="../index.html#services" class="text-base font-medium text-[#153e2e] hover:text-primary py-2 border-b border-gray-100">Services</a>
-                    <a href="../index.html#avantages" class="text-base font-medium text-[#153e2e] hover:text-primary py-2 border-b border-gray-100">Pourquoi Nous</a>
-                    <a href="../blog.html" class="text-base font-medium text-[#153e2e] hover:text-primary py-2 border-b border-gray-100">Blog</a>
-                    <a href="../index.html#contact" class="text-base font-medium text-[#153e2e] hover:text-primary py-2 border-b border-gray-100">Contact</a>
-                    <a href="tel:+33754826639" class="text-base font-bold text-primary mt-2 flex items-center gap-2">07 54 82 66 39</a>
-                </nav>
-            </div>
-        </div>
-    </header>
+        <main class="flex-grow">
 
-    <main class="flex-grow">
-
-        <!-- ======================================================= -->
-        <!--                  HERO SECTION (Standardisée)            -->
-        <!-- ======================================================= -->
-        
-        <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden flex items-center justify-center min-h-[400px]">
-            <!-- Fond Image avec Overlay pour le contraste du menu -->
-            <div class="absolute inset-0 z-0">
-                <!-- Utilisation de l'image Hero par défaut ou d'une image spécifique si dispo -->
-                <img src="../images/hero-background.webp" alt="Certification RGE" class="w-full h-full object-cover">
-                <!-- Overlay sombre pour lisibilité -->
-                <div class="absolute inset-0 bg-gradient-to-r from-[#0a1f16]/90 via-[#0a1f16]/70 to-[#0a1f16]/50"></div>
-            </div>
-
-            <div class="container mx-auto px-4 relative z-10 text-center max-w-4xl">
-                
-               
-
-                <!-- Badge -->
-                <div class="inline-flex items-center gap-2 bg-primary/20 backdrop-blur-sm border border-primary/30 rounded-full px-4 py-2 mb-6 animate-fade-up" style="animation-delay: 0.1s;">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
-                    <span class="text-sm font-bold text-white">Label Qualité Certifié</span>
+            <!-- ======================================================= -->
+            <!--                  HERO SECTION (BANNIERE)                -->
+            <!-- ======================================================= -->
+            <section class="relative pt-40 pb-20 lg:pt-52 lg:pb-32 flex items-center justify-center overflow-hidden">
+                <!-- Image de fond avec overlay -->
+                <div class="absolute inset-0 z-0">
+                    <img src="../images/hero-background.webp" alt="Certification RGE Qualibat" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-[#153e2e]/85"></div>
                 </div>
 
-                <!-- Titre -->
-                <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight animate-fade-up" style="animation-delay: 0.2s;">
-                    RGE : Le Sésame pour vos <span class="text-primary">Aides Financières</span>
-                </h1>
-                
-                <!-- Intro -->
-                <p class="text-lg text-white/80 leading-relaxed max-w-3xl mx-auto animate-fade-up" style="animation-delay: 0.3s;">
-                    Faire appel à ApexRenov, entreprise certifiée RGE (Reconnu Garant de l'Environnement), ce n'est pas seulement un gage de qualité technique. C'est la condition <strong>obligatoire</strong> pour bénéficier des subventions de l'État.
-                </p>
-            </div>
-        </section>
-
-        <!-- ======================================================= -->
-        <!--               CONTENU PAGE (Existant)                   -->
-        <!-- ======================================================= -->
-
-        <!-- POURQUOI C'EST IMPORTANT -->
-        <section class="py-20 bg-white">
-            <div class="container mx-auto px-4 grid lg:grid-cols-2 gap-16 items-center">
-                
-                <div class="reveal-up">
-                    <h2 class="font-serif text-3xl md:text-4xl text-[#153e2e] mb-6">Que signifie être RGE ?</h2>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        Ce label est délivré par des organismes indépendants (comme Qualibat) après un audit strict de nos chantiers et de nos compétences.
+                <div class="container mx-auto px-4 relative z-10 text-center max-w-4xl">
+                    <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-2 mb-6 animate-fade-up">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                        <span class="text-sm font-bold text-white">Label Qualité Certifié</span>
+                    </div>
+                    <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight animate-fade-up" style="animation-delay: 0.1s;">
+                        RGE : Le Sésame pour vos <span class="text-primary">Aides Financières</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-white/80 mb-0 leading-relaxed animate-fade-up" style="animation-delay: 0.2s;">
+                        Faire appel à ApexRenov, entreprise certifiée RGE (Reconnu Garant de l'Environnement), est la condition <strong>obligatoire</strong> pour bénéficier des subventions de l'État (MaPrimeRénov', CEE, Éco-PTZ).
                     </p>
-                    <p class="text-gray-600 mb-8 leading-relaxed">
-                        Il prouve que nous maîtrisons les normes d'efficacité énergétique. Pour vous, c'est la garantie que les travaux seront performants et que vos économies d'énergie seront réelles.
-                    </p>
+                </div>
+            </section>
+
+            <!-- ======================================================= -->
+            <!--             POURQUOI C'EST IMPORTANT                    -->
+            <!-- ======================================================= -->
+            <section class="py-20 bg-white">
+                <div class="container mx-auto px-4 grid lg:grid-cols-2 gap-16 items-center">
                     
-                    <div class="bg-gray-50 p-6 rounded-xl border border-gray-100">
-                        <h4 class="font-bold text-[#153e2e] mb-4">Vos avantages directs :</h4>
+                    <div class="reveal-up">
+                        <h2 class="font-serif text-3xl md:text-4xl text-[#153e2e] mb-6">Que signifie être RGE ?</h2>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Ce label est délivré par des organismes indépendants (comme Qualibat) après un audit strict de nos chantiers et de nos compétences.
+                        </p>
+                        <p class="text-gray-600 mb-8 leading-relaxed">
+                            Il prouve que nous maîtrisons les normes d'efficacité énergétique. Pour vous, c'est la garantie que les travaux seront performants et que vos économies d'énergie seront réelles.
+                        </p>
+                        
+                        <div class="bg-gray-50 p-6 rounded-xl border border-gray-100">
+                            <h4 class="font-bold text-[#153e2e] mb-4">Vos avantages directs :</h4>
+                            <ul class="space-y-3">
+                                <li class="flex items-center gap-3">
+                                    <div class="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center text-white text-xs font-bold">€</div>
+                                    <span class="text-gray-700">Accès à <strong>MaPrimeRénov'</strong> (jusqu'à 90% financé)</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <div class="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center text-white text-xs font-bold">€</div>
+                                    <span class="text-gray-700">Primes <strong>CEE</strong> (Certificats d'Économies d'Énergie)</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <div class="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center text-white text-xs font-bold">%</div>
+                                    <span class="text-gray-700"><strong>TVA réduite à 5,5%</strong> sur la facture</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <div class="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center text-white text-xs font-bold">0</div>
+                                    <span class="text-gray-700">Accès à l'<strong>Éco-Prêt à Taux Zéro</strong> (Éco-PTZ)</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Image / Certificat -->
+                    <div class="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl border border-gray-100 reveal-up delay-100 bg-[#f8f9fa] flex items-center justify-center">
+                        <div class="text-center p-8">
+                            <div class="w-32 h-32 mx-auto bg-white rounded-full flex items-center justify-center shadow-lg mb-6">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.78 4.78 4 4 0 0 1-6.74 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg>
+                            </div>
+                            <h3 class="font-serif text-2xl text-[#153e2e] font-bold mb-2">Certifié Qualibat RGE</h3>
+                            <p class="text-gray-500">Nos qualifications sont à jour et vérifiables sur le site officiel <em>france-renov.gouv.fr</em></p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- ======================================================= -->
+            <!--                NOS DOMAINES RGE                         -->
+            <!-- ======================================================= -->
+            <section class="py-20 bg-[#153e2e] text-white">
+                <div class="container mx-auto px-4">
+                    <div class="text-center max-w-3xl mx-auto mb-16 reveal-up">
+                        <h2 class="font-serif text-3xl md:text-4xl mb-4">Sur quels travaux sommes-nous certifiés ?</h2>
+                        <p class="text-white/70">Le label RGE est attribué par "domaine de travaux". Nous possédons les qualifications pour l'enveloppe globale du bâtiment.</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="bg-white/10 backdrop-blur p-8 rounded-2xl border border-white/10 hover:bg-white/20 transition-all">
+                            <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                            </div>
+                            <h3 class="font-bold text-xl mb-2">Isolation Toiture</h3>
+                            <p class="text-sm text-white/70">Rampants de toiture et combles perdus. Qualification indispensable pour les primes CEE.</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur p-8 rounded-2xl border border-white/10 hover:bg-white/20 transition-all">
+                            <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M12 2v20"/><path d="M4 12h16"/></svg>
+                            </div>
+                            <h3 class="font-bold text-xl mb-2">Isolation des Murs</h3>
+                            <p class="text-sm text-white/70">Isolation par l'intérieur (ITI) et par l'extérieur (ITE). Couvre les matériaux isolants et la pose.</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur p-8 rounded-2xl border border-white/10 hover:bg-white/20 transition-all">
+                            <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+                            </div>
+                            <h3 class="font-bold text-xl mb-2">Solaire PV (QualiPV)</h3>
+                            <p class="text-sm text-white/70">Qualification spécifique pour le raccordement au réseau et la vente du surplus à EDF OA.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======================================================= -->
+            <!--                        CTA                              -->
+            <!-- ======================================================= -->
+            <section id="contact-cta" class="py-24 bg-white text-center">
+                <div class="container mx-auto px-4">
+                    <h2 class="font-serif text-3xl md:text-4xl text-[#153e2e] mb-6">Vérifiez notre certification</h2>
+                    <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
+                        La transparence est totale. Nous vous fournissons notre certificat RGE à jour avec chaque devis pour que vous puissiez monter votre dossier d'aides sereinement.
+                    </p>
+                    <a href="../index.html#contact" class="btn-premium inline-flex items-center justify-center gap-2 rounded-lg text-sm font-semibold h-14 px-10 text-white">
+                        Demander un devis certifié RGE
+                    </a>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- ======================================================= -->
+        <!--                      FOOTER                             -->
+        <!-- ======================================================= -->
+
+        <footer class="bg-foreground text-white/90">
+            <div class="container mx-auto px-4 py-16">
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+                    <div>
+                        <div class="flex items-center gap-3 mb-6">
+                            <img src="../images/logo-apexrenov.png" alt="Logo ApexRenov" class="w-10 h-10 rounded-lg object-contain">
+                            <div class="flex flex-col">
+                                <span class="font-serif font-semibold text-lg leading-tight text-[#148822]">ApexRenov</span>
+                                <span class="text-xs text-white/60">Couverture & Performance Énergétique</span>
+                            </div>
+                        </div>
+                        <p class="text-white/70 text-sm leading-relaxed mb-6">Spécialistes de la couverture et de la rénovation énergétique depuis plus de 20 ans. Qualité, expertise et engagement écologique.</p>
+                        <div class="flex gap-4">
+                            <a href="#" class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-accent transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook w-5 h-5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                            <a href="#" class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-accent transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram w-5 h-5"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a>
+                            <a href="#" class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-accent transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin w-5 h-5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-serif text-lg mb-6">Nos Services</h4>
                         <ul class="space-y-3">
-                            <li class="flex items-center gap-3">
-                                <div class="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center text-white text-xs font-bold">€</div>
-                                <span class="text-gray-700">Accès à <strong>MaPrimeRénov'</strong> (jusqu'à 90% financé)</span>
+                            <li><a href="../index.html#services" class="text-white/70 hover:text-accent transition-colors text-sm">Couverture & Toiture</a></li>
+                            <li><a href="../index.html#services" class="text-white/70 hover:text-accent transition-colors text-sm">Isolation Thermique</a></li>
+                            <li><a href="../index.html#services" class="text-white/70 hover:text-accent transition-colors text-sm">Panneaux Solaires</a></li>
+                            <li><a href="../index.html#services" class="text-white/70 hover:text-accent transition-colors text-sm">Étanchéité</a></li>
+                            <li><a href="../index.html#services" class="text-white/70 hover:text-accent transition-colors text-sm">Charpente</a></li>
+                            <li><a href="../index.html#services" class="text-white/70 hover:text-accent transition-colors text-sm">Zinguerie</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-serif text-lg mb-6">Liens Utiles</h4>
+                        <ul class="space-y-3">
+                            <li><a href="../index.html#avantages" class="text-white/70 hover:text-accent transition-colors text-sm">Nos Réalisations</a></li>
+                            <li><a href="../index.html#avantages" class="text-white/70 hover:text-accent transition-colors text-sm">Aides & Financements</a></li>
+                            <li><a href="../faq.html" class="text-white/70 hover:text-accent transition-colors text-sm">FAQ</a></li>
+                            <li><a href="../legal.html" class="text-white/70 hover:text-accent transition-colors text-sm">Mentions Légales</a></li>
+                            <li><a href="../privacy.html" class="text-white/70 hover:text-accent transition-colors text-sm">Politique de Confidentialité</a></li>
+                            <li><button onclick="localStorage.removeItem('ecoToit_cookie_consent'); window.location.reload();" class="text-white/70 hover:text-accent transition-colors text-sm text-left">Gestion des cookies</button></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-serif text-lg mb-6">Contact</h4>
+                        <ul class="space-y-4">
+                            <li>
+                                <a href="tel:+33754826639" class="flex items-center gap-3 text-white/70 hover:text-accent transition-colors text-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone w-4 h-4"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                    07 54 82 66 39
+                                </a>
                             </li>
-                            <li class="flex items-center gap-3">
-                                <div class="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center text-white text-xs font-bold">€</div>
-                                <span class="text-gray-700">Primes <strong>CEE</strong> (Certificats d'Économies d'Énergie)</span>
+                            <li>
+                                <a href="mailto:ldelavictoire@gmail.com" class="flex items-center gap-3 text-white/70 hover:text-accent transition-colors text-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail w-4 h-4"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                                    ldelavictoire@gmail.com
+                                </a>
                             </li>
-                            <li class="flex items-center gap-3">
-                                <div class="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center text-white text-xs font-bold">%</div>
-                                <span class="text-gray-700"><strong>TVA réduite à 5,5%</strong> sur la facture</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <div class="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center text-white text-xs font-bold">0</div>
-                                <span class="text-gray-700">Accès à l'<strong>Éco-Prêt à Taux Zéro</strong> (Éco-PTZ)</span>
+                            <li>
+                                <div class="flex items-start gap-3 text-white/70 text-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin w-4 h-4 mt-0.5 flex-shrink-0"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                    27 rue Armand Carrel<br>75019 Paris
+                                </div>
                             </li>
                         </ul>
                     </div>
                 </div>
-
-                <!-- Image / Certificat Placeholder -->
-                <div class="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl border border-gray-100 reveal-up delay-100 bg-[#f8f9fa] flex items-center justify-center">
-                    <div class="text-center p-8">
-                        <div class="w-32 h-32 mx-auto bg-white rounded-full flex items-center justify-center shadow-lg mb-6">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.78 4.78 4 4 0 0 1-6.74 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg>
-                        </div>
-                        <h3 class="font-serif text-2xl text-[#153e2e] font-bold mb-2">Certifié Qualibat RGE</h3>
-                        <p class="text-gray-500">Nos qualifications sont à jour et vérifiables sur le site officiel <em>france-renov.gouv.fr</em></p>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- NOS DOMAINES RGE -->
-        <section class="py-20 bg-[#153e2e] text-white">
-            <div class="container mx-auto px-4">
-                <div class="text-center max-w-3xl mx-auto mb-16 reveal-up">
-                    <h2 class="font-serif text-3xl md:text-4xl mb-4">Sur quels travaux sommes-nous certifiés ?</h2>
-                    <p class="text-white/70">Le label RGE est attribué par "domaine de travaux". Nous possédons les qualifications pour l'enveloppe globale du bâtiment.</p>
-                </div>
-
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="bg-white/10 backdrop-blur p-8 rounded-2xl border border-white/10 hover:bg-white/20 transition-all">
-                        <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-                        </div>
-                        <h3 class="font-bold text-xl mb-2">Isolation Toiture</h3>
-                        <p class="text-sm text-white/70">Rampants de toiture et combles perdus. Qualification indispensable pour les primes CEE.</p>
-                    </div>
-                    <div class="bg-white/10 backdrop-blur p-8 rounded-2xl border border-white/10 hover:bg-white/20 transition-all">
-                        <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M12 2v20"/><path d="M4 12h16"/></svg>
-                        </div>
-                        <h3 class="font-bold text-xl mb-2">Isolation des Murs</h3>
-                        <p class="text-sm text-white/70">Isolation par l'intérieur (ITI) et par l'extérieur (ITE). Couvre les matériaux isolants et la pose.</p>
-                    </div>
-                    <div class="bg-white/10 backdrop-blur p-8 rounded-2xl border border-white/10 hover:bg-white/20 transition-all">
-                        <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
-                        </div>
-                        <h3 class="font-bold text-xl mb-2">Solaire PV (QualiPV)</h3>
-                        <p class="text-sm text-white/70">Qualification spécifique pour le raccordement au réseau et la vente du surplus à EDF OA.</p>
+                <div class="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-white/60 text-sm">© 2026 ApexRenov. Tous droits réservés.</p>
+                    <div class="flex items-center gap-6">
+                        <span class="text-white/60 text-sm">Certifié RGE</span>
+                        <span class="text-white/60 text-sm">Garantie Décennale</span>
                     </div>
                 </div>
             </div>
-        </section>
+        </footer>
 
-        <!-- CTA -->
-        <section class="py-24 bg-white text-center">
-            <div class="container mx-auto px-4">
-                <h2 class="font-serif text-3xl md:text-4xl text-[#153e2e] mb-6">Vérifiez notre certification</h2>
-                <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
-                    La transparence est totale. Nous vous fournissons notre certificat RGE à jour avec chaque devis pour que vous puissiez monter votre dossier d'aides sereinement.
-                </p>
-                <a href="../index.html#contact" class="btn-premium inline-flex items-center justify-center gap-2 rounded-lg text-sm font-semibold h-14 px-10 text-white">
-                    Demander un devis certifié RGE
-                </a>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- ======================================================= -->
-    <!--           FOOTER (Identique à Index + Chemins)          -->
-    <!-- ======================================================= -->
-
-    <footer class="bg-foreground text-white/90">
-        <div class="container mx-auto px-4 py-16">
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
-                <div>
-                    <div class="flex items-center gap-3 mb-6">
-                        <!-- Logo (Chemin ajusté) -->
-                        <img src="../images/logo-apexrenov.png" alt="Logo ApexRenov" class="w-10 h-10 rounded-lg object-contain">
-                        <div class="flex flex-col">
-                            <span class="font-serif font-semibold text-lg leading-tight text-[#148822]">ApexRenov</span>
-                            <span class="text-xs text-white/60">Couverture & Performance Énergétique</span>
-                        </div>
-                    </div>
-                    <p class="text-white/70 text-sm leading-relaxed mb-6">Spécialistes de la couverture et de la rénovation énergétique depuis plus de 20 ans. Qualité, expertise et engagement écologique.</p>
-                    <div class="flex gap-4">
-                        <a href="#" class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-accent transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook w-5 h-5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
-                        <a href="#" class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-accent transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram w-5 h-5"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a>
-                        <a href="#" class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-accent transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin w-5 h-5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
-                    </div>
-                </div>
-                <div>
-                    <h4 class="font-serif text-lg mb-6">Nos Services</h4>
-                    <ul class="space-y-3">
-                        <li><a href="../index.html#services" class="text-white/70 hover:text-accent transition-colors text-sm">Couverture & Toiture</a></li>
-                        <li><a href="../index.html#services" class="text-white/70 hover:text-accent transition-colors text-sm">Isolation Thermique</a></li>
-                        <li><a href="../index.html#services" class="text-white/70 hover:text-accent transition-colors text-sm">Panneaux Solaires</a></li>
-                        <li><a href="../index.html#services" class="text-white/70 hover:text-accent transition-colors text-sm">Étanchéité</a></li>
-                        <li><a href="../index.html#services" class="text-white/70 hover:text-accent transition-colors text-sm">Charpente</a></li>
-                        <li><a href="../index.html#services" class="text-white/70 hover:text-accent transition-colors text-sm">Zinguerie</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-serif text-lg mb-6">Liens Utiles</h4>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-white/70 hover:text-accent transition-colors text-sm">Nos Réalisations</a></li>
-                        <li><a href="#" class="text-white/70 hover:text-accent transition-colors text-sm">Aides & Financements</a></li>
-                        <li><a href="../faq.html" class="text-white/70 hover:text-accent transition-colors text-sm">FAQ</a></li>
-                        <li><a href="../legal.html" class="text-white/70 hover:text-accent transition-colors text-sm">Mentions Légales</a></li>
-                        <li><a href="../privacy.html" class="text-white/70 hover:text-accent transition-colors text-sm">Politique de Confidentialité</a></li>
-                        <li><button onclick="localStorage.removeItem('ecoToit_cookie_consent'); window.location.reload();" class="text-white/70 hover:text-accent transition-colors text-sm text-left">Gestion des cookies</button></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-serif text-lg mb-6">Contact</h4>
-                    <ul class="space-y-4">
-                        <li>
-                            <a href="tel:+33754826639" class="flex items-center gap-3 text-white/70 hover:text-accent transition-colors text-sm">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone w-4 h-4"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                                07 54 82 66 39
-                            </a>
-                        </li>
-                        <li>
-                            <a href="mailto:ldelavictoire@gmail.com" class="flex items-center gap-3 text-white/70 hover:text-accent transition-colors text-sm">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail w-4 h-4"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
-                                ldelavictoire@gmail.com
-                            </a>
-                        </li>
-                        <li>
-                            <div class="flex items-start gap-3 text-white/70 text-sm">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin w-4 h-4 mt-0.5 flex-shrink-0"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                                27 rue Armand Carrel<br>75019 Paris
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-white/60 text-sm">© 2026 ApexRenov. Tous droits réservés.</p>
-                <div class="flex items-center gap-6">
-                    <span class="text-white/60 text-sm">Certifié RGE</span>
-                    <span class="text-white/60 text-sm">Garantie Décennale</span>
-                </div>
-            </div>
-        </div>
-    </footer>
-
+    </div>
 </body>
 </html>
