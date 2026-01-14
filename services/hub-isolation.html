@@ -5,18 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Isolation Thermique & Rénovation Énergétique | ApexRenov</title>
-    <meta name="description"
-        content="Expert RGE en isolation : Combles, Murs (ITE/ITI) et Sols. Réduisez vos factures de chauffage jusqu'à 40%. Devis et étude thermique gratuits.">
+    <meta name="description" content="Expert RGE en isolation : Combles, Murs (ITE/ITI) et Sols. Réduisez vos factures de chauffage jusqu'à 40%. Devis et étude thermique gratuits.">
 
-    <!-- FAVICON -->
+    <!-- FAVICON (Chemin corrigé) -->
     <link rel="icon" type="image/png" href="../images/favicon-apexrenov.png">
 
     <!-- POLICES -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100..900&family=Mulish:wght@200..900&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100..900&family=Mulish:wght@200..900&display=swap" rel="stylesheet">
 
-    <!-- CSS & JS -->
+    <!-- CSS & JS (Chemins corrigés) -->
     <link rel="stylesheet" href="../style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="../script.js"></script>
@@ -24,272 +23,325 @@
 
 <body class="bg-background text-foreground antialiased font-sans">
 
-    <!-- HEADER -->
-    <header id="main-header"
-        class="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border shadow-sm">
-        <div class="container mx-auto px-4 h-20 flex items-center justify-between">
-            <a href="../index.html" class="flex items-center gap-3">
-                <img src="../images/logo-apexrenov.png" alt="Logo ApexRenov"
-                    class="w-10 h-10 rounded-lg object-contain">
-                <div class="flex flex-col">
-                    <span class="font-serif font-semibold text-lg text-[#148822] leading-tight">ApexRenov</span>
-                    <span class="text-xs text-muted-foreground">Expert RGE Isolation</span>
-                </div>
-            </a>
-            <nav class="hidden md:flex items-center gap-8">
-                <a href="../index.html"
-                    class="text-sm font-medium text-[#153e2e] hover:text-primary transition-colors">Accueil</a>
-                <a href="../index.html#services" class="text-sm font-bold text-primary transition-colors">Tous les
-                    Services</a>
-                <a href="../index.html#contact"
-                    class="btn-premium inline-flex items-center justify-center gap-2 rounded-lg text-sm font-semibold h-10 px-6 text-white">Devis
-                    Gratuit</a>
-            </nav>
-        </div>
-    </header>
+    <div class="min-h-screen flex flex-col">
 
-    <main class="pt-20">
-
-        <!-- FIL D'ARIANE -->
-        <div class="bg-gray-50 border-b border-gray-100 py-3">
+        <!-- ======================================================= -->
+        <!--                          HEADER                         -->
+        <!-- ======================================================= -->
+        <header id="main-header" class="fixed top-0 left-0 right-0 z-50 bg-transparent transition-all duration-300">
             <div class="container mx-auto px-4">
-                <nav class="text-xs text-gray-500 flex gap-2 items-center">
-                    <a href="../index.html" class="hover:text-primary transition-colors">Accueil</a>
-                    <span class="text-gray-300">/</span>
-                    <span class="text-gray-900 font-semibold">Hub Isolation</span>
-                </nav>
-            </div>
-        </div>
+                <div class="flex items-center justify-between h-20">
+                    <!-- Logo avec lien vers l'accueil (Chemin corrigé) -->
+                    <a href="../index.html" class="flex items-center gap-3 group">
+                        <img src="../images/logo-apexrenov.png" alt="Logo ApexRenov" class="w-10 h-10 rounded-lg object-contain">
+                        <div class="flex flex-col">
+                            <span class="header-title font-serif font-semibold text-lg text-[#148822] leading-tight transition-colors duration-300">ApexRenov</span>
+                            <span class="header-subtitle text-xs text-white/80 transition-colors duration-300">Expert RGE Isolation</span>
+                        </div>
+                    </a>
 
-        <!-- HERO SECTION PARENT -->
-        <section class="relative py-24 bg-[#F0F2F1] overflow-hidden">
+                    <!-- Desktop Nav -->
+                    <nav class="hidden md:flex items-center gap-8">
+                        <a href="../index.html#accueil" class="nav-link text-sm font-medium text-white/90 hover:text-primary transition-colors duration-300">Accueil</a>
+                        <a href="../index.html#services" class="nav-link text-sm font-medium text-white/90 hover:text-primary transition-colors duration-300">Services</a>
+                        <a href="../index.html#avantages" class="nav-link text-sm font-medium text-white/90 hover:text-primary transition-colors duration-300">Pourquoi Nous</a>
+                        <a href="../blog.html" class="nav-link text-sm font-medium text-white/90 hover:text-primary transition-colors duration-300">Blog</a>
+                        <a href="../index.html#contact" class="nav-link text-sm font-medium text-white/90 hover:text-primary transition-colors duration-300">Contact</a>
+                    </nav>
 
-            <!-- Texture de fond -->
-            <div class="absolute inset-0 opacity-[0.05]"
-                style="background-image: radial-gradient(#153e2e 1.5px, transparent 1.5px); background-size: 32px 32px;">
-            </div>
+                    <!-- Desktop Actions -->
+                    <div class="hidden md:flex items-center gap-4">
+                        <a href="tel:+33754826639" class="header-phone flex items-center gap-2 text-sm text-white/90 hover:text-primary transition-colors duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone w-4 h-4">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            07 54 82 66 39
+                        </a>
+                        <a href="../index.html#contact" class="btn-premium inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm font-semibold h-10 px-6 text-white">
+                            Devis Gratuit
+                        </a>
+                    </div>
 
-            <div class="container mx-auto px-4 relative z-10 text-center">
-                <span
-                    class="text-primary font-bold text-sm uppercase tracking-widest mb-2 block border-b-2 border-primary/20 w-fit mx-auto pb-1">Confort
-                    & Économies</span>
-                <h1 class="font-serif text-4xl md:text-5xl text-[#153e2e] mb-6 mt-4">L'Isolation Haute Performance</h1>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-                    Une maison mal isolée, c'est de l'argent jeté par les fenêtres.
-                    Nous traitons les 3 zones de déperdition thermique pour réduire vos factures jusqu'à 40%.
-                </p>
-
-                <!-- Bloc RGE -->
-                <div
-                    class="inline-flex items-center gap-3 bg-white px-6 py-3 rounded-full shadow-sm mb-12 border border-green-100">
-                    <div
-                        class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-700 font-bold text-xs">
-                        RGE</div>
-                    <span class="text-sm font-medium text-gray-700">Entreprise certifiée éligible aux aides
-                        <strong>MaPrimeRénov'</strong></span>
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="mobile-menu-btn-icon md:hidden p-2 text-white hover:text-primary transition-colors" aria-label="Toggle menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu w-6 h-6">
+                            <line x1="4" x2="20" y1="12" y2="12"></line>
+                            <line x1="4" x2="20" y1="6" y2="6"></line>
+                            <line x1="4" x2="20" y1="18" y2="18"></line>
+                        </svg>
+                    </button>
                 </div>
 
-                <!-- GRILLE DE NAVIGATION (HUB) -->
-                <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-6 max-w-5xl mx-auto text-left">
-
-                    <!-- 1. COMBLES (Le plus important) -->
-                    <a href="isolation-combles.html"
-                        class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex items-start gap-5 hover:-translate-y-1">
-                        <div
-                            class="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center text-orange-600 group-hover:bg-orange-600 group-hover:text-white transition-colors shrink-0">
-                            <!-- Icone Toit/Chaleur -->
-                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path
-                                    d="M2.97 12.92A2 2 0 0 0 2 14.63v3.24a2 2 0 0 0 .97 1.71l.915.53a2 2 0 0 0 2.02-.11l8.29-5.46a2 2 0 0 0 .91-1.74v-2.3a2 2 0 0 0-.66-1.55l-9.916-8.72a2 2 0 0 0-2.91 2.58L2.97 12.92Z" />
-                                <path
-                                    d="M11 12.1v2.75a2 2 0 0 0 1.05 1.75l7.65 4.25a2 2 0 0 0 2.72-1.25l.23-1.15a2 2 0 0 0-.8-2.03L12.05 9.77" />
-                            </svg>
-                        </div>
-                        <div>
-                            <span class="text-xs font-bold text-orange-600 uppercase tracking-wide">30% de pertes</span>
-                            <h3
-                                class="font-serif text-xl text-[#153e2e] font-bold mb-2 group-hover:text-primary transition-colors">
-                                Combles & Toiture</h3>
-                            <p class="text-sm text-gray-600 mb-4 leading-relaxed">Isolation par soufflage (combles
-                                perdus) ou rampants (combles aménagés). La priorité n°1 pour le confort.</p>
-                            <span
-                                class="text-primary text-sm font-bold underline decoration-primary/30 group-hover:decoration-primary transition-all">Voir
-                                les solutions &rarr;</span>
-                        </div>
-                    </a>
-
-                    <!-- 2. MURS (ITI & ITE) -->
-                    <a href="isolation-murs.html"
-                        class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex items-start gap-5 hover:-translate-y-1">
-                        <div
-                            class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors shrink-0">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <rect x="4" y="2" width="16" height="20" rx="2" />
-                                <path d="M12 2v20" />
-                                <path d="M4 12h16" />
-                                <path d="M4 7h16" />
-                                <path d="M4 17h16" />
-                            </svg>
-                        </div>
-                        <div>
-                            <span class="text-xs font-bold text-blue-600 uppercase tracking-wide">25% de pertes</span>
-                            <h3
-                                class="font-serif text-xl text-[#153e2e] font-bold mb-2 group-hover:text-primary transition-colors">
-                                Murs (ITE & ITI)</h3>
-                            <p class="text-sm text-gray-600 mb-4 leading-relaxed">Isolation Thermique par l'Extérieur
-                                (Façade) ou par l'Intérieur (Doublage). Supprimez l'effet "paroi froide".</p>
-                            <span
-                                class="text-primary text-sm font-bold underline decoration-primary/30 group-hover:decoration-primary transition-all">Intérieur
-                                ou Extérieur ? &rarr;</span>
-                        </div>
-                    </a>
-
-                    <!-- 3. PLANCHERS BAS -->
-                    <a href="isolation-sols.html"
-                        class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex items-start gap-5 hover:-translate-y-1">
-                        <div
-                            class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-colors shrink-0">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M3 21h18" />
-                                <path d="M5 21v-7" />
-                                <path d="M19 21v-7" />
-                                <path d="M9 21v-9" />
-                                <path d="M15 21v-9" />
-                                <path d="M2 3h20" />
-                            </svg>
-                        </div>
-                        <div>
-                            <span class="text-xs font-bold text-purple-600 uppercase tracking-wide">10% de pertes</span>
-                            <h3
-                                class="font-serif text-xl text-[#153e2e] font-bold mb-2 group-hover:text-primary transition-colors">
-                                Sols & Planchers Bas</h3>
-                            <p class="text-sm text-gray-600 mb-4 leading-relaxed">Isolation en sous-face de dalle
-                                (Garage, Cave, Vide-sanitaire). Fini la sensation de pieds froids au rez-de-chaussée.
-                            </p>
-                            <span
-                                class="text-primary text-sm font-bold underline decoration-primary/30 group-hover:decoration-primary transition-all">Voir
-                                les solutions &rarr;</span>
-                        </div>
-                    </a>
-
-                    <!-- 4. CARTE BILAN THERMIQUE (Services +) -->
-                    <a href="bilan-thermique.html"
-                        class="group bg-[#153e2e] p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-[#153e2e] flex items-start gap-5 hover:-translate-y-1">
-                        <div
-                            class="w-14 h-14 bg-white/10 rounded-xl flex items-center justify-center text-primary shrink-0">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M12 20v-6M6 20V10M18 20V4" />
-                            </svg>
-                        </div>
-                        <div>
-                            <span class="text-xs font-bold text-primary uppercase tracking-wide">Offert</span>
-                            <h3 class="font-serif text-xl text-white font-bold mb-2">Bilan Thermique</h3>
-                            <p class="text-sm text-white/70 mb-4 leading-relaxed">Vous ne savez pas par où commencer ?
-                                Nous réalisons une étude thermique pour prioriser vos travaux.</p>
-                            <span
-                                class="text-white text-sm font-bold underline decoration-white/30 group-hover:decoration-white transition-all">Demander
-                                mon bilan &rarr;</span>
-                        </div>
-                    </a>
-
+                <!-- Mobile Menu Content -->
+                <div id="mobile-menu" class="hidden md:hidden pb-6 border-t border-white/20 mt-2 bg-white/90 backdrop-blur-xl rounded-2xl px-6 shadow-2xl mx-2">
+                    <nav class="flex flex-col gap-4 mt-4">
+                        <a href="../index.html" class="text-base font-medium text-[#153e2e] hover:text-primary py-2 border-b border-gray-100">Accueil</a>
+                        <a href="../index.html#services" class="text-base font-medium text-[#153e2e] hover:text-primary py-2 border-b border-gray-100">Services</a>
+                        <a href="../index.html#avantages" class="text-base font-medium text-[#153e2e] hover:text-primary py-2 border-b border-gray-100">Pourquoi Nous</a>
+                        <a href="../blog.html" class="text-base font-medium text-[#153e2e] hover:text-primary py-2 border-b border-gray-100">Blog</a>
+                        <a href="../index.html#contact" class="text-base font-medium text-[#153e2e] hover:text-primary py-2 border-b border-gray-100">Contact</a>
+                        <a href="tel:+33754826639" class="text-base font-bold text-primary mt-2 flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            07 54 82 66 39
+                        </a>
+                    </nav>
                 </div>
             </div>
-        </section>
+        </header>
 
-        <!-- SECTION AIDES FINANCIÈRES (CRITIQUE POUR L'ISOLATION) -->
-        <section class="py-20 bg-white">
-            <div class="container mx-auto px-4 grid lg:grid-cols-2 gap-16 items-center">
-                <!-- Image -->
-                <div class="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl border border-gray-100 reveal-up">
-                    <img src="../images/aides-rge.webp" alt="Dossier aides MaPrimeRénov"
-                        class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                    <div class="absolute bottom-6 left-6 text-white max-w-xs">
-                        <p class="font-bold text-lg">Nous gérons votre dossier administratif</p>
+        <main class="flex-grow">
+
+            <!-- ======================================================= -->
+            <!--                  HERO SECTION UNIVERSELLE               -->
+            <!-- ======================================================= -->
+            <section class="relative h-[50vh] min-h-[400px] flex items-center justify-center pt-20 overflow-hidden">
+                <!-- Image de fond -->
+                <div class="absolute inset-0 z-0">
+                    <img src="../images/service-isolation.webp" alt="Isolation Thermique" class="w-full h-full object-cover">
+                    <!-- Overlay dégradé sombre -->
+                    <div class="absolute inset-0 bg-gradient-to-r from-foreground/90 via-foreground/70 to-foreground/40"></div>
+                </div>
+
+                <div class="container mx-auto px-4 relative z-10 text-center">
+                    <span class="inline-block py-1 px-3 rounded-full bg-primary/20 border border-primary/30 text-white text-xs font-bold uppercase tracking-wider mb-4 backdrop-blur-sm">
+                        Confort & Économies
+                    </span>
+                    <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl text-white font-bold mb-4 drop-shadow-lg">
+                        Isolation Thermique
+                    </h1>
+                    <p class="text-lg text-white/80 max-w-2xl mx-auto">
+                        Traitez les zones de déperdition et réduisez vos factures jusqu'à 40%.
+                    </p>
+                </div>
+            </section>
+
+            <!-- FIL D'ARIANE -->
+            <div class="bg-gray-50 border-b border-gray-100 py-3">
+                <div class="container mx-auto px-4">
+                    <nav class="text-xs text-gray-500 flex gap-2 items-center">
+                        <a href="../index.html" class="hover:text-primary transition-colors">Accueil</a>
+                        <span class="text-gray-300">/</span>
+                        <a href="../index.html#services" class="hover:text-primary transition-colors">Services</a>
+                        <span class="text-gray-300">/</span>
+                        <span class="text-gray-900 font-semibold">Hub Isolation</span>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- SECTION INTRO & NAVIGATION HUB -->
+            <section class="relative py-20 bg-[#F0F2F1] overflow-hidden">
+                
+                <!-- Texture de fond -->
+                <div class="absolute inset-0 opacity-[0.05]" 
+                     style="background-image: radial-gradient(#153e2e 1.5px, transparent 1.5px); background-size: 32px 32px;">
+                </div>
+
+                <div class="container mx-auto px-4 relative z-10">
+                    
+                    <!-- Intro Texte -->
+                    <div class="text-center max-w-3xl mx-auto mb-16">
+                        <h2 class="font-serif text-3xl md:text-4xl text-[#153e2e] mb-6">L'Isolation Haute Performance</h2>
+                        <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                            Une maison mal isolée, c'est de l'argent jeté par les fenêtres. 
+                            Nous traitons les 3 zones de déperdition thermique pour améliorer votre confort été comme hiver.
+                        </p>
+                        
+                        <!-- Bloc RGE -->
+                        <div class="inline-flex items-center gap-3 bg-white px-6 py-3 rounded-full shadow-sm border border-green-100">
+                            <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-700 font-bold text-xs">RGE</div>
+                            <span class="text-sm font-medium text-gray-700">Entreprise certifiée éligible aux aides <strong>MaPrimeRénov'</strong></span>
+                        </div>
+                    </div>
+
+                    <!-- GRILLE DE NAVIGATION (HUB) -->
+                    <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-6 max-w-5xl mx-auto text-left">
+                        
+                        <!-- 1. COMBLES -->
+                        <a href="isolation-combles.html" class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex items-start gap-5 hover:-translate-y-1">
+                            <div class="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center text-orange-600 group-hover:bg-orange-600 group-hover:text-white transition-colors shrink-0">
+                                <!-- Icone Toit/Chaleur -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.97 12.92A2 2 0 0 0 2 14.63v3.24a2 2 0 0 0 .97 1.71l.915.53a2 2 0 0 0 2.02-.11l8.29-5.46a2 2 0 0 0 .91-1.74v-2.3a2 2 0 0 0-.66-1.55l-9.916-8.72a2 2 0 0 0-2.91 2.58L2.97 12.92Z"/><path d="M11 12.1v2.75a2 2 0 0 0 1.05 1.75l7.65 4.25a2 2 0 0 0 2.72-1.25l.23-1.15a2 2 0 0 0-.8-2.03L12.05 9.77"/></svg>
+                            </div>
+                            <div>
+                                <span class="text-xs font-bold text-orange-600 uppercase tracking-wide">30% de pertes</span>
+                                <h3 class="font-serif text-xl text-[#153e2e] font-bold mb-2 group-hover:text-primary transition-colors">Combles & Toiture</h3>
+                                <p class="text-sm text-gray-600 mb-4 leading-relaxed">Isolation par soufflage (combles perdus) ou rampants (combles aménagés). La priorité n°1 pour le confort.</p>
+                                <span class="text-primary text-sm font-bold underline decoration-primary/30 group-hover:decoration-primary transition-all">Voir les solutions &rarr;</span>
+                            </div>
+                        </a>
+
+                        <!-- 2. MURS (ITI & ITE) -->
+                        <a href="isolation-murs.html" class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex items-start gap-5 hover:-translate-y-1">
+                            <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M12 2v20"/><path d="M4 12h16"/><path d="M4 7h16"/><path d="M4 17h16"/></svg>
+                            </div>
+                            <div>
+                                <span class="text-xs font-bold text-blue-600 uppercase tracking-wide">25% de pertes</span>
+                                <h3 class="font-serif text-xl text-[#153e2e] font-bold mb-2 group-hover:text-primary transition-colors">Murs (ITE & ITI)</h3>
+                                <p class="text-sm text-gray-600 mb-4 leading-relaxed">Isolation Thermique par l'Extérieur (Façade) ou par l'Intérieur (Doublage). Supprimez l'effet "paroi froide".</p>
+                                <span class="text-primary text-sm font-bold underline decoration-primary/30 group-hover:decoration-primary transition-all">Intérieur ou Extérieur ? &rarr;</span>
+                            </div>
+                        </a>
+
+                        <!-- 3. PLANCHERS BAS -->
+                        <a href="isolation-sols.html" class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex items-start gap-5 hover:-translate-y-1">
+                            <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-colors shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21v-7"/><path d="M19 21v-7"/><path d="M9 21v-9"/><path d="M15 21v-9"/><path d="M2 3h20"/></svg>
+                            </div>
+                            <div>
+                                <span class="text-xs font-bold text-purple-600 uppercase tracking-wide">10% de pertes</span>
+                                <h3 class="font-serif text-xl text-[#153e2e] font-bold mb-2 group-hover:text-primary transition-colors">Sols & Planchers Bas</h3>
+                                <p class="text-sm text-gray-600 mb-4 leading-relaxed">Isolation en sous-face de dalle (Garage, Cave, Vide-sanitaire). Fini la sensation de pieds froids au rez-de-chaussée.</p>
+                                <span class="text-primary text-sm font-bold underline decoration-primary/30 group-hover:decoration-primary transition-all">Voir les solutions &rarr;</span>
+                            </div>
+                        </a>
+
+                         <!-- 4. CARTE BILAN THERMIQUE (Services +) -->
+                         <a href="bilan-thermique.html" class="group bg-[#153e2e] p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-[#153e2e] flex items-start gap-5 hover:-translate-y-1">
+                            <div class="w-14 h-14 bg-white/10 rounded-xl flex items-center justify-center text-primary shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20v-6M6 20V10M18 20V4"/></svg>
+                            </div>
+                            <div>
+                                <span class="text-xs font-bold text-primary uppercase tracking-wide animate-pulse">Offert</span>
+                                <h3 class="font-serif text-xl text-white font-bold mb-2">Bilan Thermique</h3>
+                                <p class="text-sm text-white/70 mb-4 leading-relaxed">Vous ne savez pas par où commencer ? Nous réalisons une étude thermique pour prioriser vos travaux.</p>
+                                <span class="text-white text-sm font-bold underline decoration-white/30 group-hover:decoration-white transition-all">Demander mon bilan &rarr;</span>
+                            </div>
+                        </a>
+
                     </div>
                 </div>
+            </section>
 
-                <!-- Texte -->
-                <div class="reveal-up delay-100">
-                    <h2 class="font-serif text-3xl md:text-4xl text-[#153e2e] mb-6 leading-tight">Financez jusqu'à 90%
-                        de vos travaux</h2>
-                    <p class="text-gray-600 mb-6 leading-relaxed text-lg">
-                        L'isolation est le poste de travaux le plus aidé par l'État. En tant qu'entreprise certifiée
-                        <strong>RGE (Reconnu Garant de l'Environnement)</strong>, nos factures débloquent vos primes.
+            <!-- SECTION AIDES FINANCIÈRES (CRITIQUE POUR L'ISOLATION) -->
+            <section class="py-20 bg-white">
+                <div class="container mx-auto px-4 grid lg:grid-cols-2 gap-16 items-center">
+                    <!-- Image -->
+                    <div class="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl border border-gray-100">
+                        <img src="../images/aides-rge.webp" alt="Dossier aides MaPrimeRénov" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        <div class="absolute bottom-6 left-6 text-white max-w-xs">
+                            <p class="font-bold text-lg">Nous gérons votre dossier administratif</p>
+                        </div>
+                    </div>
+
+                    <!-- Texte -->
+                    <div>
+                        <h2 class="font-serif text-3xl md:text-4xl text-[#153e2e] mb-6 leading-tight">Financez jusqu'à 90% de vos travaux</h2>
+                        <p class="text-gray-600 mb-6 leading-relaxed text-lg">
+                            L'isolation est le poste de travaux le plus aidé par l'État. En tant qu'entreprise certifiée <strong>RGE (Reconnu Garant de l'Environnement)</strong>, nos factures débloquent vos primes.
+                        </p>
+
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-center gap-3 p-4 bg-gray-50 rounded-xl border border-gray-100">
+                                <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-700 font-bold text-sm shrink-0">€</div>
+                                <span class="text-gray-700 font-medium">MaPrimeRénov' (Parcours par geste ou global)</span>
+                            </li>
+                            <li class="flex items-center gap-3 p-4 bg-gray-50 rounded-xl border border-gray-100">
+                                <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-700 font-bold text-sm shrink-0">€</div>
+                                <span class="text-gray-700 font-medium">Primes CEE (Certificats d'Économies d'Énergie)</span>
+                            </li>
+                            <li class="flex items-center gap-3 p-4 bg-gray-50 rounded-xl border border-gray-100">
+                                <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-700 font-bold text-sm shrink-0">%</div>
+                                <span class="text-gray-700 font-medium">TVA Réduite à 5,5% & Éco-PTZ</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA CONTACT -->
+            <section class="py-24 bg-[#153e2e] relative overflow-hidden">
+                <!-- Fond texturé sombre -->
+                <div class="absolute inset-0 opacity-20 bg-[url('../images/contact-texture.webp')] bg-cover bg-center mix-blend-overlay"></div>
+
+                <div class="container mx-auto px-4 text-center relative z-10">
+                    <h2 class="font-serif text-3xl md:text-4xl text-white mb-6">Stop aux courants d'air et aux factures élevées</h2>
+                    <p class="text-white/70 mb-10 max-w-2xl mx-auto text-lg">
+                        Investir dans l'isolation est le placement le plus rentable pour votre maison. Améliorez votre étiquette énergétique (DPE) dès aujourd'hui.
                     </p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <a href="../index.html#contact" class="btn-premium inline-flex items-center justify-center px-8 py-4 rounded-lg text-white font-bold text-base transition-transform hover:scale-105">
+                            Demander une étude thermique
+                        </a>
+                        <a href="tel:+33754826639" class="inline-flex items-center justify-center px-8 py-4 rounded-lg border border-white/20 text-white font-bold hover:bg-white/10 transition-colors backdrop-blur-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            07 54 82 66 39
+                        </a>
+                    </div>
+                </div>
+            </section>
 
-                    <ul class="space-y-4 mb-8">
-                        <li class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
-                            <div
-                                class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-700 font-bold text-sm">
-                                €</div>
-                            <span class="text-gray-700 font-medium">MaPrimeRénov' (Parcours par geste ou global)</span>
-                        </li>
-                        <li class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
-                            <div
-                                class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-700 font-bold text-sm">
-                                €</div>
-                            <span class="text-gray-700 font-medium">Primes CEE (Certificats d'Économies
-                                d'Énergie)</span>
-                        </li>
-                        <li class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
-                            <div
-                                class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-700 font-bold text-sm">
-                                %</div>
-                            <span class="text-gray-700 font-medium">TVA Réduite à 5,5% & Éco-PTZ</span>
-                        </li>
-                    </ul>
+        </main>
+
+        <!-- ======================================================= -->
+        <!--                      FOOTER                            -->
+        <!-- ======================================================= -->
+        <footer class="bg-foreground text-white/90 border-t border-white/10">
+            <div class="container mx-auto px-4 py-16">
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+                    <div>
+                        <div class="flex items-center gap-3 mb-6">
+                            <img src="../images/logo-apexrenov.png" alt="Logo ApexRenov" class="w-10 h-10 rounded-lg object-contain">
+                            <div class="flex flex-col">
+                                <span class="font-serif font-semibold text-lg leading-tight text-[#148822]">ApexRenov</span>
+                                <span class="text-xs text-white/60">Couverture & Performance Énergétique</span>
+                            </div>
+                        </div>
+                        <p class="text-white/70 text-sm leading-relaxed mb-6">Spécialistes de la couverture et de la rénovation énergétique depuis plus de 20 ans. Qualité, expertise et engagement écologique.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-serif text-lg mb-6">Nos Services</h4>
+                        <ul class="space-y-3">
+                            <li><a href="../index.html#services" class="text-white/70 hover:text-accent transition-colors text-sm">Couverture & Toiture</a></li>
+                            <li><a href="hub-isolation.html" class="text-white/70 hover:text-accent transition-colors text-sm">Isolation Thermique</a></li>
+                            <li><a href="../index.html#services" class="text-white/70 hover:text-accent transition-colors text-sm">Panneaux Solaires</a></li>
+                            <li><a href="../index.html#services" class="text-white/70 hover:text-accent transition-colors text-sm">Étanchéité</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-serif text-lg mb-6">Liens Utiles</h4>
+                        <ul class="space-y-3">
+                            <li><a href="../index.html#contact" class="text-white/70 hover:text-accent transition-colors text-sm">Devis Gratuit</a></li>
+                            <li><a href="../faq.html" class="text-white/70 hover:text-accent transition-colors text-sm">FAQ</a></li>
+                            <li><a href="../legal.html" class="text-white/70 hover:text-accent transition-colors text-sm">Mentions Légales</a></li>
+                            <li><a href="../privacy.html" class="text-white/70 hover:text-accent transition-colors text-sm">Politique de Confidentialité</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-serif text-lg mb-6">Contact</h4>
+                        <ul class="space-y-4">
+                            <li>
+                                <a href="tel:+33754826639" class="flex items-center gap-3 text-white/70 hover:text-accent transition-colors text-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                    07 54 82 66 39
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:ldelavictoire@gmail.com" class="flex items-center gap-3 text-white/70 hover:text-accent transition-colors text-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                                    ldelavictoire@gmail.com
+                                </a>
+                            </li>
+                            <li>
+                                <div class="flex items-start gap-3 text-white/70 text-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-1 flex-shrink-0"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                    <span>27 rue Armand Carrel<br>75019 Paris</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-white/60 text-sm">© 2026 ApexRenov. Tous droits réservés.</p>
+                    <div class="flex items-center gap-6">
+                        <span class="text-white/60 text-sm">Certifié RGE</span>
+                        <span class="text-white/60 text-sm">Garantie Décennale</span>
+                    </div>
                 </div>
             </div>
-        </section>
+        </footer>
 
-        <!-- CTA CONTACT -->
-        <section class="py-20 bg-[#153e2e] relative overflow-hidden">
-            <!-- Fond texturé sombre -->
-            <div
-                class="absolute inset-0 opacity-20 bg-[url('../images/contact-texture.webp')] bg-cover bg-center mix-blend-overlay">
-            </div>
-
-            <div class="container mx-auto px-4 text-center relative z-10">
-                <h2 class="font-serif text-3xl text-white mb-6">Stop aux courants d'air et aux factures élevées</h2>
-                <p class="text-white/70 mb-8 max-w-2xl mx-auto">
-                    Investir dans l'isolation est le placement le plus rentable pour votre maison. Améliorez votre
-                    étiquette énergétique (DPE) dès aujourd'hui.
-                </p>
-                <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="../index.html#contact"
-                        class="btn-premium inline-flex items-center justify-center px-8 py-3 rounded-lg text-white font-bold">
-                        Demander une étude thermique
-                    </a>
-                    <a href="tel:+33754826639"
-                        class="inline-flex items-center justify-center px-8 py-3 rounded-lg border border-white/20 text-white font-bold hover:bg-white/10 transition-colors backdrop-blur-sm">
-                        📞 07 54 82 66 39
-                    </a>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="bg-foreground text-white/60 py-8 border-t border-white/10 text-center text-sm">
-        <div class="container mx-auto">
-            <p class="mb-2">© 2026 ApexRenov - Expert RGE</p>
-            <div class="flex justify-center gap-4 text-xs">
-                <a href="../legal.html" class="hover:text-white transition-colors">Mentions Légales</a>
-                <a href="../privacy.html" class="hover:text-white transition-colors">Politique de Confidentialité</a>
-            </div>
-        </div>
-    </footer>
-
+    </div>
 </body>
-
 </html>
